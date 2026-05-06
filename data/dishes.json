@@ -149,7 +149,7 @@
         "protein",
         "mousse"
       ],
-      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n🟡 RISONI (alle Varianten)\nAvocado-Zitrone\nJoghurt-Pesto\nTomaten-Frischkäse\nTahini-Joghurt"
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
     },
     {
       "id": "ricotta-zitrone",
@@ -167,7 +167,7 @@
         "ricotta",
         "zitrone"
       ],
-      "notes": "🟡 MODERAT\n➡️ Frequenz:👉 2–4x/Woche👉 nicht 2x am selben Tag\n🟡 REIS (alle Varianten)\nAvocado\nPesto"
+      "notes": "🟡 MODERAT\n➡️ Frequenz:👉 2–4x/Woche👉 nicht 2x am selben Tag"
     },
     {
       "id": "joghurt-tahini",
@@ -185,13 +185,13 @@
         "joghurt",
         "tahini"
       ],
-      "notes": "🟡 MODERAT\n➡️ 2–4x/Woche\n🟡 NUDELN (leichte Varianten)\nTomate-Cottage\nZitrone-Ricotta\nTomaten-Ricotta"
+      "notes": "🟡 MODERAT\n➡️ 2–4x/Woche"
     },
     {
       "id": "pesto-joghurt",
       "name": "Pesto-Joghurt",
       "category": "yellow",
-      "heavy": true,
+      "heavy": false,
       "frequency": {
         "type": "weekly",
         "max": 3
@@ -203,7 +203,7 @@
         "pesto",
         "joghurt"
       ],
-      "notes": "🟡 MODERAT\n➡️ 2–3x/Woche\n🔴 RISOTTO (alle Varianten)\nAvocado-Pesto\nZitrone-Parmesan\nTomate-Frischkäse\nSafran"
+      "notes": "🟡 MODERAT\n➡️ 2–3x/Woche"
     },
     {
       "id": "hummus-falafel-rucola-paprika",
@@ -303,7 +303,7 @@
         "feta",
         "warm"
       ],
-      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n🟡 🔴 GNOCCHI"
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche"
     },
     {
       "id": "avocado-bowl-mit-tomaten-frischkaese-rucola",
@@ -344,7 +344,7 @@
         "gegrillt",
         "gnocchi"
       ],
-      "notes": "🟡 MODERAT➡️ 2x/Woche\n🟢 QUINOA (alle Varianten)\n🟢 BASIS\n➡️ 3–5x/Woche\nGarnelen - Sesam - Paprika - Rucola/Spinat (warm)\nSpinat - Paprika - Sesam (warm)\nThunfisch - Rucola - Gurke (warm)\nTomate - Feta - Rucola"
+      "notes": "🟡 MODERAT➡️ 2x/Woche"
     },
     {
       "id": "cottage-varianten",
@@ -398,7 +398,7 @@
         "hummus",
         "varianten"
       ],
-      "notes": "🟡 MODERAT➡️ 2–3x/Woche\nGurke - Paprika - Rucola - Hummus\nLachs - Rucola - Gurke - Hummus\n🟢 BULGUR\n🟢 BASIS\n➡️ 3–5x/Woche\nPaprika - Tomate - Cottage\nGurke - Hummus - Tomate"
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\nGurke - Paprika - Rucola - Hummus\nLachs - Rucola - Gurke - Hummus"
     },
     {
       "id": "apfel-granatapfel-walnuesse-rucola-gurke-cotage-zitrone",
@@ -441,7 +441,7 @@
         "cottage",
         "bowl"
       ],
-      "notes": "🟢 BASIS➡️ frei möglich\nmit Lachs/Feta🟡 MODERAT➡️ 2–3x/Woche\n🟡 WEITERE"
+      "notes": "🟢 BASIS➡️ frei möglich\nmit Lachs/Feta🟡 MODERAT➡️ 2–3x/Woche"
     },
     {
       "id": "falafel-avocado-bowl-gurke-paprika-tomaten-rucola-spinat",
@@ -494,6 +494,7 @@
         "max": 3
       },
       "slotTypes": [
+        "breakfast",
         "snack"
       ],
       "tags": [
@@ -502,7 +503,7 @@
         "cottage",
         "avocado"
       ],
-      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n🟢 SUPPEN"
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
     },
     {
       "id": "leichte-suppen-zucchini-tomate-fenchel-spinat",
@@ -514,7 +515,8 @@
         "max": 5
       },
       "slotTypes": [
-        "snack"
+        "lunch",
+        "dinner"
       ],
       "tags": [
         "leichte",
@@ -536,7 +538,8 @@
         "max": 3
       },
       "slotTypes": [
-        "snack"
+        "lunch",
+        "dinner"
       ],
       "tags": [
         "kartoffel",
@@ -554,7 +557,8 @@
         "max": 1
       },
       "slotTypes": [
-        "snack"
+        "lunch",
+        "dinner"
       ],
       "tags": [
         "kürbis",
@@ -573,7 +577,8 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "lunch",
+        "dinner"
       ],
       "tags": [
         "avocado",
@@ -592,12 +597,13 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "lunch",
+        "dinner"
       ],
       "tags": [
         "einbrennsuppe"
       ],
-      "notes": "🔴 CHEAT➡️ selten (1–2x/Monat)\n🟢 FRÜHSTÜCK"
+      "notes": "🔴 CHEAT➡️ selten (1–2x/Monat)"
     },
     {
       "id": "standard-porridge-smoothie",
@@ -617,26 +623,6 @@
         "smoothie"
       ],
       "notes": "🟢 BASIS➡️ täglich"
-    },
-    {
-      "id": "finn-crisp-cottage-avocado-2",
-      "name": "Finn Crisp + Cottage + Avocado",
-      "category": "yellow",
-      "heavy": false,
-      "frequency": {
-        "type": "weekly",
-        "max": 3
-      },
-      "slotTypes": [
-        "breakfast"
-      ],
-      "tags": [
-        "finn",
-        "crisp",
-        "cottage",
-        "avocado"
-      ],
-      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
     },
     {
       "id": "avocado-ei-ruehrei-lachs",
@@ -1192,7 +1178,7 @@
         "goddess",
         "salat"
       ],
-      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n1/2 Kohl (od Alternative), 1 Gurke, Schnittlauch, Schalotte; 1/2 Avocado, 80 g Feta, 1 TL Öl, 1 EL Kerne; 150 g griechischer Joghurt, Zitrone, Kräuter\n🔴 KLARE CHEATS"
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n1/2 Kohl (od Alternative), 1 Gurke, Schnittlauch, Schalotte; 1/2 Avocado, 80 g Feta, 1 TL Öl, 1 EL Kerne; 150 g griechischer Joghurt, Zitrone, Kräuter"
     },
     {
       "id": "kartoffelplaetzchen",
