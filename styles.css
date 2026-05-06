@@ -49,3 +49,35 @@ html, body {
     transition-duration: 0s !important;
   }
 }
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: var(--n-50);
+  border-top: 1px solid var(--n-200);
+  padding-bottom: var(--safe-bottom);
+  z-index: 10;
+}
+.tab {
+  flex: 1;
+  background: none;
+  border: 0;
+  padding: 14px 0;
+  font: inherit;
+  color: var(--n-500);
+  min-height: 44px;
+  cursor: pointer;
+}
+body[data-screen="week"]     .tab:nth-child(1),
+body[data-screen="catalog"]  .tab:nth-child(2),
+body[data-screen="settings"] .tab:nth-child(3) {
+  color: var(--n-900);
+  font-weight: 600;
+}
+
+#root { padding-bottom: calc(56px + var(--safe-bottom) + 16px); }
+
+.stub { color: var(--n-500); padding: 1rem; }
