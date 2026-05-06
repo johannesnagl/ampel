@@ -304,3 +304,38 @@ body[data-screen="settings"] .tab:nth-child(3) {
 .picker-row-verdict.ok    { color: var(--green-text); }
 .picker-row-verdict.warn  { color: var(--yellow-text); }
 .picker-row-verdict.block { color: var(--red-text); }
+
+.slot-detail-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 0 16px 8px;
+}
+.slot-detail-name { font-weight: 600; font-size: 17px; }
+.slot-note {
+  margin: 0 16px 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--n-200);
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+  min-height: 60px;
+}
+.slot-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 12px;
+  flex-wrap: wrap;
+}
+.slot-action {
+  flex: 1;
+  min-height: 44px;
+  background: var(--n-50);
+  border: 1px solid var(--n-200);
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+  cursor: pointer;
+}
+.slot-action.primary { background: var(--n-900); color: var(--n-0); border-color: var(--n-900); }
+.slot-action.danger  { color: var(--red-text); border-color: var(--red); }
