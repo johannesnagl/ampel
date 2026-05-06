@@ -23,7 +23,6 @@ export function calcDistribution(week, dishes) {
   }
 
   const target = total >= 36 ? TARGET_42 : TARGET_35;
-  const filledOnly = green + yellow + red;
   const inRange =
     green  >= target.green[0] &&
     yellow >= target.yellow[0] - 4 && yellow <= target.yellow[1] + 4 &&
