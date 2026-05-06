@@ -1,0 +1,1548 @@
+{
+  "version": 1,
+  "dishes": [
+    {
+      "id": "skyr-obst",
+      "name": "Skyr + Obst",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "skyr",
+        "obst"
+      ],
+      "notes": "🟢 BASIS➡️ täglich möglich (1x)"
+    },
+    {
+      "id": "cottage-apfel",
+      "name": "Cottage + Apfel",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "cottage",
+        "apfel"
+      ],
+      "notes": "🟢 BASIS➡️ täglich möglich"
+    },
+    {
+      "id": "cottage-finn-crisp",
+      "name": "Cottage + Finn Crisp",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "cottage",
+        "finn",
+        "crisp"
+      ],
+      "notes": "🟢 BASIS➡️ täglich möglich"
+    },
+    {
+      "id": "buttermilch-obst",
+      "name": "Buttermilch + Obst",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "buttermilch",
+        "obst"
+      ],
+      "notes": "🟢 BASIS➡️ täglich möglich"
+    },
+    {
+      "id": "buttermilch-finn-crisp",
+      "name": "Buttermilch + Finn Crisp",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "buttermilch",
+        "finn",
+        "crisp"
+      ],
+      "notes": "🟢 BASIS➡️ täglich möglich"
+    },
+    {
+      "id": "buttermilch-neoh-bekind",
+      "name": "Buttermilch + Neoh/BeKind",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "buttermilch",
+        "neoh",
+        "bekind"
+      ],
+      "notes": "🟡 MODERAT➡️ 1x/Tag max"
+    },
+    {
+      "id": "keto-muffins-mit-schokostueckchen",
+      "name": "Keto Muffins mit Schokostückchen",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "keto",
+        "muffins",
+        "mit",
+        "schokostückchen"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche"
+    },
+    {
+      "id": "high-protein-mousse",
+      "name": "High Protein Mousse",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "high",
+        "protein",
+        "mousse"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n🟡 RISONI (alle Varianten)\nAvocado-Zitrone\nJoghurt-Pesto\nTomaten-Frischkäse\nTahini-Joghurt"
+    },
+    {
+      "id": "ricotta-zitrone",
+      "name": "Ricotta-Zitrone",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 4
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "ricotta",
+        "zitrone"
+      ],
+      "notes": "🟡 MODERAT\n➡️ Frequenz:👉 2–4x/Woche👉 nicht 2x am selben Tag\n🟡 REIS (alle Varianten)\nAvocado\nPesto"
+    },
+    {
+      "id": "joghurt-tahini",
+      "name": "Joghurt-Tahini",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 4
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "joghurt",
+        "tahini"
+      ],
+      "notes": "🟡 MODERAT\n➡️ 2–4x/Woche\n🟡 NUDELN (leichte Varianten)\nTomate-Cottage\nZitrone-Ricotta\nTomaten-Ricotta"
+    },
+    {
+      "id": "pesto-joghurt",
+      "name": "Pesto-Joghurt",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "pesto",
+        "joghurt"
+      ],
+      "notes": "🟡 MODERAT\n➡️ 2–3x/Woche\n🔴 RISOTTO (alle Varianten)\nAvocado-Pesto\nZitrone-Parmesan\nTomate-Frischkäse\nSafran"
+    },
+    {
+      "id": "hummus-falafel-rucola-paprika",
+      "name": "Hummus + Falafel + Rucola + Paprika",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "hummus",
+        "falafel",
+        "rucola",
+        "paprika"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "thunfisch-frischkaese-gurke-babyspinat",
+      "name": "Thunfisch + Frischkäse + Gurke + Babyspinat",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "thunfisch",
+        "frischkäse",
+        "gurke",
+        "babyspinat"
+      ],
+      "notes": "🟢 BASIS➡️ frei möglich"
+    },
+    {
+      "id": "raeucherlachs-cottage-salat",
+      "name": "Räucherlachs + Cottage + Salat",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "räucherlachs",
+        "cottage",
+        "salat"
+      ],
+      "notes": "🟢 BASIS➡️ frei möglich"
+    },
+    {
+      "id": "salat-walnuesse-gurke-paprika-sojasprossen",
+      "name": "Salat + Walnüsse + Gurke + Paprika + Sojasprossen",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "salat",
+        "walnüsse",
+        "gurke",
+        "paprika",
+        "sojasprossen"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "spiegelei-avocado-feta-warm",
+      "name": "Spiegelei + Avocado + Feta (warm)",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "spiegelei",
+        "avocado",
+        "feta",
+        "warm"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n🟡 🔴 GNOCCHI"
+    },
+    {
+      "id": "avocado-bowl-mit-tomaten-frischkaese-rucola",
+      "name": "Avocado-Bowl mit Tomaten, Frischkäse, Rucola",
+      "category": "red",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "avocado",
+        "bowl",
+        "mit",
+        "tomaten",
+        "frischkäse",
+        "rucola"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "lachs-gegrillt-gnocchi",
+      "name": "Lachs gegrillt + Gnocchi",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "lachs",
+        "gegrillt",
+        "gnocchi"
+      ],
+      "notes": "🟡 MODERAT➡️ 2x/Woche\n🟢 QUINOA (alle Varianten)\n🟢 BASIS\n➡️ 3–5x/Woche\nGarnelen - Sesam - Paprika - Rucola/Spinat (warm)\nSpinat - Paprika - Sesam (warm)\nThunfisch - Rucola - Gurke (warm)\nTomate - Feta - Rucola"
+    },
+    {
+      "id": "cottage-varianten",
+      "name": "Cottage Varianten",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "cottage",
+        "varianten"
+      ],
+      "notes": "🟢 BASIS➡️ frei möglich\nRucola - Gurke - Cottage\nGurke - Paprika - Rucola - Cottage\nLachs - Rucola - Gurke - Cottage"
+    },
+    {
+      "id": "feta-varianten",
+      "name": "Feta Varianten",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "feta",
+        "varianten"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\nTomate - Gurke - Feta"
+    },
+    {
+      "id": "hummus-varianten",
+      "name": "Hummus Varianten",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "hummus",
+        "varianten"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\nGurke - Paprika - Rucola - Hummus\nLachs - Rucola - Gurke - Hummus\n🟢 BULGUR\n🟢 BASIS\n➡️ 3–5x/Woche\nPaprika - Tomate - Cottage\nGurke - Hummus - Tomate"
+    },
+    {
+      "id": "apfel-granatapfel-walnuesse-rucola-gurke-cotage-zitrone",
+      "name": "Apfel + Granatapfel + Walnüsse (+Rucola, Gurke, Cotage, Zitrone)",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "apfel",
+        "granatapfel",
+        "walnüsse",
+        "rucola",
+        "gurke",
+        "cotage",
+        "zitrone"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche"
+    },
+    {
+      "id": "spinat-tomaten-cottage-bowl",
+      "name": "Spinat-Tomaten-Cottage Bowl",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "spinat",
+        "tomaten",
+        "cottage",
+        "bowl"
+      ],
+      "notes": "🟢 BASIS➡️ frei möglich\nmit Lachs/Feta🟡 MODERAT➡️ 2–3x/Woche\n🟡 WEITERE"
+    },
+    {
+      "id": "falafel-avocado-bowl-gurke-paprika-tomaten-rucola-spinat",
+      "name": "Falafel + Avocado Bowl (Gurke, Paprika, Tomaten, Rucola/Spinat)",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "falafel",
+        "avocado",
+        "bowl",
+        "gurke",
+        "paprika",
+        "tomaten",
+        "rucola",
+        "spinat"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "pizzamuffins",
+      "name": "Pizzamuffins",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "pizzamuffins"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche"
+    },
+    {
+      "id": "finn-crisp-cottage-avocado",
+      "name": "Finn Crisp + Cottage + Avocado",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "finn",
+        "crisp",
+        "cottage",
+        "avocado"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n🟢 SUPPEN"
+    },
+    {
+      "id": "leichte-suppen-zucchini-tomate-fenchel-spinat",
+      "name": "leichte Suppen (Zucchini, Tomate, Fenchel, Spinat)",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "leichte",
+        "suppen",
+        "zucchini",
+        "tomate",
+        "fenchel",
+        "spinat"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche"
+    },
+    {
+      "id": "kartoffel-erbsensuppen",
+      "name": "Kartoffel-/Erbsensuppen",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "kartoffel",
+        "erbsensuppen"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "kuerbis-kokos-suppe",
+      "name": "Kürbis-Kokos-Suppe",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "kürbis",
+        "kokos",
+        "suppe"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "avocado-garnelen-suppe",
+      "name": "Avocado-Garnelen-Suppe",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "avocado",
+        "garnelen",
+        "suppe"
+      ],
+      "notes": "🟡 MODERAT➡️ 2x/Woche"
+    },
+    {
+      "id": "einbrennsuppe",
+      "name": "Einbrennsuppe",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack"
+      ],
+      "tags": [
+        "einbrennsuppe"
+      ],
+      "notes": "🔴 CHEAT➡️ selten (1–2x/Monat)\n🟢 FRÜHSTÜCK"
+    },
+    {
+      "id": "standard-porridge-smoothie",
+      "name": "Standard (Porridge + Smoothie)",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 7
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "standard",
+        "porridge",
+        "smoothie"
+      ],
+      "notes": "🟢 BASIS➡️ täglich"
+    },
+    {
+      "id": "finn-crisp-cottage-avocado-2",
+      "name": "Finn Crisp + Cottage + Avocado",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "finn",
+        "crisp",
+        "cottage",
+        "avocado"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "avocado-ei-ruehrei-lachs",
+      "name": "Avocado-Ei / Rührei / Lachs",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "avocado",
+        "rührei",
+        "lachs"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\nRührei + Avocado\nRührei + Räucherlachs + Rucola"
+    },
+    {
+      "id": "skyr-crunch-beeren-apfel-mango-ananas-nuesse-neoh-bekind",
+      "name": "Skyr + Crunch (Beeren/Apfel/Mango/Ananas + Nüsse/Neoh/BeKind)",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "skyr",
+        "crunch",
+        "beeren",
+        "apfel",
+        "mango",
+        "ananas",
+        "nüsse",
+        "neoh",
+        "bekind"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche"
+    },
+    {
+      "id": "keto-varianten-avocado-ei-protein",
+      "name": "Keto Varianten (Avocado + Ei + Protein)",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "keto",
+        "varianten",
+        "avocado",
+        "protein"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche"
+    },
+    {
+      "id": "kornkaeseweckerl",
+      "name": "Kornkäseweckerl",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "kornkäseweckerl"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche"
+    },
+    {
+      "id": "roggenweckerl-schwarzbrot",
+      "name": "Roggenweckerl / Schwarzbrot",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "breakfast"
+      ],
+      "tags": [
+        "roggenweckerl",
+        "schwarzbrot"
+      ],
+      "notes": "🟢 ➡️ 2-3x/Woche - Cottage, magerer Aufstrich\n🟡 MODERAT➡️ 1–2x/Woche - Frischkäse\n🔴 CHEAT➡️ Käse"
+    },
+    {
+      "id": "omelette-wrap",
+      "name": "Omelette Wrap",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "omelette",
+        "wrap"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n3 Eier, 40 g Käse, 50 - 100 g Gemüse (Paprika, Spinat, Tomaten)"
+    },
+    {
+      "id": "mini-quiches",
+      "name": "Mini Quiches",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "mini",
+        "quiches"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n4 Stk: 3 Eier, 150 g Cottage, 50 g Käse, 100 g Gemüse, Salz, Pfeffer"
+    },
+    {
+      "id": "spinat-feta-ei-muffins",
+      "name": "Spinat Feta Ei Muffins",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "spinat",
+        "feta",
+        "muffins"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n3 Eier, 50 g Feta, 100 g Spinat, Salz, Pfeffer"
+    },
+    {
+      "id": "thunfisch-tortilla-bake",
+      "name": "Thunfisch Tortilla Bake",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "thunfisch",
+        "tortilla",
+        "bake"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n1 Low Carb Wrap, 1 Dose Thunfisch, 1 Ei, 40 g Käse, Gewürze"
+    },
+    {
+      "id": "tortilla-ei-huettenkaese",
+      "name": "Tortilla Ei Hüttenkäse",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "tortilla",
+        "hüttenkäse"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n1 Low Carb Wrap, 3 Eier, 150 g Cottage, Gewürze"
+    },
+    {
+      "id": "lachs-mit-quinoa",
+      "name": "Lachs mit Quinoa",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "lachs",
+        "mit",
+        "quinoa"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\nLachsfilet, Zitrone, Knoblauch, Kräuter 1 TL Öl; 60 g Quinoa, 1/2 Gurke, 100 g Tomaten, 1/2 Zwiebel; 1 TL Öl, 1 EL Zitrone, Salz, Pfeffer"
+    },
+    {
+      "id": "spinat-ei-wrap-mit-thunfisch",
+      "name": "Spinat-Ei-Wrap mit Thunfisch",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "spinat",
+        "wrap",
+        "mit",
+        "thunfisch"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n3 Eier, 80 g Thunfisch, 1 EL Frischkäse, 1/4 Avocado"
+    },
+    {
+      "id": "hafer-chia-wrap",
+      "name": "Hafer-Chia Wrap",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "hafer",
+        "chia",
+        "wrap"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n60 g Haferflocken, 1 TL Chia, 200 ml Wasser; 2 Eier, 1 EL Avocado"
+    },
+    {
+      "id": "protein-muffins-herzhaft",
+      "name": "Protein Muffins (herzhaft)",
+      "category": "green",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 5
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "protein",
+        "muffins",
+        "herzhaft"
+      ],
+      "notes": "🟢 BASIS➡️ 3–5x/Woche\n4 Eier, 100 ml Milch; 1 Paprika, 1 Spinat, Tomaten, 20-30 g Käse\n🟡 MIT ANPASSUNG SINNVOLL"
+    },
+    {
+      "id": "griechischer-risoni-salat",
+      "name": "Griechischer Risoni Salat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "griechischer",
+        "risoni",
+        "salat"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n60 g Risoni, 50 g Feta, 150 g Gemüse (Tomaten, Gurke, Paprika), 1 TL Öl, Essig, Gewürze"
+    },
+    {
+      "id": "low-carb-schuettelpfannkuchen",
+      "name": "Low Carb Schüttelpfannkuchen",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "low",
+        "carb",
+        "schüttelpfannkuchen"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n2 Eier, 150 g Magerquark, 30 g Hafermehl, 60 ml Milch, 1 TL Öl, Süße, Salz"
+    },
+    {
+      "id": "kichererbsensalat",
+      "name": "Kichererbsensalat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "kichererbsensalat"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n100 g Kichererbsen, 150 g Thunfisch/Huhn, 100 g Gemüse, 1 TL Olivenöl, Gewürze"
+    },
+    {
+      "id": "avocado-protein-wrap",
+      "name": "Avocado Protein Wrap",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "avocado",
+        "protein",
+        "wrap"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n1 Low Carb Wrap, 120 g Huhn, 50 g Avocado, Gemüse"
+    },
+    {
+      "id": "avocado-boden-pizza",
+      "name": "Avocado Boden Pizza",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "avocado",
+        "boden",
+        "pizza"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n1 Ei, 50 g Avocado, 40 g Käse, 30 g Mehl/LC Alternative, Belag nach Wahl"
+    },
+    {
+      "id": "apfel-walnuss-salat",
+      "name": "Apfel Walnuss Salat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "apfel",
+        "walnuss",
+        "salat"
+      ],
+      "notes": "🟡 MODERAT➡️ 2x/Woche\n1 Apfel, 100 g Salat, 50 g Feta, 10 g Walnüsse, 1 TL Öl"
+    },
+    {
+      "id": "honig-limetten-haehnchen",
+      "name": "Honig Limetten Hähnchen",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "honig",
+        "limetten",
+        "hähnchen"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n150 g Huhn, 60 g Reis, 50 g Avocado, 1 TL Honig, Limette, Gewürze"
+    },
+    {
+      "id": "protein-porridge-bowl",
+      "name": "Protein Porridge Bowl",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 3
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "protein",
+        "porridge",
+        "bowl"
+      ],
+      "notes": "🟡 MODERAT➡️ 2–3x/Woche\n40 g Haferflocken, 30 g Proteinpulver, 200 ml Flüssigkeit, 100 g Beeren, 10 g Schokolade"
+    },
+    {
+      "id": "erdbeer-mango-feta-salat",
+      "name": "Erdbeer Mango Feta Salat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "erdbeer",
+        "mango",
+        "feta",
+        "salat"
+      ],
+      "notes": "🟡 MODERAT➡️ 2x/Woche\n100 g Erdbeeren, 50 g Mango, 50 g Feta, 10 g Kerne, 1 TL Öl"
+    },
+    {
+      "id": "mini-lachs-spinat-quiches",
+      "name": "Mini Lachs-Spinat-Quiches",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "mini",
+        "lachs",
+        "spinat",
+        "quiches"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche\n2 LC Wraps, 150 g Lachs, 100 g Spinat, 3 Eier, 100 ml Milch, Käse 30 g"
+    },
+    {
+      "id": "kartoffel-spinat-feta-wrap",
+      "name": "Kartoffel-Spinat-Feta Wrap",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "kartoffel",
+        "spinat",
+        "feta",
+        "wrap"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n2 Kartoffeln, 80 g Käse, 200 g Spinat, 100 g Feta"
+    },
+    {
+      "id": "kartoffel-fladenbrot",
+      "name": "Kartoffel-Fladenbrot",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "kartoffel",
+        "fladenbrot"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche (Beilage)\n4 Kartoffeln, 150 g Mehl"
+    },
+    {
+      "id": "protein-piccolini",
+      "name": "Protein Piccolini",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "protein",
+        "piccolini"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche\n250 g Cottage, 2 Eier, 80 g Mozzarella, 100 g Huhn, 1/2 Zwiebel, 1 Paprika, Gewürze"
+    },
+    {
+      "id": "green-goddess-salat",
+      "name": "Green Goddess Salat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "green",
+        "goddess",
+        "salat"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche\n1/2 Kohl (od Alternative), 1 Gurke, Schnittlauch, Schalotte; 1/2 Avocado, 80 g Feta, 1 TL Öl, 1 EL Kerne; 150 g griechischer Joghurt, Zitrone, Kräuter\n🔴 KLARE CHEATS"
+    },
+    {
+      "id": "kartoffelplaetzchen",
+      "name": "Kartoffelplätzchen",
+      "category": "red",
+      "heavy": false,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "kartoffelplätzchen"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n250 g Kartoffeln, 1 Eigelb, 1 EL Stärke, 50 g Käse, Öl"
+    },
+    {
+      "id": "suesse-schupfnudeln",
+      "name": "Süße Schupfnudeln",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "süße",
+        "schupfnudeln"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n250 g Schupfnudeln, Butter, Zucker"
+    },
+    {
+      "id": "spinatspaetzle-mit-sahne",
+      "name": "Spinatspätzle mit Sahne",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "spinatspätzle",
+        "mit",
+        "sahne"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n200 g Spätzle, 100 ml Sahne, Käse"
+    },
+    {
+      "id": "knoblauch-fladenbrot",
+      "name": "Knoblauch Fladenbrot",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "knoblauch",
+        "fladenbrot"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\nMehl, Öl, Wasser"
+    },
+    {
+      "id": "kaiserschmarrn",
+      "name": "Kaiserschmarrn",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "kaiserschmarrn"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n2 Eier, 100 g Mehl, Milch, Zucker"
+    },
+    {
+      "id": "apfelpfannkuchen-klassisch",
+      "name": "Apfelpfannkuchen (klassisch)",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "apfelpfannkuchen",
+        "klassisch"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n2 Eier, 125 g Mehl, Milch, Apfel, Zucker"
+    },
+    {
+      "id": "ofenpfannkuchen",
+      "name": "Ofenpfannkuchen",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "ofenpfannkuchen"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat\n4 Eier, 150 g Mehl, Milch, Zucker"
+    },
+    {
+      "id": "blaetterteig-spinat-feta-schnecken",
+      "name": "Blätterteig-Spinat-Feta Schnecken",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "blätterteig",
+        "spinat",
+        "feta",
+        "schnecken"
+      ],
+      "notes": "🔴 CHEAT➡️ alle 1–2 Monate"
+    },
+    {
+      "id": "bruschetta-avocado",
+      "name": "Bruschetta Avocado",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "bruschetta",
+        "avocado"
+      ],
+      "notes": "🟡 MODERAT➡️ 1–2x/Woche"
+    },
+    {
+      "id": "spaghetti-spinat-frischkaese",
+      "name": "Spaghetti Spinat-Frischkäse",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "spaghetti",
+        "spinat",
+        "frischkäse"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "erdbeermousse-sahne",
+      "name": "Erdbeermousse (Sahne)",
+      "category": "red",
+      "heavy": false,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "erdbeermousse",
+        "sahne"
+      ],
+      "notes": "🔴 CHEAT➡️ 1–2x/Monat"
+    },
+    {
+      "id": "pasta-garnelen-cremig",
+      "name": "Pasta Garnelen cremig",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "pasta",
+        "garnelen",
+        "cremig"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "avocado-pesto-salat",
+      "name": "Avocado-Pesto-Salat",
+      "category": "yellow",
+      "heavy": false,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "avocado",
+        "pesto",
+        "salat"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche"
+    },
+    {
+      "id": "pasta-lachs-sahne",
+      "name": "Pasta Lachs Sahne",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "pasta",
+        "lachs",
+        "sahne"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "tagliatelle-al-salmone",
+      "name": "Tagliatelle al Salmone",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "tagliatelle",
+        "salmone"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "spinat-feta-tomaten-pasta",
+      "name": "Spinat-Feta-Tomaten-Pasta",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "spinat",
+        "feta",
+        "tomaten",
+        "pasta"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "chili-garnelen-pasta",
+      "name": "Chili-Garnelen-Pasta",
+      "category": "red",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 1
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "chili",
+        "garnelen",
+        "pasta"
+      ],
+      "notes": "🔴 CHEAT➡️ 1x/Woche"
+    },
+    {
+      "id": "avocado-tomaten-pasta",
+      "name": "Avocado-Tomaten-Pasta",
+      "category": "yellow",
+      "heavy": true,
+      "frequency": {
+        "type": "weekly",
+        "max": 2
+      },
+      "slotTypes": [
+        "lunch",
+        "dinner"
+      ],
+      "tags": [
+        "avocado",
+        "tomaten",
+        "pasta"
+      ],
+      "notes": "🟡 MODERAT (hoch)➡️ 1–2x/Woche"
+    }
+  ]
+}
