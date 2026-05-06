@@ -9,6 +9,8 @@ import { evaluateWeek } from "./rules/evaluate.js";
 import { isoWeekId, isoWeekIdFromKey, mondayOf, dateKey, addDays } from "./util/dates.js";
 import { openPicker } from "./ui/picker.js";
 import { openSlotDetail } from "./ui/slot-detail.js";
+import { renderCatalogView } from "./ui/catalog-view.js";
+import { openDishForm } from "./ui/dish-form.js";
 
 const root = document.getElementById("root");
 
@@ -101,7 +103,33 @@ const screens = {
       },
     });
   },
-  catalog:  () => h("section", {}, h("h1", {}, t.screens.catalog),  h("p", { class: "stub" }, "folgt")),
+  catalog: () => renderCatalogView({
+    catalog: state.catalog,
+    onAdd:  () => openDishForm({
+      dish: null,
+      onSave: (draft) => {
+        state.catalog.dishes.push(draft);
+        catalogStore.save(state.catalog);
+        render();
+      },
+      onDelete: () => {},
+      onClose: () => render(),
+    }),
+    onEdit: (dish) => openDishForm({
+      dish,
+      onSave: (draft) => {
+        state.catalog.dishes = state.catalog.dishes.map((d) => d.id === draft.id ? draft : d);
+        catalogStore.save(state.catalog);
+        render();
+      },
+      onDelete: (id) => {
+        state.catalog.dishes = state.catalog.dishes.filter((d) => d.id !== id);
+        catalogStore.save(state.catalog);
+        render();
+      },
+      onClose: () => render(),
+    }),
+  }),
   settings: () => h("section", {}, h("h1", {}, t.screens.settings), h("p", { class: "stub" }, "folgt")),
 };
 
