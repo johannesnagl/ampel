@@ -7,10 +7,15 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
   const dish = dishes.find((d) => d.id === slot.dishId);
   const slotCfg = settings.slotsPerDay[slotIdx];
 
-  const overlay = h("div", { class: "picker-overlay", onclick: (e) => { if (e.target === overlay) onClose(); } });
-  const sheet = h("div", { class: "picker-sheet" });
+  const overlay = h("div", { class: "picker-overlay", onclick: (e) => { if (e.target === overlay) { cleanup(); onClose(); } } });
+  const sheet = h("div", { class: "picker-sheet", role: "dialog", "aria-modal": "true" });
   overlay.append(sheet);
   document.body.append(overlay);
+
+  function onKeyDown(e) {
+    if (e.key === "Escape") { cleanup(); onClose(); }
+  }
+  document.addEventListener("keydown", onKeyDown);
 
   function rerender() {
     clear(sheet);
@@ -45,7 +50,10 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
   }
 
   function emojiFor(c) { return { green: "🟢", yellow: "🟡", red: "🔴" }[c] ?? "·"; }
-  function cleanup() { if (overlay.parentElement) document.body.removeChild(overlay); }
+  function cleanup() {
+    document.removeEventListener("keydown", onKeyDown);
+    if (overlay.parentElement) document.body.removeChild(overlay);
+  }
 
   rerender();
   return cleanup;

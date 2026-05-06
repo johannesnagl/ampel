@@ -15,10 +15,15 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
   };
   const isNew = !dish;
 
-  const overlay = h("div", { class: "picker-overlay", onclick: (e) => { if (e.target === overlay) onClose(); } });
-  const sheet = h("div", { class: "picker-sheet" });
+  const overlay = h("div", { class: "picker-overlay", onclick: (e) => { if (e.target === overlay) { cleanup(); onClose(); } } });
+  const sheet = h("div", { class: "picker-sheet", role: "dialog", "aria-modal": "true" });
   overlay.append(sheet);
   document.body.append(overlay);
+
+  function onKeyDown(e) {
+    if (e.key === "Escape") { cleanup(); onClose(); }
+  }
+  document.addEventListener("keydown", onKeyDown);
 
   function input(label, value, onInput, opts = {}) {
     return h("label", { class: "df-row" },
@@ -108,7 +113,10 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
       .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
       .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
-  function cleanup() { if (overlay.parentElement) document.body.removeChild(overlay); }
+  function cleanup() {
+    document.removeEventListener("keydown", onKeyDown);
+    if (overlay.parentElement) document.body.removeChild(overlay);
+  }
 
   rerender();
   return cleanup;

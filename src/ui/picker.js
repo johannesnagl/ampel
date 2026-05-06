@@ -10,11 +10,16 @@ import { matchDish } from "../util/search.js";
 
 export function openPicker({ slotType, slotLabel, date, week, dishes, settings, evaluateWith, onPick, onClose }) {
   const overlay = h("div", { class: "picker-overlay", onclick: (e) => {
-    if (e.target === overlay) onClose();
+    if (e.target === overlay) { cleanup(); onClose(); }
   }});
-  const sheet = h("div", { class: "picker-sheet" });
+  const sheet = h("div", { class: "picker-sheet", role: "dialog", "aria-modal": "true" });
   overlay.append(sheet);
   document.body.append(overlay);
+
+  function onKeyDown(e) {
+    if (e.key === "Escape") { cleanup(); onClose(); }
+  }
+  document.addEventListener("keydown", onKeyDown);
 
   let query = "";
   function rerender() {
@@ -82,7 +87,8 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   }
 
   function cleanup() {
-    document.body.removeChild(overlay);
+    document.removeEventListener("keydown", onKeyDown);
+    if (overlay.parentElement) document.body.removeChild(overlay);
   }
 
   rerender();

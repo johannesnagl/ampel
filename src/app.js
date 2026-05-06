@@ -68,7 +68,7 @@ function setScreen(name) {
 const screens = {
   week: () => {
     if (!state.week) return h("p", { class: "loading" }, t.app.loading);
-    const verdict = evaluateWeek(state.week, [], state.catalog.dishes, state.settings);
+    const verdict = evaluateWeek(state.week, getOtherWeeksInSameMonth(), state.catalog.dishes, state.settings);
     return renderWeekView({
       week: state.week,
       verdict,
@@ -93,7 +93,7 @@ const screens = {
           week: state.week,
           dishes: state.catalog.dishes,
           settings: state.settings,
-          evaluateWith: (w) => evaluateWeek(w, [], state.catalog.dishes, state.settings),
+          evaluateWith: (w) => evaluateWeek(w, getOtherWeeksInSameMonth(), state.catalog.dishes, state.settings),
           onPick: (dishId) => {
             state.week.days[date].slots[slotIdx].dishId = dishId;
             saveWeek();
@@ -109,6 +109,10 @@ const screens = {
     onAdd:  () => openDishForm({
       dish: null,
       onSave: (draft) => {
+        if (state.catalog.dishes.some((d) => d.id === draft.id)) {
+          alert(`ID "${draft.id}" bereits vorhanden`);
+          return;
+        }
         state.catalog.dishes.push(draft);
         catalogStore.save(state.catalog);
         render();
@@ -176,8 +180,26 @@ init().catch((e) => {
 });
 
 function saveWeek() {
-  const weekId = isoWeekIdFromKey(state.week.monday);
-  weeksStore.saveWeek(weekId, state.week);
+  try {
+    const weekId = isoWeekIdFromKey(state.week.monday);
+    weeksStore.saveWeek(weekId, state.week);
+  } catch (e) {
+    console.error(e);
+    alert(e.message);
+  }
+}
+
+function getOtherWeeksInSameMonth() {
+  if (!state.week) return [];
+  const all = weeksStore.loadAll();
+  const currentMonth = state.week.monday.slice(0, 7); // YYYY-MM
+  const result = [];
+  for (const [weekId, w] of Object.entries(all)) {
+    // Skip the active week (compare by mondayDate to be safe — weekId may differ)
+    if (w.monday === state.week.monday) continue;
+    if (w.monday.slice(0, 7) === currentMonth) result.push(w);
+  }
+  return result;
 }
 
 function openSlotDetail_proxy(date, slotIdx) {
@@ -202,7 +224,7 @@ function openSlotDetail_proxy(date, slotIdx) {
         slotType: slot.type,
         slotLabel: slotCfg.label,
         date, week: state.week, dishes: state.catalog.dishes, settings: state.settings,
-        evaluateWith: (w) => evaluateWeek(w, [], state.catalog.dishes, state.settings),
+        evaluateWith: (w) => evaluateWeek(w, getOtherWeeksInSameMonth(), state.catalog.dishes, state.settings),
         onPick: (dishId) => {
           state.week.days[date].slots[slotIdx].dishId = dishId;
           state.week.days[date].slots[slotIdx].loggedAt = null;

@@ -29,7 +29,15 @@ export function makeStorage(backend = globalThis.localStorage, schemas = {}) {
 
   function write(key, data, version) {
     const wrapped = { schemaVersion: version, data };
-    backend.setItem(key, JSON.stringify(wrapped));
+    try {
+      backend.setItem(key, JSON.stringify(wrapped));
+    } catch (e) {
+      if (e.name === "QuotaExceededError" || e.name === "NS_ERROR_DOM_QUOTA_REACHED") {
+        // Surface to caller; the app should catch this and show a toast.
+        throw new Error("Speicher voll. Bitte exportiere & lösche alte Daten.");
+      }
+      throw e;
+    }
   }
 
   function remove(key) {
