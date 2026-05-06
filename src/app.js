@@ -6,7 +6,8 @@ import { makeSettingsStore } from "./state/settings.js";
 import { makeWeeksStore } from "./state/weeks.js";
 import { makeCatalogStore } from "./state/catalog.js";
 import { evaluateWeek } from "./rules/evaluate.js";
-import { isoWeekId, mondayOf, dateKey, addDays } from "./util/dates.js";
+import { isoWeekId, isoWeekIdFromKey, mondayOf, dateKey, addDays } from "./util/dates.js";
+import { openPicker } from "./ui/picker.js";
 
 const root = document.getElementById("root");
 
@@ -75,8 +76,27 @@ const screens = {
       onPrevWeek: () => shiftWeek(-7),
       onNextWeek: () => shiftWeek(+7),
       onSlotClick: (date, slotIdx, kind) => {
-        // Picker hookup follows in Task 15
-        console.log("slot click", { date, slotIdx, kind });
+        if (kind === "filled") {
+          openSlotDetail_proxy(date, slotIdx);
+          return;
+        }
+        const slot = state.week.days[date].slots[slotIdx];
+        const slotCfg = state.settings.slotsPerDay[slotIdx];
+        openPicker({
+          slotType: slot.type,
+          slotLabel: slotCfg.label,
+          date,
+          week: state.week,
+          dishes: state.catalog.dishes,
+          settings: state.settings,
+          evaluateWith: (w) => evaluateWeek(w, [], state.catalog.dishes, state.settings),
+          onPick: (dishId) => {
+            state.week.days[date].slots[slotIdx].dishId = dishId;
+            saveWeek();
+            render();
+          },
+          onClose: () => render(),
+        });
       },
     });
   },
@@ -103,3 +123,18 @@ init().catch((e) => {
   console.error(e);
   mount(root, h("p", { class: "error" }, `Fehler beim Laden: ${e.message}`));
 });
+
+function saveWeek() {
+  const weekId = isoWeekIdFromKey(state.week.monday);
+  weeksStore.saveWeek(weekId, state.week);
+}
+
+function openSlotDetail_proxy(date, slotIdx) {
+  // Replaced by Task 16's real implementation. For now, simple confirm fallback:
+  if (confirm("Slot löschen?")) {
+    state.week.days[date].slots[slotIdx].dishId = null;
+    state.week.days[date].slots[slotIdx].loggedAt = null;
+    saveWeek();
+    render();
+  }
+}
