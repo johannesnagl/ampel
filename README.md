@@ -36,3 +36,22 @@ No environment variables. No build command.
 See `docs/superpowers/specs/2026-05-06-ampel-tracker-design.md` for the
 full design and `docs/superpowers/plans/2026-05-06-ampel-tracker.md` for
 the implementation plan.
+
+## Deploy to Cloudflare Pages
+
+```bash
+npm i -g wrangler
+wrangler pages deploy . --project-name ampel
+```
+
+Or drag the project folder into the Cloudflare Pages dashboard. No build command. No environment variables.
+
+## Add to iPhone home screen
+
+1. Open the deployed URL in Safari on iPhone
+2. Tap Share → "Zum Home-Bildschirm"
+3. Open from the home screen — runs chromeless, like a native app
+
+## Backup
+
+Settings → Daten exportieren downloads a JSON snapshot. Import the same file on another device or after a reset to restore.
