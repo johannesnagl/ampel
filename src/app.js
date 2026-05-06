@@ -11,6 +11,7 @@ import { openPicker } from "./ui/picker.js";
 import { openSlotDetail } from "./ui/slot-detail.js";
 import { renderCatalogView } from "./ui/catalog-view.js";
 import { openDishForm } from "./ui/dish-form.js";
+import { renderSettingsView } from "./ui/settings-view.js";
 
 const root = document.getElementById("root");
 
@@ -130,7 +131,28 @@ const screens = {
       onClose: () => render(),
     }),
   }),
-  settings: () => h("section", {}, h("h1", {}, t.screens.settings), h("p", { class: "stub" }, "folgt")),
+  settings: () => renderSettingsView({
+    settings: state.settings,
+    onSave: (next) => {
+      state.settings = next;
+      settingsStore.save(next);
+      render();
+    },
+    onExport: exportData,
+    onImport: importData,
+    onResetCatalog: async () => {
+      if (!confirm("Vorrat wirklich zurücksetzen? Alle eigenen Mahlzeiten gehen verloren.")) return;
+      state.catalog = await catalogStore.reset();
+      render();
+    },
+    onResetAll: () => {
+      if (!confirm("Wirklich alle Daten löschen?")) return;
+      localStorage.removeItem("ampel.weeks");
+      localStorage.removeItem("ampel.dishes");
+      localStorage.removeItem("ampel.settings");
+      location.reload();
+    },
+  }),
 };
 
 function render() {
@@ -201,4 +223,37 @@ function openSlotDetail_proxy(date, slotIdx) {
     },
     onClose: () => render(),
   });
+}
+
+function exportData() {
+  const blob = new Blob([JSON.stringify({
+    settings: state.settings,
+    catalog: state.catalog,
+    weeks: weeksStore.loadAll(),
+    exportedAt: new Date().toISOString(),
+  }, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `ampel-export-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+async function importData(file) {
+  if (!file) return;
+  const text = await file.text();
+  let data;
+  try { data = JSON.parse(text); } catch (e) { alert("Ungültige JSON-Datei"); return; }
+  if (!data.settings || !data.catalog || !data.weeks) {
+    alert("Ungültiges Export-Format");
+    return;
+  }
+  if (!confirm("Aktuelle Daten überschreiben?")) return;
+  state.settings = data.settings;
+  state.catalog = data.catalog;
+  settingsStore.save(state.settings);
+  catalogStore.save(state.catalog);
+  weeksStore.saveAll(data.weeks);
+  location.reload();
 }

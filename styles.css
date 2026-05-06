@@ -399,3 +399,12 @@ body[data-screen="settings"] .tab:nth-child(3) {
 .df-chip { display: flex; gap: 4px; align-items: center; padding: 6px 10px; border: 1px solid var(--n-200); border-radius: 16px; cursor: pointer; }
 .df-chip.on { background: var(--n-900); color: var(--n-0); border-color: var(--n-900); }
 .df-chip input { display: none; }
+
+/* ── Settings ────────────────────────────────────────────────── */
+.set { padding: 16px; }
+.set h1 { font-size: 22px; margin: 0 0 16px; }
+.set h2 { font-size: 15px; margin: 0 0 8px; color: var(--n-500); font-weight: 600; }
+.set-card { background: var(--n-50); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+.set-slot-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+.set-slot-row select, .set-slot-row input { flex: 1; padding: 8px; border: 1px solid var(--n-200); border-radius: 6px; min-height: 44px; }
+.set-slot-rm { background: none; border: 0; font-size: 16px; padding: 4px 8px; cursor: pointer; min-width: 44px; }
