@@ -13,8 +13,6 @@ export const DEFAULT_SETTINGS = {
     { type: "dinner",    label: "Abend" },
   ],
   weeklyPointBudget: 12,
-  weekStartsOn: "monday",
-  language: "de",
 };
 
 export function makeSettingsStore(backend) {
