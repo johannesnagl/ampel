@@ -2,7 +2,10 @@
 import { makeStorage } from "./storage.js";
 
 export const CATALOG_KEY = "ampel.dishes";
-export const CATALOG_VERSION = 1;
+// Bump when the seed catalog (data/dishes.xlsx → data/dishes.json) is
+// replaced. Bumping invalidates the user's localStorage cache so the new
+// catalog is fetched on next load.
+export const CATALOG_VERSION = 2;
 
 export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
   const storage = makeStorage(backend, {
