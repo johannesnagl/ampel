@@ -417,6 +417,18 @@ body[data-screen="settings"] .tab:nth-child(3) {
 .df-chip { display: flex; gap: 4px; align-items: center; padding: 6px 10px; border: 1px solid var(--n-200); border-radius: 16px; cursor: pointer; }
 .df-chip.on { background: var(--n-900); color: var(--n-0); border-color: var(--n-900); }
 .df-chip input { display: none; }
+.df-details { margin-top: 4px; }
+.df-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 6px 0;
+  font-size: 13px;
+  color: var(--n-500);
+  user-select: none;
+}
+.df-summary::-webkit-details-marker { display: none; }
+.df-summary::before { content: "▸ "; display: inline-block; transition: transform 150ms; }
+.df-details[open] .df-summary::before { content: "▾ "; }
 
 /* ── Settings ────────────────────────────────────────────────── */
 .set { padding: 16px; }

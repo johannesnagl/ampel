@@ -84,11 +84,14 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
         draft.category !== "green"
           ? checkbox("schwer", draft.heavy, (v) => { draft.heavy = v; })
           : null,
-        select("Frequenz-Typ", draft.frequency.type, sortByLabel([
-          { value: "weekly",  label: "pro Woche" },
-          { value: "monthly", label: "pro Monat" },
-        ]), (v) => { draft.frequency.type = v; }),
-        input("Frequenz max", draft.frequency.max, (v) => { draft.frequency.max = parseInt(v, 10) || 1; }, { type: "number", min: 1, max: 31 }),
+        h("details", { class: "df-details" },
+          h("summary", { class: "df-summary" }, "Erweitert"),
+          select("Frequenz-Typ", draft.frequency.type, sortByLabel([
+            { value: "weekly",  label: "pro Woche" },
+            { value: "monthly", label: "pro Monat" },
+          ]), (v) => { draft.frequency.type = v; }),
+          input("Frequenz max", draft.frequency.max, (v) => { draft.frequency.max = parseInt(v, 10) || 1; }, { type: "number", min: 1, max: 31 }),
+        ),
         multiCheck("Slots", sortByLabel([
           { value: "breakfast", label: "Frühstück" },
           { value: "snack",     label: "Snack" },
