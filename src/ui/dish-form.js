@@ -73,25 +73,25 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
       h("div", { class: "picker-title" }, isNew ? "Neue Mahlzeit" : "Mahlzeit bearbeiten"),
       h("div", { class: "df" },
         input("Name", draft.name, (v) => { draft.name = v; if (isNew) draft.id = kebab(v); }),
-        select("Kategorie", draft.category, [
+        select("Kategorie", draft.category, sortByLabel([
           { value: "green",  label: "🟢 Basis" },
           { value: "yellow", label: "🟡 Moderat" },
           { value: "red",    label: "🔴 Cheat" },
-        ], (v) => { draft.category = v; rerender(); }),
+        ]), (v) => { draft.category = v; rerender(); }),
         draft.category !== "green"
           ? checkbox("schwer", draft.heavy, (v) => { draft.heavy = v; })
           : null,
-        select("Frequenz-Typ", draft.frequency.type, [
+        select("Frequenz-Typ", draft.frequency.type, sortByLabel([
           { value: "weekly",  label: "pro Woche" },
           { value: "monthly", label: "pro Monat" },
-        ], (v) => { draft.frequency.type = v; }),
+        ]), (v) => { draft.frequency.type = v; }),
         input("Frequenz max", draft.frequency.max, (v) => { draft.frequency.max = parseInt(v, 10) || 1; }, { type: "number", min: 1, max: 31 }),
-        multiCheck("Slots", [
+        multiCheck("Slots", sortByLabel([
           { value: "breakfast", label: "Frühstück" },
           { value: "snack",     label: "Snack" },
           { value: "lunch",     label: "Mittag" },
           { value: "dinner",    label: "Abend" },
-        ], draft.slotTypes, (v) => {
+        ]), draft.slotTypes, (v) => {
           if (draft.slotTypes.includes(v)) draft.slotTypes = draft.slotTypes.filter((x) => x !== v);
           else draft.slotTypes.push(v);
         }),
@@ -112,6 +112,12 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
     return String(s).toLowerCase()
       .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
       .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+  function sortByLabel(opts) {
+    // Strip leading non-word chars (emoji + space) before comparing so
+    // "🟢 Basis" sorts as "Basis", not by the emoji codepoint.
+    const textOf = (s) => s.replace(/^[^\w]+/u, "").trim();
+    return [...opts].sort((a, b) => textOf(a.label).localeCompare(textOf(b.label), "de"));
   }
   function cleanup() {
     document.removeEventListener("keydown", onKeyDown);

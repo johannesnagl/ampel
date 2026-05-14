@@ -16,14 +16,21 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
   }
 
   function slotsEditor() {
+    // Slot type options, sorted alphabetically by label (German collation).
+    const SLOT_TYPE_OPTIONS = [
+      { value: "breakfast", label: "Frühstück" },
+      { value: "snack",     label: "Snack" },
+      { value: "lunch",     label: "Mittag" },
+      { value: "dinner",    label: "Abend" },
+    ].sort((a, b) => a.label.localeCompare(b.label, "de"));
+
     return h("section", { class: "set-card" },
       h("h2", {}, "Slots pro Tag"),
       ...draft.slotsPerDay.map((s, i) => h("div", { class: "set-slot-row" },
         h("select", { onchange: (e) => { draft.slotsPerDay[i].type = e.target.value; save(); rerender(); } },
-          h("option", { value: "breakfast", selected: s.type === "breakfast" ? "selected" : null }, "Frühstück"),
-          h("option", { value: "snack",     selected: s.type === "snack"     ? "selected" : null }, "Snack"),
-          h("option", { value: "lunch",     selected: s.type === "lunch"     ? "selected" : null }, "Mittag"),
-          h("option", { value: "dinner",    selected: s.type === "dinner"    ? "selected" : null }, "Abend"),
+          ...SLOT_TYPE_OPTIONS.map((opt) =>
+            h("option", { value: opt.value, selected: s.type === opt.value ? "selected" : null }, opt.label),
+          ),
         ),
         h("input", { value: s.label, oninput: (e) => { draft.slotsPerDay[i].label = e.target.value; save(); } }),
         h("button", { class: "set-slot-rm", onclick: () => { draft.slotsPerDay.splice(i, 1); save(); rerender(); } }, "✕"),

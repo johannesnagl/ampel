@@ -44,7 +44,8 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   function candidates(q) {
     return dishes
       .filter((d) => d.slotTypes.includes(slotType))
-      .filter((d) => matchDish(d, q));
+      .filter((d) => matchDish(d, q))
+      .sort((a, b) => a.name.localeCompare(b.name, "de"));
   }
 
   function row(dish) {

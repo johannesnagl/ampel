@@ -43,7 +43,8 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
     return catalog.dishes
       .filter((d) => cat === "all" || d.category === cat)
       .filter((d) => !heavyOnly || d.heavy)
-      .filter((d) => matchDish(d, q));
+      .filter((d) => matchDish(d, q))
+      .sort((a, b) => a.name.localeCompare(b.name, "de"));
   }
 
   function row(d) {
