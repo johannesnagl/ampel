@@ -103,7 +103,12 @@ function daySlots(day, date, verdict, dishById, settings, onSlotClick, onSlotLon
       h("div", { class: "wk-day-points" }, `${dv?.points ?? 0} Pkt · ${dv?.label ?? "leichter Tag"}`),
     ),
     ...day.slots.map((slot, i) => slotRow(slot, i, date, dv, dishById, settings, onSlotClick, onSlotLongPress)),
-    dv?.warnings?.length ? h("div", { class: "wk-day-warnings" }, t.warnings_n(dv.warnings.length)) : null,
+    dv?.warnings?.length ? h("details", { class: "wk-day-warnings-details" },
+      h("summary", { class: "wk-day-warnings" }, t.warnings_n(dv.warnings.length)),
+      h("ul", { class: "wk-day-warnings-list" },
+        ...dv.warnings.map((w) => h("li", {}, w.message)),
+      ),
+    ) : null,
   );
 }
 
