@@ -96,6 +96,12 @@ const screens = {
       onDayClick: setActiveDate,
       onPrevWeek: () => shiftWeek(-7),
       onNextWeek: () => shiftWeek(+7),
+      onJumpToToday: () => {
+        const today = dateKey(new Date());
+        loadWeek(today);
+        state.activeDate = today;
+        render();
+      },
       onSlotLongPress: (date, slotIdx) => {
         const slot = state.week.days[date].slots[slotIdx];
         if (!slot.dishId) return;

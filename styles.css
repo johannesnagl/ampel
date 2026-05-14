@@ -108,6 +108,17 @@ body[data-screen="settings"] .tab:nth-child(3) {
   color: var(--n-900);
 }
 .wk-title { font-weight: 600; font-size: 17px; }
+.wk-today-btn {
+  background: var(--n-900);
+  color: var(--n-0);
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  min-height: 36px;
+}
 
 .wk-summary {
   position: sticky;
