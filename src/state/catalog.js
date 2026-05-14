@@ -23,11 +23,34 @@ export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
     async load() {
       const cached = storage.read(CATALOG_KEY);
       if (cached) {
-        // Merge in any new seed dishes that aren't yet in the cached catalog
+        // Try to bring in any new seed dishes the user hasn't seen yet.
+        //
+        // BUT: if the cache and seed share almost no IDs, the seed has been
+        // wholesale replaced (e.g. data/dishes.json regenerated from a
+        // different source). Additively merging would pollute the cache with
+        // a mix of old + new dishes that aren't related — the picker and
+        // search would surface stale ghosts. Don't auto-merge in that case;
+        // log a warning and leave the cache alone. The user can opt in to a
+        // fresh seed via Settings → "Vorrat zurücksetzen".
         try {
           const seed = await fetchSeed();
-          const cachedIds = new Set(cached.dishes.map((d) => d.id));
-          const newOnes = seed.dishes.filter((d) => !cachedIds.has(d.id));
+          const seedIds = new Set(seed.dishes.map((d) => d.id));
+          const cachedIds = cached.dishes.map((d) => d.id);
+          const overlap = cachedIds.filter((id) => seedIds.has(id)).length;
+          const ratio = cachedIds.length > 0 ? overlap / cachedIds.length : 1;
+
+          if (ratio < 0.3 && cachedIds.length > 0) {
+            console.warn(
+              `[ampel] Cached catalog has diverged from seed (${overlap}/${cachedIds.length} IDs match, ${Math.round(ratio * 100)}%). ` +
+              `Skipping auto-merge to avoid pollution. ` +
+              `Use Settings → "Vorrat zurücksetzen" to refresh from seed.`,
+            );
+            return cached;
+          }
+
+          // Healthy overlap — pull in any new seed dishes
+          const cachedIdSet = new Set(cachedIds);
+          const newOnes = seed.dishes.filter((d) => !cachedIdSet.has(d.id));
           if (newOnes.length > 0) {
             cached.dishes.push(...newOnes);
             storage.write(CATALOG_KEY, cached, CATALOG_VERSION);
