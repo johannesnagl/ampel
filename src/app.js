@@ -308,6 +308,22 @@ async function importData(file) {
     alert("Ungültiges Export-Format");
     return;
   }
+  if (!Array.isArray(data.settings.slotsPerDay) || data.settings.slotsPerDay.length === 0) {
+    alert("Ungültige Slot-Konfiguration");
+    return;
+  }
+  if (typeof data.settings.weeklyPointBudget !== "number" || data.settings.weeklyPointBudget < 1) {
+    alert("Ungültiges Wochenbudget");
+    return;
+  }
+  if (!Array.isArray(data.catalog.dishes)) {
+    alert("Ungültiger Vorrat");
+    return;
+  }
+  if (typeof data.weeks !== "object" || data.weeks === null) {
+    alert("Ungültige Wochen-Daten");
+    return;
+  }
   if (!confirm("Aktuelle Daten überschreiben?")) return;
   state.settings = data.settings;
   state.catalog = data.catalog;

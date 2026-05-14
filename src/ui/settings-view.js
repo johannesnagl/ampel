@@ -12,6 +12,7 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
       slotsEditor(),
       budgetEditor(),
       ioSection(),
+      dangerSection(),
     );
   }
 
@@ -32,7 +33,7 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
             h("option", { value: opt.value, selected: s.type === opt.value ? "selected" : null }, opt.label),
           ),
         ),
-        h("input", { value: s.label, oninput: (e) => { draft.slotsPerDay[i].label = e.target.value; save(); } }),
+        h("input", { value: s.label, onblur: (e) => { draft.slotsPerDay[i].label = e.target.value; save(); } }),
         h("button", { class: "set-slot-rm", onclick: () => { draft.slotsPerDay.splice(i, 1); save(); rerender(); } }, "✕"),
       )),
       h("button", { class: "slot-action", onclick: () => {
@@ -57,6 +58,12 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
         t.settings.import,
         h("input", { type: "file", accept: ".json", style: { display: "none" }, onchange: (e) => onImport(e.target.files[0]) }),
       ),
+    );
+  }
+
+  function dangerSection() {
+    return h("section", { class: "set-card set-danger" },
+      h("h2", {}, "Gefahrenzone"),
       h("button", { class: "slot-action danger", onclick: onResetCatalog }, t.settings.resetCatalog),
       h("button", { class: "slot-action danger", onclick: onResetAll }, t.settings.resetAll),
     );
