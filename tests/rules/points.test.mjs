@@ -46,14 +46,14 @@ test("status flips to over above budget", () => {
 test("perDay points + label", () => {
   const week = buildWeek({
     "2026-05-04": ["porridge", "skyr", "couscous", null, null], // 1 → normal
-    "2026-05-05": ["porridge", "skyr", "pizza", null, null],     // 3 → cheat
+    "2026-05-05": ["porridge", "skyr", "pizza", null, null],     // 3 → Genuss-Tag
     "2026-05-06": ["porridge", null, null, null, null],          // 0 → light
   });
   const r = calcPoints(week, DISHES, 12);
   assert.equal(r.perDay["2026-05-04"].points, 1);
   assert.equal(r.perDay["2026-05-04"].label, "normaler Tag");
   assert.equal(r.perDay["2026-05-05"].points, 3);
-  assert.equal(r.perDay["2026-05-05"].label, "Cheat-Tag");
+  assert.equal(r.perDay["2026-05-05"].label, "Genuss-Tag");
   assert.equal(r.perDay["2026-05-06"].points, 0);
   assert.equal(r.perDay["2026-05-06"].label, "leichter Tag");
 });

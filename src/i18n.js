@@ -11,7 +11,7 @@ export const t = {
     snack2:    "Snack 2",
     snack3:    "Snack 3",
   },
-  dayLabel: { light: "leichter Tag", normal: "normaler Tag", cheat: "Cheat-Tag" },
+  dayLabel: { light: "leichter Tag", normal: "normaler Tag", cheat: "Genuss-Tag" },
   add: "+ planen",
   empty: "Noch keine Mahlzeit",
   heavy: "schwer",

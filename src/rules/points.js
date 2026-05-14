@@ -1,7 +1,7 @@
 // src/rules/points.js
 //
 // Points: green=0, yellow=1, red=3.
-// Per-day label: 0–1 = leichter Tag, 1–2 = normaler Tag, 3+ = Cheat-Tag.
+// Per-day label: 0–1 = leichter Tag, 1–2 = normaler Tag, 3+ = Genuss-Tag.
 
 const POINTS = { green: 0, yellow: 1, red: 3 };
 
@@ -32,6 +32,6 @@ export function calcPoints(week, dishes, budget) {
 
 function dayLabel(points) {
   if (points <= 1) return points === 0 ? "leichter Tag" : "normaler Tag";
-  if (points >= 3) return "Cheat-Tag";
+  if (points >= 3) return "Genuss-Tag";
   return "normaler Tag";
 }

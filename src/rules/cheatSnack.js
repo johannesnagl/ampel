@@ -26,7 +26,7 @@ export function checkCheatSnackPolicy(day, date, dishes, slotsPerDay) {
         severity: "warn",
         ruleId: "no-cheat-plus-extra-snack",
         where: { date, slotIndex: i },
-        message: "Cheat-Tag: Snacks sollten grün sein",
+        message: "Genuss-Tag: Snacks sollten grün sein",
       });
     }
   }
