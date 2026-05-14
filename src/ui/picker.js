@@ -45,7 +45,7 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
     return dishes
       .filter((d) => d.slotTypes.includes(slotType))
       .filter((d) => matchDish(d, q))
-      .sort((a, b) => a.name.localeCompare(b.name, "de"));
+      .sort(sortByCategoryThenName);
   }
 
   function row(dish) {
@@ -85,6 +85,14 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
 
   function icon(sev) {
     return sev === "warn" ? "⚠" : sev === "block" ? "🚫" : "✓";
+  }
+
+  // Primary sort: category (green → yellow → red). Secondary: name A→Z (de).
+  function sortByCategoryThenName(a, b) {
+    const order = { green: 0, yellow: 1, red: 2 };
+    const co = (order[a.category] ?? 99) - (order[b.category] ?? 99);
+    if (co !== 0) return co;
+    return a.name.localeCompare(b.name, "de");
   }
 
   function cleanup() {

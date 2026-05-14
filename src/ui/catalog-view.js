@@ -40,11 +40,17 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
   }
 
   function filtered() {
+    const order = { green: 0, yellow: 1, red: 2 };
     return catalog.dishes
       .filter((d) => cat === "all" || d.category === cat)
       .filter((d) => !heavyOnly || d.heavy)
       .filter((d) => matchDish(d, q))
-      .sort((a, b) => a.name.localeCompare(b.name, "de"));
+      .sort((a, b) => {
+        // Primary: category (green → yellow → red). Secondary: name A→Z.
+        const co = (order[a.category] ?? 99) - (order[b.category] ?? 99);
+        if (co !== 0) return co;
+        return a.name.localeCompare(b.name, "de");
+      });
   }
 
   function row(d) {
