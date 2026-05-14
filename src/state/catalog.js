@@ -52,8 +52,29 @@ export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
   };
 }
 
+const INLINE_FALLBACK = {
+  version: 0,
+  dishes: [
+    { id: "porridge-smoothie",  name: "Porridge + Smoothie",   category: "green",  heavy: false, frequency: { type: "weekly", max: 7 }, slotTypes: ["breakfast"],                       tags: ["frühstück","smoothie","haferflocken"], notes: "Offline-Standard" },
+    { id: "skyr-obst",          name: "Skyr + Obst",            category: "green",  heavy: false, frequency: { type: "weekly", max: 7 }, slotTypes: ["breakfast","snack","lunch","dinner"], tags: ["skyr","obst"],                        notes: "Offline-Standard" },
+    { id: "couscous-cottage",   name: "Couscous + Cottage",     category: "green",  heavy: false, frequency: { type: "weekly", max: 5 }, slotTypes: ["lunch","dinner"],                  tags: ["couscous","cottage"],                  notes: "Offline-Standard" },
+    { id: "quinoa-thunfisch",   name: "Quinoa + Thunfisch",     category: "green",  heavy: false, frequency: { type: "weekly", max: 5 }, slotTypes: ["lunch","dinner"],                  tags: ["quinoa","thunfisch"],                  notes: "Offline-Standard" },
+    { id: "bulgur-cottage",     name: "Bulgur + Cottage",       category: "green",  heavy: false, frequency: { type: "weekly", max: 5 }, slotTypes: ["lunch","dinner"],                  tags: ["bulgur","cottage"],                    notes: "Offline-Standard" },
+    { id: "rührei-avocado",     name: "Rührei + Avocado",       category: "green",  heavy: false, frequency: { type: "weekly", max: 5 }, slotTypes: ["breakfast","lunch","dinner"],       tags: ["rührei","avocado","ei"],               notes: "Offline-Standard" },
+    { id: "couscous-feta",      name: "Couscoussalat Feta",     category: "yellow", heavy: false, frequency: { type: "weekly", max: 3 }, slotTypes: ["lunch","dinner"],                  tags: ["couscous","feta"],                     notes: "Offline-Standard" },
+    { id: "falafel-bowl",       name: "Falafel Bowl",           category: "yellow", heavy: true,  frequency: { type: "weekly", max: 3 }, slotTypes: ["lunch","dinner"],                  tags: ["falafel","hummus"],                    notes: "Offline-Standard" },
+    { id: "pizza",              name: "Pizza",                  category: "red",    heavy: true,  frequency: { type: "weekly", max: 1 }, slotTypes: ["lunch","dinner"],                  tags: ["pizza"],                               notes: "Offline-Standard" },
+    { id: "risotto",            name: "Risotto",                category: "red",    heavy: true,  frequency: { type: "weekly", max: 1 }, slotTypes: ["lunch","dinner"],                  tags: ["risotto"],                             notes: "Offline-Standard" },
+  ],
+};
+
 async function defaultFetchSeed() {
-  const res = await fetch("data/dishes.json");
-  if (!res.ok) throw new Error(`Failed to fetch seed catalog: ${res.status}`);
-  return await res.json();
+  try {
+    const res = await fetch("data/dishes.json");
+    if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
+    return await res.json();
+  } catch (e) {
+    console.warn("Seed catalog fetch failed — using inline fallback (10 dishes). Reload online to get the full catalog.", e);
+    return INLINE_FALLBACK;
+  }
 }
