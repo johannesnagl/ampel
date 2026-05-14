@@ -28,6 +28,31 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
   }
   document.addEventListener("keydown", onKeyDown);
 
+  // Swipe-down-to-dismiss from the top 80px of the sheet
+  let dragStartY = null;
+  sheet.addEventListener("pointerdown", (e) => {
+    const rect = sheet.getBoundingClientRect();
+    if (e.clientY - rect.top > 80) return;
+    dragStartY = e.clientY;
+    sheet.setPointerCapture(e.pointerId);
+  });
+  sheet.addEventListener("pointermove", (e) => {
+    if (dragStartY == null) return;
+    const dy = e.clientY - dragStartY;
+    if (dy > 0) sheet.style.transform = `translateY(${dy}px)`;
+  });
+  sheet.addEventListener("pointerup", (e) => {
+    if (dragStartY == null) return;
+    const dy = e.clientY - dragStartY;
+    dragStartY = null;
+    if (dy > 100) { cleanup(); onClose(); }
+    else { sheet.style.transform = ""; }
+  });
+  sheet.addEventListener("pointercancel", () => {
+    dragStartY = null;
+    sheet.style.transform = "";
+  });
+
   function input(label, value, onInput, opts = {}) {
     return h("label", { class: "df-row" },
       h("span", { class: "df-label" }, label),
