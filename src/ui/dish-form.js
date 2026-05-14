@@ -76,11 +76,11 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
       h("div", { class: "picker-title", id: titleId }, isNew ? "Neue Mahlzeit" : "Mahlzeit bearbeiten"),
       h("div", { class: "df" },
         input("Name", draft.name, (v) => { draft.name = v; if (isNew) draft.id = kebab(v); }),
-        select("Kategorie", draft.category, sortByLabel([
+        select("Kategorie", draft.category, [
           { value: "green",  label: "🟢 Basis" },
           { value: "yellow", label: "🟡 Moderat" },
           { value: "red",    label: "🔴 Cheat" },
-        ]), (v) => { draft.category = v; rerender(); }),
+        ], (v) => { draft.category = v; rerender(); }),
         draft.category !== "green"
           ? checkbox("schwer", draft.heavy, (v) => { draft.heavy = v; })
           : null,

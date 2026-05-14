@@ -11,6 +11,9 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
   const root = h("section", { class: "cat" });
 
   function rerender() {
+    // If category filter is green, force-disable heavyOnly (no green dish can be heavy)
+    if (cat === "green") heavyOnly = false;
+
     root.replaceChildren(
       h("div", { class: "cat-header" },
         h("h1", {}, t.catalog.title),
@@ -20,6 +23,7 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
         type: "search",
         class: "picker-search",
         placeholder: t.search,
+        value: q,
         oninput: (e) => { q = e.target.value; rerender(); },
       }),
       h("div", { class: "cat-filters" },
@@ -27,7 +31,9 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
         chip("green",  "🟢",      () => { cat = "green"; rerender(); }),
         chip("yellow", "🟡",      () => { cat = "yellow"; rerender(); }),
         chip("red",    "🔴",      () => { cat = "red"; rerender(); }),
-        h("button", { class: `cat-chip ${heavyOnly ? "on" : ""}`, onclick: () => { heavyOnly = !heavyOnly; rerender(); } }, t.heavy),
+        cat !== "green"
+          ? h("button", { class: `cat-chip ${heavyOnly ? "on" : ""}`, onclick: () => { heavyOnly = !heavyOnly; rerender(); } }, t.heavy)
+          : null,
       ),
       h("div", { class: "cat-list" },
         ...filtered().map((d) => row(d)),
