@@ -1,9 +1,9 @@
 // src/ui/week-view.js
 import { h } from "./render.js";
 import { t } from "../i18n.js";
-import { isoWeekIdFromKey, fmtDayShort, addDays, mondayOf, dateKey } from "../util/dates.js";
+import { isoWeekIdFromKey, fmtDayShort, fmtDateGerman, addDays, mondayOf, dateKey } from "../util/dates.js";
 
-export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick, onSlotLongPress, onJumpToToday, onPrevDay, onNextDay }) {
+export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick, onSlotLongPress, onJumpToToday, onPrevDay, onNextDay, pulseFirstTime }) {
   const monday = new Date(`${week.monday}T12:00:00Z`);
   const sunday = addDays(monday, 6);
   const weekId = isoWeekIdFromKey(week.monday);
@@ -17,7 +17,7 @@ export function renderWeekView({ week, verdict, settings, dishes, today, activeD
 
   return h("div", { class: "wk" },
     header(weekNumber, monday, sunday, isCurrentWeek, onPrevWeek, onNextWeek, onJumpToToday),
-    summary(verdict, week, dishById, today, activeDateKey, onDayClick),
+    summary(verdict, week, dishById, today, activeDateKey, onDayClick, pulseFirstTime),
     daySlots(activeDay, activeDateKey, verdict, dishById, settings, onSlotClick, onSlotLongPress, onPrevDay, onNextDay),
   );
 }
@@ -26,20 +26,20 @@ function header(weekNumber, monday, sunday, isCurrentWeek, onPrev, onNext, onJum
   return h("div", { class: "wk-header" },
     h("button", { class: "wk-nav", "aria-label": "Vorherige Woche", onclick: onPrev }, "◀"),
     h("div", { class: "wk-title" },
-      `${t.week_n(weekNumber)} · ${monday.getUTCDate()}.${monday.getUTCMonth() + 1}.–${sunday.getUTCDate()}.${sunday.getUTCMonth() + 1}.`,
+      `${t.week_n(weekNumber)} · ${fmtDateGerman(monday)}–${fmtDateGerman(sunday)}`,
     ),
     !isCurrentWeek ? h("button", { class: "wk-today-btn", onclick: onJumpToToday }, "Heute") : null,
     h("button", { class: "wk-nav", "aria-label": "Nächste Woche", onclick: onNext }, "▶"),
   );
 }
 
-function summary(verdict, week, dishById, today, activeDate, onDayClick) {
+function summary(verdict, week, dishById, today, activeDate, onDayClick, pulseFirstTime) {
   const { used, budget, status } = verdict.weeklyPoints;
   const pct = Math.min(100, Math.round((used / budget) * 100));
   const dist = verdict.weeklyDistribution;
 
   return h("div", { class: "wk-summary" },
-    h("div", { class: `wk-bar ${status === "over" ? "over" : status === "warn" ? "warn" : ""}` },
+    h("div", { class: `wk-bar ${status === "over" ? "over" : status === "warn" ? "warn" : ""} ${status === "over" && !pulseFirstTime ? "no-pulse" : ""}`.trim() },
       h("div", { class: "wk-bar-fill", style: { width: `${pct}%` } }),
     ),
     h("div", { class: "wk-points" },
@@ -72,7 +72,7 @@ function miniDay(date, week, dishById, today, activeDate, onDayClick) {
   return h("button", {
       class: `wk-mini-day ${isActive ? "active" : ""} ${isToday ? "today" : ""} ${isPast ? "past" : ""}`,
       onclick: () => onDayClick(date),
-      "aria-label": `${fmtDayShort(dayDate)} ${dayDate.getUTCDate()}.${dayDate.getUTCMonth() + 1}.`,
+      "aria-label": `${fmtDayShort(dayDate)} ${fmtDateGerman(dayDate)}`,
     },
     h("div", { class: "name" }, fmtDayShort(dayDate)),
     h("div", { class: "wk-mini-dots" },
@@ -120,7 +120,7 @@ function daySlots(day, date, verdict, dishById, settings, onSlotClick, onSlotLon
   },
     h("div", { class: "wk-day-header" },
       h("div", {},
-        `${fmtDayShort(dayDate)} · ${dayDate.getUTCDate()}.${dayDate.getUTCMonth() + 1}.`,
+        `${fmtDayShort(dayDate)} · ${fmtDateGerman(dayDate)}`,
         dv?.bestCombo ? h("span", { class: "wk-day-combo", title: dv.bestCombo }, "  ✨") : null,
       ),
       h("div", { class: "wk-day-points" }, `${dv?.points ?? 0} Pkt · ${dv?.label ?? "leichter Tag"}`),

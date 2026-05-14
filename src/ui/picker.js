@@ -7,7 +7,7 @@
 import { h, mount, clear } from "./render.js";
 import { t } from "../i18n.js";
 import { matchDish } from "../util/search.js";
-import { fmtDayShort } from "../util/dates.js";
+import { fmtDayShort, fmtDateGerman } from "../util/dates.js";
 
 export function openPicker({ slotType, slotLabel, date, week, dishes, settings, evaluateWith, onPick, onClose }) {
   const overlay = h("div", { class: "picker-overlay", onclick: (e) => {
@@ -26,7 +26,7 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   sheet.setAttribute("aria-labelledby", titleId);
 
   const _dayDate = new Date(`${date}T12:00:00Z`);
-  const _dateLabel = `${fmtDayShort(_dayDate)}, ${_dayDate.getUTCDate()}.${_dayDate.getUTCMonth() + 1}.`;
+  const _dateLabel = `${fmtDayShort(_dayDate)}, ${fmtDateGerman(_dayDate)}`;
 
   let query = "";
   function rerender() {
@@ -92,6 +92,8 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   }
 
   function icon(sev) {
+    // `block` severity is reserved — currently no rule emits it, but the
+    // precedence handling stays so future rules can opt-in.
     return sev === "warn" ? "⚠" : sev === "block" ? "🚫" : "✓";
   }
 

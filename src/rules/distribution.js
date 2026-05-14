@@ -2,6 +2,11 @@
 //
 // Counts 🟢/🟡/🔴/empty across a week and compares to target ranges from
 // the spec (35-meal config).
+//
+// Note: `inRange` only enforces upper bounds on yellow and red and the
+// lower bound implied by yellow's target range. More green than the
+// target maximum is always considered fine — the user can always have
+// MORE basis meals. This is an intentional asymmetry.
 
 const TARGET_35 = { green: [22, 26], yellow: [7, 10], red: [1, 2] };
 const TARGET_42 = { green: [28, 32], yellow: [8, 12], red: [1, 2] };

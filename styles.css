@@ -456,6 +456,7 @@ body[data-screen="settings"] .tab:nth-child(3) {
   50%      { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.3); }
 }
 .wk-bar.over { animation: pulse-once 600ms ease-out 1; }
+.wk-bar.over.no-pulse { animation: none; }
 
 /* Slot fade-in */
 @keyframes slot-fade-in {

@@ -15,6 +15,8 @@ import { renderSettingsView } from "./ui/settings-view.js";
 
 const root = document.getElementById("root");
 
+let pulseShownForWeek = null; // weekId where we already fired the over-budget pulse
+
 const settingsStore = makeSettingsStore(localStorage);
 const weeksStore    = makeWeeksStore(localStorage);
 const catalogStore  = makeCatalogStore(localStorage);
@@ -86,6 +88,9 @@ const screens = {
   week: () => {
     if (!state.week) return h("p", { class: "loading" }, t.app.loading);
     const verdict = evaluateWeek(state.week, getOtherWeeksInSameMonth(), state.catalog.dishes, state.settings);
+    const currentWeekId = isoWeekIdFromKey(state.week.monday);
+    const shouldPulse = verdict.weeklyPoints.status === "over" && pulseShownForWeek !== currentWeekId;
+    if (shouldPulse) pulseShownForWeek = currentWeekId;
     return renderWeekView({
       week: state.week,
       verdict,
@@ -102,6 +107,7 @@ const screens = {
         state.activeDate = today;
         render();
       },
+      pulseFirstTime: shouldPulse,
       onPrevDay: () => {
         const dates = Object.keys(state.week.days).sort();
         const idx = dates.indexOf(state.activeDate);

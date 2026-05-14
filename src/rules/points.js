@@ -5,7 +5,7 @@
 
 const POINTS = { green: 0, yellow: 1, red: 3 };
 
-export function pointsFor(dish) {
+function pointsFor(dish) {
   return POINTS[dish?.category] ?? 0;
 }
 

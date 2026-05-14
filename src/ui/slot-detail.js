@@ -1,7 +1,7 @@
 // src/ui/slot-detail.js
 import { h, clear } from "./render.js";
 import { t } from "../i18n.js";
-import { fmtDayShort } from "../util/dates.js";
+import { fmtDayShort, fmtDateGerman } from "../util/dates.js";
 
 export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, onUnlog, onSwap, onDelete, onNoteChange, onClose }) {
   const slot = week.days[date].slots[slotIdx];
@@ -17,7 +17,7 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
   sheet.setAttribute("aria-labelledby", titleId);
 
   const _dayDate = new Date(`${date}T12:00:00Z`);
-  const _dateLabel = `${fmtDayShort(_dayDate)}, ${_dayDate.getUTCDate()}.${_dayDate.getUTCMonth() + 1}.`;
+  const _dateLabel = `${fmtDayShort(_dayDate)}, ${fmtDateGerman(_dayDate)}`;
 
   function onKeyDown(e) {
     if (e.key === "Escape") { cleanup(); onClose(); }

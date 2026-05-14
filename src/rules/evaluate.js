@@ -36,6 +36,8 @@ export function evaluateWeek(week, otherWeeks, dishes, settings) {
     const combo = checkBestCombo(day, date, dishes, settings.slotsPerDay);
 
     // Build per-slot verdict
+    // `block` severity is reserved — currently no rule emits it, but the
+    // precedence handling stays so future rules can opt-in.
     const verdictBySlot = new Map();
     for (const w of dayWarnings) {
       const idx = w.where.slotIndex;
