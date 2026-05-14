@@ -453,6 +453,13 @@ body[data-screen="settings"] .tab:nth-child(3) {
   margin-left: 4px;
 }
 
+/* Long-press log pulse */
+@keyframes log-pulse {
+  0%, 100% { outline: 2px solid transparent; outline-offset: 2px; }
+  50%      { outline: 2px solid var(--n-900); outline-offset: 2px; }
+}
+.wk-slot.just-logged { animation: log-pulse 300ms ease-out 1; }
+
 /* Focus rings */
 button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 2px solid var(--n-900);

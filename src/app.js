@@ -96,6 +96,25 @@ const screens = {
       onDayClick: setActiveDate,
       onPrevWeek: () => shiftWeek(-7),
       onNextWeek: () => shiftWeek(+7),
+      onSlotLongPress: (date, slotIdx) => {
+        const slot = state.week.days[date].slots[slotIdx];
+        if (!slot.dishId) return;
+        slot.loggedAt = slot.loggedAt ? null : new Date().toISOString();
+        saveWeek();
+        render();
+        // Briefly add a CSS class to the slot button for the pulse animation
+        const rootEl = document.getElementById("root");
+        if (rootEl) {
+          const buttons = rootEl.querySelectorAll(".wk-slot.filled");
+          // Find the slot button by position: day slots are rendered in order
+          const daySlots = Array.from(rootEl.querySelectorAll(".wk-day .wk-slot"));
+          const btn = daySlots[slotIdx];
+          if (btn) {
+            btn.classList.add("just-logged");
+            setTimeout(() => btn.classList.remove("just-logged"), 300);
+          }
+        }
+      },
       onSlotClick: (date, slotIdx, kind) => {
         if (kind === "filled") {
           openSlotDetail_proxy(date, slotIdx);

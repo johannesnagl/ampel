@@ -3,7 +3,7 @@ import { h } from "./render.js";
 import { t } from "../i18n.js";
 import { isoWeekIdFromKey, fmtDayShort, addDays } from "../util/dates.js";
 
-export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick }) {
+export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick, onSlotLongPress }) {
   const monday = new Date(`${week.monday}T12:00:00Z`);
   const sunday = addDays(monday, 6);
   const weekId = isoWeekIdFromKey(week.monday);
@@ -98,12 +98,12 @@ function daySlots(day, date, verdict, dishById, settings, onSlotClick) {
       ),
       h("div", { class: "wk-day-points" }, `${dv?.points ?? 0} Pkt · ${dv?.label ?? "leichter Tag"}`),
     ),
-    ...day.slots.map((slot, i) => slotRow(slot, i, date, dv, dishById, settings, onSlotClick)),
+    ...day.slots.map((slot, i) => slotRow(slot, i, date, dv, dishById, settings, onSlotClick, onSlotLongPress)),
     dv?.warnings?.length ? h("div", { class: "wk-day-warnings" }, t.warnings_n(dv.warnings.length)) : null,
   );
 }
 
-function slotRow(slot, idx, date, dv, dishById, settings, onSlotClick) {
+function slotRow(slot, idx, date, dv, dishById, settings, onSlotClick, onSlotLongPress) {
   const slotCfg = settings.slotsPerDay[idx];
   const v = dv?.slots?.[idx];
   const dish = slot.dishId ? dishById.get(slot.dishId) : null;
@@ -118,10 +118,30 @@ function slotRow(slot, idx, date, dv, dishById, settings, onSlotClick) {
     );
   }
   const verdictClass = v?.verdict === "warn" ? "warn" : "";
+
+  let pressTimer = null;
+  let longPressed = false;
+  const handlePointerDown = () => {
+    longPressed = false;
+    pressTimer = setTimeout(() => {
+      longPressed = true;
+      if (onSlotLongPress) onSlotLongPress(date, idx);
+    }, 500);
+  };
+  const handlePointerUp = () => { if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; } };
+  const handleClick = (e) => {
+    if (longPressed) { e.preventDefault(); return; }
+    onSlotClick(date, idx, "filled");
+  };
+
   return h("button", {
       class: `wk-slot filled ${dish.category} ${verdictClass}`,
-      onclick: () => onSlotClick(date, idx, "filled"),
-      "aria-label": `${slotCfg.label}: ${dish.name}`,
+      onclick: handleClick,
+      onpointerdown: handlePointerDown,
+      onpointerup: handlePointerUp,
+      onpointercancel: handlePointerUp,
+      onpointerleave: handlePointerUp,
+      "aria-label": `${slotCfg.label}: ${dish.name}${v?.reason ? ` – Hinweis: ${v.reason}` : ""}`,
     },
     h("div", { class: "wk-slot-meta" },
       h("span", { class: "wk-slot-emoji" }, emojiFor(dish.category)),
