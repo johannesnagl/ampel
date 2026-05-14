@@ -35,7 +35,7 @@ function summary(verdict, week, dishById, today, activeDate, onDayClick) {
   const dist = verdict.weeklyDistribution;
 
   return h("div", { class: "wk-summary" },
-    h("div", { class: `wk-bar ${status === "over" ? "over" : ""}` },
+    h("div", { class: `wk-bar ${status === "over" ? "over" : status === "warn" ? "warn" : ""}` },
       h("div", { class: "wk-bar-fill", style: { width: `${pct}%` } }),
     ),
     h("div", { class: "wk-points" },

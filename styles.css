@@ -88,7 +88,7 @@ body[data-screen="settings"] .tab:nth-child(3) {
   top: 0;
   background: var(--n-0);
   border-bottom: 1px solid var(--n-200);
-  padding: 12px 16px calc(12px + var(--safe-top));
+  padding: calc(12px + var(--safe-top)) 16px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -126,9 +126,10 @@ body[data-screen="settings"] .tab:nth-child(3) {
 }
 .wk-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--green) 0%, var(--yellow) 70%, var(--red) 100%);
+  background: var(--green);
   transition: width 200ms ease-out;
 }
+.wk-bar.warn .wk-bar-fill { background: var(--yellow); }
 .wk-bar.over .wk-bar-fill { background: var(--red); }
 .wk-points {
   display: flex;
@@ -168,8 +169,9 @@ body[data-screen="settings"] .tab:nth-child(3) {
   justify-content: center;
   gap: 3px;
 }
+.wk-mini-day.today    { border: 2px solid var(--green); }
 .wk-mini-day.active   { border: 2px solid var(--n-900); background: var(--n-0); }
-.wk-mini-day.today    { border-color: var(--n-900); }
+.wk-mini-day.today.active { border: 2px solid var(--n-900); background: var(--green-tint); }
 .wk-mini-day.past     { opacity: 0.6; }
 .wk-mini-day .name    { font-weight: 600; }
 .wk-mini-dots {
@@ -354,7 +356,7 @@ body[data-screen="settings"] .tab:nth-child(3) {
   border: 1px solid var(--n-200);
   border-radius: 16px;
   padding: 6px 12px;
-  min-height: 36px;
+  min-height: 44px;
   font: inherit;
   cursor: pointer;
 }
