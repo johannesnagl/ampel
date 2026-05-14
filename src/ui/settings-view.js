@@ -28,15 +28,27 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
     return h("section", { class: "set-card" },
       h("h2", {}, "Slots pro Tag"),
       ...draft.slotsPerDay.map((s, i) => h("div", { class: "set-slot-row" },
-        h("select", { onchange: (e) => { draft.slotsPerDay[i].type = e.target.value; save(); rerender(); } },
+        h("span", { class: "set-slot-num" }, `${i + 1}.`),
+        h("select", {
+            "aria-label": `Slot ${i + 1} Typ`,
+            onchange: (e) => { draft.slotsPerDay[i].type = e.target.value; save(); rerender(); },
+          },
           ...SLOT_TYPE_OPTIONS.map((opt) =>
             h("option", { value: opt.value, selected: s.type === opt.value ? "selected" : null }, opt.label),
           ),
         ),
-        h("input", { value: s.label, onblur: (e) => { draft.slotsPerDay[i].label = e.target.value; save(); } }),
-        h("button", { class: "set-slot-rm", onclick: () => { draft.slotsPerDay.splice(i, 1); save(); rerender(); } }, "✕"),
+        h("input", {
+          "aria-label": `Slot ${i + 1} Bezeichnung`,
+          value: s.label,
+          onblur: (e) => { draft.slotsPerDay[i].label = e.target.value; save(); },
+        }),
+        h("button", {
+          class: "set-slot-rm",
+          "aria-label": `Slot ${i + 1} entfernen`,
+          onclick: () => { draft.slotsPerDay.splice(i, 1); save(); rerender(); },
+        }, "✕"),
       )),
-      h("button", { class: "slot-action", onclick: () => {
+      h("button", { class: "set-add-slot", onclick: () => {
         draft.slotsPerDay.push({ type: "snack", label: `Snack ${draft.slotsPerDay.filter((x) => x.type === "snack").length + 1}` });
         save(); rerender();
       } }, "+ Slot"),

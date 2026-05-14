@@ -434,13 +434,71 @@ body[data-screen="settings"] .tab:nth-child(3) {
 /* ── Settings ────────────────────────────────────────────────── */
 .set { padding: 16px; }
 .set h1 { font-size: 22px; margin: 0 0 16px; }
-.set h2 { font-size: 15px; margin: 0 0 8px; color: var(--n-500); font-weight: 600; }
-.set-card { background: var(--n-50); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+.set h2 { font-size: 15px; margin: 0 0 12px; color: var(--n-500); font-weight: 600; }
+.set-card { background: var(--n-50); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
 .set-danger { background: #fef2f2; border: 1px solid var(--red); }
 .set-danger h2 { color: var(--red-text); }
-.set-slot-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
-.set-slot-row select, .set-slot-row input { flex: 1; padding: 8px; border: 1px solid var(--n-200); border-radius: 6px; min-height: 44px; }
-.set-slot-rm { background: none; border: 0; font-size: 16px; padding: 4px 8px; cursor: pointer; min-width: 44px; }
+
+/* Slot row: [number]  [type select]  [label input]  [remove] */
+.set-slot-row {
+  display: grid;
+  grid-template-columns: 22px minmax(110px, 1.2fr) minmax(0, 1.8fr) 36px;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.set-slot-num {
+  color: var(--n-500);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  user-select: none;
+}
+.set-slot-row select,
+.set-slot-row input {
+  padding: 8px 10px;
+  border: 1px solid var(--n-200);
+  border-radius: 6px;
+  min-height: 40px;
+  background: var(--n-0);
+  font: inherit;
+  color: var(--n-900);
+  min-width: 0; /* allow grid cell to shrink */
+}
+.set-slot-row select { color: var(--n-500); }
+.set-slot-row input { font-weight: 500; }
+.set-slot-rm {
+  background: none;
+  border: 0;
+  color: var(--n-500);
+  cursor: pointer;
+  min-height: 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.set-slot-rm:hover { background: var(--n-100); color: var(--red); }
+
+/* "+ Slot" button: secondary, left-aligned, sized to content */
+.set-add-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 6px 12px;
+  min-height: 36px;
+  background: var(--n-0);
+  border: 1px dashed var(--n-200);
+  border-radius: 6px;
+  color: var(--n-500);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.set-add-slot:hover { color: var(--n-900); border-color: var(--n-500); }
 
 /* ---------- Polish ---------- */
 
