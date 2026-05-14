@@ -15,11 +15,17 @@ const COMBOS = [
   { combo: "gruen-gelb-gruen", pattern: ["green", "yellow", "green"] },
 ];
 
-export function checkBestCombo(day, _date, dishes, _slots) {
+export function checkBestCombo(day, _date, dishes, slotsPerDay) {
   const byId = new Map(dishes.map((d) => [d.id, d]));
   const mains = MAIN_TYPES.map((type) => {
-    const slot = day.slots.find((s) => s.type === type);
-    if (!slot || !slot.dishId) return null;
+    let foundIdx = -1;
+    for (let i = 0; i < day.slots.length; i++) {
+      const slotType = slotsPerDay?.[i]?.type ?? day.slots[i].type;
+      if (slotType === type) { foundIdx = i; break; }
+    }
+    if (foundIdx < 0) return null;
+    const slot = day.slots[foundIdx];
+    if (!slot.dishId) return null;
     return byId.get(slot.dishId) ?? null;
   });
   if (mains.some((m) => m == null)) return { matched: false, combo: null };
