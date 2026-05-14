@@ -41,9 +41,26 @@ function loadWeek(anchorDateKey) {
   const mondayKey = dateKey(monday);
   const weekId = isoWeekId(anchor);
   const week = weeksStore.getWeek(weekId, mondayKey, state.settings.slotsPerDay);
+  // Normalize each day's slot array against current settings.
+  // Sync slot.type by index, preserve dish/log/note, append empty slots
+  // when settings grew, drop trailing slots when settings shrank.
+  for (const date of Object.keys(week.days)) {
+    week.days[date].slots = normalizeSlots(week.days[date].slots, state.settings.slotsPerDay);
+  }
   state.week = week;
-  // Persist immediately if it was a fresh week (idempotent if not)
   weeksStore.saveWeek(weekId, week);
+}
+
+function normalizeSlots(existingSlots, slotsPerDay) {
+  return slotsPerDay.map((cfg, i) => {
+    const existing = existingSlots[i];
+    return {
+      type: cfg.type,
+      dishId: existing?.dishId ?? null,
+      loggedAt: existing?.loggedAt ?? null,
+      note: existing?.note ?? "",
+    };
+  });
 }
 
 function shiftWeek(deltaDays) {
@@ -84,10 +101,9 @@ const screens = {
           openSlotDetail_proxy(date, slotIdx);
           return;
         }
-        const slot = state.week.days[date].slots[slotIdx];
         const slotCfg = state.settings.slotsPerDay[slotIdx];
         openPicker({
-          slotType: slot.type,
+          slotType: slotCfg.type, // settings is source of truth, not stale slot.type
           slotLabel: slotCfg.label,
           date,
           week: state.week,
@@ -140,6 +156,9 @@ const screens = {
     onSave: (next) => {
       state.settings = next;
       settingsStore.save(next);
+      // Re-load the active week so its slot array gets re-normalized
+      // against the new slotsPerDay (type changes, add/remove slots).
+      if (state.activeDate) loadWeek(state.activeDate);
       render();
     },
     onExport: exportData,
@@ -218,10 +237,9 @@ function openSlotDetail_proxy(date, slotIdx) {
       saveWeek(); render();
     },
     onSwap: () => {
-      const slot = state.week.days[date].slots[slotIdx];
       const slotCfg = state.settings.slotsPerDay[slotIdx];
       openPicker({
-        slotType: slot.type,
+        slotType: slotCfg.type, // settings is source of truth
         slotLabel: slotCfg.label,
         date, week: state.week, dishes: state.catalog.dishes, settings: state.settings,
         evaluateWith: (w) => evaluateWeek(w, getOtherWeeksInSameMonth(), state.catalog.dishes, state.settings),

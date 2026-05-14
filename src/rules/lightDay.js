@@ -4,12 +4,16 @@
 // Fires when ALL non-dinner slots are 🟢 (or empty) AND dinner is 🔴 or
 // heavy 🟡.
 
-export function checkLightDayEveningEscalation(day, date, dishes, _slots) {
+export function checkLightDayEveningEscalation(day, date, dishes, slotsPerDay) {
   const byId = new Map(dishes.map((d) => [d.id, d]));
   let dinnerIdx = -1;
   let dinnerDish = null;
   for (let i = 0; i < day.slots.length; i++) {
-    if (day.slots[i].type === "dinner") {
+    // Settings is the source of truth for slot type — slot.type may be
+    // stale if the user changed slot configuration after the week was
+    // created.
+    const slotType = slotsPerDay?.[i]?.type ?? day.slots[i].type;
+    if (slotType === "dinner") {
       dinnerIdx = i;
       const id = day.slots[i].dishId;
       dinnerDish = id ? byId.get(id) : null;
