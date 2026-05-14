@@ -7,6 +7,7 @@
 import { h, mount, clear } from "./render.js";
 import { t } from "../i18n.js";
 import { matchDish } from "../util/search.js";
+import { fmtDayShort } from "../util/dates.js";
 
 export function openPicker({ slotType, slotLabel, date, week, dishes, settings, evaluateWith, onPick, onClose }) {
   const overlay = h("div", { class: "picker-overlay", onclick: (e) => {
@@ -21,12 +22,18 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   }
   document.addEventListener("keydown", onKeyDown);
 
+  const titleId = `dlg-title-${Math.random().toString(36).slice(2, 9)}`;
+  sheet.setAttribute("aria-labelledby", titleId);
+
+  const _dayDate = new Date(`${date}T12:00:00Z`);
+  const _dateLabel = `${fmtDayShort(_dayDate)}, ${_dayDate.getUTCDate()}.${_dayDate.getUTCMonth() + 1}.`;
+
   let query = "";
   function rerender() {
     clear(sheet);
     sheet.append(
       h("div", { class: "picker-handle" }),
-      h("div", { class: "picker-title" }, `${slotLabel} · ${date}`),
+      h("div", { class: "picker-title", id: titleId }, `${slotLabel} · ${_dateLabel}`),
       h("input", {
         type: "search",
         class: "picker-search",
@@ -69,6 +76,7 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
     const day = cloned.days[date];
     const slotIdx = day.slots.findIndex((s) => s.type === slotType && !s.dishId);
     const targetIdx = slotIdx >= 0 ? slotIdx : day.slots.findIndex((s) => s.type === slotType);
+    if (targetIdx < 0) return { severity: "ok", message: null };
     day.slots[targetIdx].dishId = dish.id;
     const newVerdict = evaluateWith(cloned);
     const dayWarnings = newVerdict.perDay[date]?.warnings ?? [];

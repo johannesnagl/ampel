@@ -20,6 +20,9 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
   overlay.append(sheet);
   document.body.append(overlay);
 
+  const titleId = `dlg-title-${Math.random().toString(36).slice(2, 9)}`;
+  sheet.setAttribute("aria-labelledby", titleId);
+
   function onKeyDown(e) {
     if (e.key === "Escape") { cleanup(); onClose(); }
   }
@@ -70,7 +73,7 @@ export function openDishForm({ dish, onSave, onDelete, onClose }) {
     clear(sheet);
     sheet.append(
       h("div", { class: "picker-handle" }),
-      h("div", { class: "picker-title" }, isNew ? "Neue Mahlzeit" : "Mahlzeit bearbeiten"),
+      h("div", { class: "picker-title", id: titleId }, isNew ? "Neue Mahlzeit" : "Mahlzeit bearbeiten"),
       h("div", { class: "df" },
         input("Name", draft.name, (v) => { draft.name = v; if (isNew) draft.id = kebab(v); }),
         select("Kategorie", draft.category, sortByLabel([

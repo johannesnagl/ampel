@@ -1,6 +1,7 @@
 // src/ui/slot-detail.js
 import { h, clear } from "./render.js";
 import { t } from "../i18n.js";
+import { fmtDayShort } from "../util/dates.js";
 
 export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, onUnlog, onSwap, onDelete, onNoteChange, onClose }) {
   const slot = week.days[date].slots[slotIdx];
@@ -12,6 +13,12 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
   overlay.append(sheet);
   document.body.append(overlay);
 
+  const titleId = `dlg-title-${Math.random().toString(36).slice(2, 9)}`;
+  sheet.setAttribute("aria-labelledby", titleId);
+
+  const _dayDate = new Date(`${date}T12:00:00Z`);
+  const _dateLabel = `${fmtDayShort(_dayDate)}, ${_dayDate.getUTCDate()}.${_dayDate.getUTCMonth() + 1}.`;
+
   function onKeyDown(e) {
     if (e.key === "Escape") { cleanup(); onClose(); }
   }
@@ -21,25 +28,29 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
     clear(sheet);
     sheet.append(
       h("div", { class: "picker-handle" }),
-      h("div", { class: "picker-title" }, `${slotCfg.label} · ${date}`),
+      h("div", { class: "picker-title", id: titleId }, `${slotCfg.label} · ${_dateLabel}`),
       dish
         ? h("div", { class: "slot-detail-meta" },
             h("span", { class: "slot-detail-emoji" }, emojiFor(dish.category)),
             h("span", { class: "slot-detail-name" }, dish.name),
           )
-        : h("div", { class: "slot-detail-meta" }, h("span", {}, t.empty)),
+        : slot.dishId
+          ? h("div", { class: "slot-detail-meta" },
+              h("span", { class: "slot-detail-name" }, "Mahlzeit nicht mehr im Vorrat"),
+            )
+          : h("div", { class: "slot-detail-meta" }, h("span", {}, t.empty)),
       h("textarea", {
         class: "slot-note",
         placeholder: "Notiz …",
         oninput: (e) => onNoteChange(e.target.value),
       }, slot.note ?? ""),
       h("div", { class: "slot-actions" },
-        slot.dishId
+        slot.dishId && dish
           ? slot.loggedAt
             ? h("button", { class: "slot-action", onclick: () => { onUnlog(); cleanup(); } }, t.unlog)
             : h("button", { class: "slot-action primary", onclick: () => { onLog(); cleanup(); } }, t.log)
           : null,
-        slot.dishId
+        slot.dishId && dish
           ? h("button", { class: "slot-action", onclick: () => { onSwap(); cleanup(); } }, t.swap)
           : null,
         slot.dishId
