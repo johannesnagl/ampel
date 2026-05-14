@@ -3,7 +3,7 @@ import { h } from "./render.js";
 import { t } from "../i18n.js";
 import { isoWeekIdFromKey, fmtDayShort, addDays, mondayOf, dateKey } from "../util/dates.js";
 
-export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick, onSlotLongPress, onJumpToToday }) {
+export function renderWeekView({ week, verdict, settings, dishes, today, activeDate, onDayClick, onPrevWeek, onNextWeek, onSlotClick, onSlotLongPress, onJumpToToday, onPrevDay, onNextDay }) {
   const monday = new Date(`${week.monday}T12:00:00Z`);
   const sunday = addDays(monday, 6);
   const weekId = isoWeekIdFromKey(week.monday);
@@ -18,7 +18,7 @@ export function renderWeekView({ week, verdict, settings, dishes, today, activeD
   return h("div", { class: "wk" },
     header(weekNumber, monday, sunday, isCurrentWeek, onPrevWeek, onNextWeek, onJumpToToday),
     summary(verdict, week, dishById, today, activeDateKey, onDayClick),
-    daySlots(activeDay, activeDateKey, verdict, dishById, settings, onSlotClick, onSlotLongPress),
+    daySlots(activeDay, activeDateKey, verdict, dishById, settings, onSlotClick, onSlotLongPress, onPrevDay, onNextDay),
   );
 }
 
@@ -90,11 +90,34 @@ function dotClass(slot, dishById) {
 
 // ---- Day slots area ----
 
-function daySlots(day, date, verdict, dishById, settings, onSlotClick, onSlotLongPress) {
+function daySlots(day, date, verdict, dishById, settings, onSlotClick, onSlotLongPress, onPrevDay, onNextDay) {
   if (!day) return h("div", { class: "wk-day-empty" }, "Tag nicht geladen");
   const dv = verdict.perDay[date];
   const dayDate = new Date(`${date}T12:00:00Z`);
-  return h("div", { class: "wk-day" },
+
+  let pointerStart = null;
+  const handlePointerDown = (e) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    pointerStart = { x: e.clientX, y: e.clientY, t: Date.now() };
+  };
+  const handlePointerUp = (e) => {
+    if (!pointerStart) return;
+    const dx = e.clientX - pointerStart.x;
+    const dy = e.clientY - pointerStart.y;
+    const dt = Date.now() - pointerStart.t;
+    pointerStart = null;
+    if (dt > 600) return;                      // too slow, treat as not a swipe
+    if (Math.abs(dx) < 60) return;             // too small
+    if (Math.abs(dy) > Math.abs(dx)) return;   // mostly vertical (scrolling)
+    if (dx < 0) { if (onNextDay) onNextDay(); } else { if (onPrevDay) onPrevDay(); }
+  };
+  const handlePointerCancel = () => { pointerStart = null; };
+
+  return h("div", { class: "wk-day",
+    onpointerdown: handlePointerDown,
+    onpointerup:   handlePointerUp,
+    onpointercancel: handlePointerCancel,
+  },
     h("div", { class: "wk-day-header" },
       h("div", {},
         `${fmtDayShort(dayDate)} · ${dayDate.getUTCDate()}.${dayDate.getUTCMonth() + 1}.`,

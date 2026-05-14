@@ -102,6 +102,16 @@ const screens = {
         state.activeDate = today;
         render();
       },
+      onPrevDay: () => {
+        const dates = Object.keys(state.week.days).sort();
+        const idx = dates.indexOf(state.activeDate);
+        if (idx > 0) setActiveDate(dates[idx - 1]);
+      },
+      onNextDay: () => {
+        const dates = Object.keys(state.week.days).sort();
+        const idx = dates.indexOf(state.activeDate);
+        if (idx >= 0 && idx < dates.length - 1) setActiveDate(dates[idx + 1]);
+      },
       onSlotLongPress: (date, slotIdx) => {
         const slot = state.week.days[date].slots[slotIdx];
         if (!slot.dishId) return;
