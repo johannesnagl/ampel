@@ -54,23 +54,36 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
   const _dateLabel = `${fmtDayShort(_dayDate)}, ${fmtDateGerman(_dayDate)}`;
 
   let query = "";
-  function rerender() {
-    clear(sheet);
+  // Build the sheet's stable skeleton ONCE. The search input persists
+  // across query updates so it never loses focus. Only the result list's
+  // children are re-rendered on each keystroke.
+  const inputEl = h("input", {
+    type: "search",
+    class: "picker-search",
+    placeholder: t.search,
+    autofocus: "true",
+    oninput: (e) => { query = e.target.value; renderList(); },
+    value: "",
+  });
+  const listEl = h("div", { class: "picker-list" });
+
+  function renderList() {
+    clear(listEl);
+    for (const dish of candidates(query)) {
+      listEl.append(row(dish));
+    }
+  }
+
+  function build() {
     sheet.append(
       h("div", { class: "picker-handle" }),
       h("div", { class: "picker-title", id: titleId }, `${slotLabel} · ${_dateLabel}`),
-      h("input", {
-        type: "search",
-        class: "picker-search",
-        placeholder: t.search,
-        autofocus: "true",
-        oninput: (e) => { query = e.target.value; rerender(); },
-        value: query,
-      }),
-      h("div", { class: "picker-list" },
-        ...candidates(query).map((dish) => row(dish)),
-      ),
+      inputEl,
+      listEl,
     );
+    renderList();
+    // Focus the input after the sheet is in the DOM
+    requestAnimationFrame(() => inputEl.focus());
   }
 
   function candidates(q) {
@@ -135,6 +148,6 @@ export function openPicker({ slotType, slotLabel, date, week, dishes, settings, 
     if (overlay.parentElement) document.body.removeChild(overlay);
   }
 
-  rerender();
+  build();
   return cleanup;
 }

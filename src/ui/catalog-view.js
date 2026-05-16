@@ -1,5 +1,5 @@
 // src/ui/catalog-view.js
-import { h } from "./render.js";
+import { h, clear } from "./render.js";
 import { t } from "../i18n.js";
 import { matchDish } from "../util/search.js";
 
@@ -10,35 +10,43 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
 
   const root = h("section", { class: "cat" });
 
-  function rerender() {
-    // If category filter is green, force-disable heavyOnly (no green dish can be heavy)
-    if (cat === "green") heavyOnly = false;
+  // Build stable elements ONCE. The search input keeps focus across
+  // keystrokes because it's never replaced — only the list (and the
+  // chip "on" state) re-render.
+  const inputEl = h("input", {
+    type: "search",
+    class: "picker-search",
+    placeholder: t.search,
+    value: "",
+    oninput: (e) => { q = e.target.value; renderList(); },
+  });
+  const filtersEl = h("div", { class: "cat-filters" });
+  const listEl = h("div", { class: "cat-list" });
 
-    root.replaceChildren(
-      h("div", { class: "cat-header" },
-        h("h1", {}, t.catalog.title),
-        h("button", { class: "cat-add slot-action primary", onclick: onAdd }, t.catalog.new),
-      ),
-      h("input", {
-        type: "search",
-        class: "picker-search",
-        placeholder: t.search,
-        value: q,
-        oninput: (e) => { q = e.target.value; rerender(); },
-      }),
-      h("div", { class: "cat-filters" },
-        chip("all",    "Alle",    () => { cat = "all"; rerender(); }),
-        chip("green",  "🟢",      () => { cat = "green"; rerender(); }),
-        chip("yellow", "🟡",      () => { cat = "yellow"; rerender(); }),
-        chip("red",    "🔴",      () => { cat = "red"; rerender(); }),
-        cat !== "green"
-          ? h("button", { class: `cat-chip ${heavyOnly ? "on" : ""}`, onclick: () => { heavyOnly = !heavyOnly; rerender(); } }, t.heavy)
-          : null,
-      ),
-      h("div", { class: "cat-list" },
-        ...filtered().map((d) => row(d)),
-      ),
+  function renderFilters() {
+    clear(filtersEl);
+    filtersEl.append(
+      chip("all",    "Alle",    () => { cat = "all";    renderFilters(); renderList(); }),
+      chip("green",  "🟢",      () => { cat = "green";  renderFilters(); renderList(); }),
+      chip("yellow", "🟡",      () => { cat = "yellow"; renderFilters(); renderList(); }),
+      chip("red",    "🔴",      () => { cat = "red";    renderFilters(); renderList(); }),
     );
+    if (cat !== "green") {
+      filtersEl.append(
+        h("button", {
+          class: `cat-chip ${heavyOnly ? "on" : ""}`,
+          onclick: () => { heavyOnly = !heavyOnly; renderFilters(); renderList(); },
+        }, t.heavy),
+      );
+    } else {
+      // Green never has heavy dishes — also clear the heavy-only filter
+      heavyOnly = false;
+    }
+  }
+
+  function renderList() {
+    clear(listEl);
+    for (const d of filtered()) listEl.append(row(d));
   }
 
   function chip(value, label, onClick) {
@@ -80,6 +88,17 @@ export function renderCatalogView({ catalog, onAdd, onEdit }) {
 
   function emojiFor(c) { return { green: "🟢", yellow: "🟡", red: "🔴" }[c] ?? "·"; }
 
-  rerender();
+  // One-time build of the screen's skeleton
+  root.replaceChildren(
+    h("div", { class: "cat-header" },
+      h("h1", {}, t.catalog.title),
+      h("button", { class: "cat-add slot-action primary", onclick: onAdd }, t.catalog.new),
+    ),
+    inputEl,
+    filtersEl,
+    listEl,
+  );
+  renderFilters();
+  renderList();
   return root;
 }
