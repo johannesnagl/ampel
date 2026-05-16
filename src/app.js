@@ -9,6 +9,7 @@ import { evaluateWeek } from "./rules/evaluate.js";
 import { isoWeekId, isoWeekIdFromKey, mondayOf, dateKey, addDays } from "./util/dates.js";
 import { openPicker } from "./ui/picker.js";
 import { openSlotDetail } from "./ui/slot-detail.js";
+import { openCookingView } from "./ui/cooking-view.js";
 import { renderCatalogView } from "./ui/catalog-view.js";
 import { openDishForm } from "./ui/dish-form.js";
 import { renderSettingsView } from "./ui/settings-view.js";
@@ -301,6 +302,22 @@ function openSlotDetail_proxy(date, slotIdx) {
     onNoteChange: (text) => {
       state.week.days[date].slots[slotIdx].note = text;
       saveWeek();
+    },
+    onShowRecipe: () => {
+      const slot = state.week.days[date].slots[slotIdx];
+      const dish = state.catalog.dishes.find((d) => d.id === slot.dishId);
+      if (!dish) { render(); return; }
+      openCookingView({
+        dish,
+        isLogged: !!slot.loggedAt,
+        onLog: () => {
+          // Toggle loggedAt from inside the cooking view
+          const current = state.week.days[date].slots[slotIdx];
+          current.loggedAt = current.loggedAt ? null : new Date().toISOString();
+          saveWeek();
+        },
+        onClose: () => render(),
+      });
     },
     onClose: () => render(),
   });

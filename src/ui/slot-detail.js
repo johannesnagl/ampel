@@ -3,7 +3,7 @@ import { h, clear } from "./render.js";
 import { t } from "../i18n.js";
 import { fmtDayShort, fmtDateGerman } from "../util/dates.js";
 
-export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, onUnlog, onSwap, onDelete, onNoteChange, onClose }) {
+export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, onUnlog, onSwap, onDelete, onNoteChange, onShowRecipe, onClose }) {
   const slot = week.days[date].slots[slotIdx];
   const dish = dishes.find((d) => d.id === slot.dishId);
   const slotCfg = settings.slotsPerDay[slotIdx];
@@ -69,6 +69,15 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
         placeholder: "Notiz …",
         oninput: (e) => onNoteChange(e.target.value),
       }, slot.note ?? ""),
+      // Anleitung button — full-width, visually prominent, only if the
+      // dish carries a non-empty notes field. Tapping it leaves the
+      // detail sheet and opens the cooking view.
+      dish && dish.notes && dish.notes.trim()
+        ? h("button", {
+            class: "slot-action recipe",
+            onclick: () => { onShowRecipe?.(); cleanup(); },
+          }, "📖 Anleitung")
+        : null,
       h("div", { class: "slot-actions" },
         slot.dishId && dish
           ? slot.loggedAt
