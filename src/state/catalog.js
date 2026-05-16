@@ -5,16 +5,18 @@ export const CATALOG_KEY = "ampel.dishes";
 // Bump when the seed catalog (data/dishes.xlsx → data/dishes.json) is
 // replaced. Bumping invalidates the user's localStorage cache so the new
 // catalog is fetched on next load.
-export const CATALOG_VERSION = 2;
+export const CATALOG_VERSION = 3;
 
 export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
   const storage = makeStorage(backend, {
     [CATALOG_KEY]: {
       currentVersion: CATALOG_VERSION,
       migrate: {
-        // 1 → 2: identity. Preserves user catalog across the version bump.
-        // (When introducing future versions, replace this with a real migration.)
+        // 1 → 2 → 3: identity migrations. Preserve the user's catalog
+        // across version bumps. Real structural migrations (e.g. new
+        // required field) would replace these with actual transforms.
         1: (data) => data,
+        2: (data) => data,
       },
     },
   });

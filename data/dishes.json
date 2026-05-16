@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "dishes": [
     {
       "id": "roest-polentakartoffeln",
@@ -18,7 +18,7 @@
         "röst",
         "polentakartoffeln"
       ],
-      "notes": ""
+      "notes": "Zutaten: 500 g festkochende Kartoffeln, 1-1 1/2 EL Olivenöl (15-20 g), 1 EL Polenta (fein oder mittelgrob), 1 TL Rosmarin, 1 kl Knoblauchzehe, Salz, Pfeffer; optional Zitronenabrieb oder Chiliflocken; Schritte: Schritt 1 – Vorkochen (wichtig!)\n\n1. Kartoffeln in mundgerechte Stücke schneiden.\n2. In gut gesalzenem Wasser 10–12 Minuten vorkochen\n   \n    → sie sollen weich sein, aber nicht zerfallen.\n3. Abgießen.\n4. 2–3 Minuten im Topf ohne Deckel ausdampfen lassen (Feuchtigkeit raus!)\n👉 Je trockener die Oberfläche, desto knuspriger.; Schritt 2 – Würzen & Polenta\n\n1. Kartoffeln in eine große Schüssel geben.\n2. Öl darüber.\n3. Polenta, Rosmarin, Knoblauch, Salz & Pfeffer zugeben.\n4. Alles vorsichtig schwenken, bis die Kartoffeln leicht „mehlig“ überzogen sind.\n👉 Die Polenta bildet später die Knusperkruste.; Schritt 3 – Airfryer\n\n- 190–200 °C\n- 15–20 Minuten\n- nach 8–10 Minuten einmal schütteln\nSie sind fertig, wenn sie:\n- goldbraun\n- außen knusprig\n- innen weich sind; Extra-Trick für maximale Knusprigkeit\n\nNach dem Abgießen die Kartoffeln im Topf kurz „anschubsen“ (Deckel drauf, leicht schütteln).\nDie Oberfläche wird leicht aufgeraut → mehr Crunch."
     },
     {
       "id": "topfenauflauf",
@@ -36,7 +36,7 @@
       "tags": [
         "topfenauflauf"
       ],
-      "notes": ""
+      "notes": "Zutaten: 3 eier, 250 g Topfen, 50 g Butter, 70 g Zucker(alternative), 3 EL Grieß, Topping Beeren, Apfelmus, etc; Zubereitung: Eier trennen und Schnee schlagen; Dotter, weiche Butter, Zucker und Topfen schaumig rühren, Grieß zugeben; Schnee unterheben; 180 Grad Ober- und Unterhitze, 25 Minuten"
     },
     {
       "id": "couscoussalat-mit-feta-gurke-minze-erbsen-basilikum",
@@ -60,7 +60,7 @@
         "erbsen",
         "basilikum"
       ],
-      "notes": ""
+      "notes": "Zutaten: 10 g Minze, 10 g Basilikum, 40 g Frühlingszwiebel, 1 gr. Knoblauchzehe, 35 g Olivenöl, 1/2 TL Salz, 1/4 TL gemahlener Pfeffer, 1/2 Gurke in Stücken, Saft einer halben Zitrone; 175 g Erbsen, 400 g Wasser, 200 g Couscous, 50 g Feta, optional Pinienkerne; Zubereitung: Dressing (Minze, Basilikum, Frühlingszwiebel, Knoblauch - 5 Sek, Stufe 5); Olivenöl, Salz, Pfeffer, Grukenstücke (5 Sek, Linkslauf, Stufe 2,5); Zitronensaft dazu, vermengen, zur Seite stellen; Wasser in Mixtopf, Erbsen und Couscous separat"
     },
     {
       "id": "pizza",
@@ -99,7 +99,7 @@
         "lachs",
         "frischkäse"
       ],
-      "notes": ""
+      "notes": "Zutaten für 2 Portionen: 1 Schalotte\n1 EL Olivenöl\n150 g Kräuterfrischkäse\n150 ml Milch\n2-3 EL Zitronensaft\n400 g Gnocchi\n5 Stängel Dill\n100 g Räucherlachs\nSalz und Pfeffer; Zubereitung: Schalotte fein würfeln. Olivenöl in einer großen Pfanne erhitzen und die Zwiebel darin bei mittlerer Hitze glasig braten.\nKräuterfrischkäse und Milch hinzugeben. Auf kleiner Hitze einköcheln lassen, dann Zitronensaft unterrühren.\nGnocchi nach Packungsanweisung kochen. In der Zwischenzeit Dillblättchen abzupfen und fein hacken. Räucherlachs in Stücke zupfen.\nGnocchi abgießen. Sauce mit Dill, Salz und Pfeffer würzen.\nRäucherlachs und Gnocchi hinzugeben, vermischen und genießen."
     },
     {
       "id": "buddha-bowl-mit-suesskartoffel-avocado-reis",
@@ -122,7 +122,7 @@
         "avocado",
         "reis"
       ],
-      "notes": ""
+      "notes": "Zutaten 2 Portionen: 300 g Süßkartoffeln\n2 TL Paprikapulver\n3 EL Olivenöl\n1 Tasse Reis\n2 Tassen Wasser\n1 Avocado\nSojasauce\nSalat\nPetersilie\n1 Limette; Zubereitung: Ofen auf 200 Grad Ober/Unterhitze vorheizen.\nSüßkartoffel schälen und in Würfel schneiden. In einer Auflaufform mit Paprikapulver und Olivenöl vermischen. Gut mit Salz und Pfeffer würzen. Für circa 30 Minuten backen. Dabei alle 10 Minuten umrühren.\nReis und Wasser in einem großen Topf aufkochen lassen. Mit aufgesetztem Deckel von der Flamme nehmen und den Reis gar ziehen lassen.\nAvocado würfeln.\nReis in zwei Schüsseln geben und mit Sojasauce würzen.\nDie Süßkartoffelwürfel sind fertig, sobald sie schön knusprig sind. Über den Reis geben. Avocadowürfel, Salat und gehackte Petersilie hinzufügen. Mit Limettensaft beträufeln und genießen."
     },
     {
       "id": "falafel-bowl",
@@ -141,7 +141,7 @@
         "falafel",
         "bowl"
       ],
-      "notes": ""
+      "notes": "Zutaten: Falafel aus DM-Pulver, Griechischer Joghurt mit Zitrone, Salat/Rucola, Tomaten, Paprika, Gurken"
     },
     {
       "id": "kartoffel-lachs-power-bowl",
@@ -162,7 +162,7 @@
         "power",
         "bowl"
       ],
-      "notes": ""
+      "notes": "Zutaten für 2 Portionen: 2 EL Butter\n2 EL Olivenöl\n500 g Kartoffeln\n300 g Joghurt\n2 1/2 EL Zitronensaft\n2 EL frischer Dill gehackt\n3 handvoll Rucola\n1/2 Gurke\n1 Avocado\n100 g Räucherlachs\nSalz und Pfeffer; Zubereitung: Ofen auf 200 Grad vorheizen. Olivenöl und Butter in eine ofenfeste Form geben und im Ofen schmelzen lassen. In der Zwischenzeit die Kartoffeln waschen und mundgerecht würfeln. Sobald der Ofen auf 200 Grad vorgeheizt ist Kartoffelwürfel mit der Butter und Öl vermischen und 30 bis 45 Minuten knusprig rösten. Nicht wenden, da die Kartoffeln sonst nicht knusprig werden.\nIn der Zwischenzeit aus Joghurt, Zitronensaft und Dill ein Dressing herstellen. Mit Salz und Pfeffer abschmecken.\nRuccola waschen, trocken schütteln und auf zwei Teller verteilen. Gurke waschen und würfeln. Avocado in Scheiben schneiden.\nKartoffelwürfel, Lachs, Gurke und Avocado auf die beiden Teller aufteilen. Mit Sauce beträufeln und genießen."
     },
     {
       "id": "tortelli-bowl-mit-avocado-feta",
@@ -184,7 +184,7 @@
         "avocado",
         "feta"
       ],
-      "notes": ""
+      "notes": "Zutaten für 2 Portionen: 250 g Tortelli - Kühlregal, oder Tortellini\n▢1 Avocado\n▢125 g Kirschtomaten\n▢50 g Rucola\n▢100 g Feta\nZutaten für das Feta-Dressing\n▢100 g Feta\n▢3 EL Olivenöl\n▢3 EL Zitronensaft\n▢1-2 EL Honig - oder Ahornsirup; Zubereitung: Tortelli in nach Packungsangabe kochen. Avocado halbieren, entkernen und in Scheiben schneiden. Tomaten halbieren, Rucola waschen.\nFür das Dressing den Feta mit Olivenöl, Zitronensaft und Honig pürieren. Nach Belieben mit Wasser cremig rühren und mit Salz und Pfeffer würzen.\nTortelli, Avocado, Tomaten und Rucola in 2 Schüsseln geben. Mit dem Dressing beträufeln und mit dem restlichen Feta servieren."
     },
     {
       "id": "nudelsalat-honig-senf",
@@ -204,7 +204,7 @@
         "honig",
         "senf"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: 500 g Nudeln\n1 Gurke\n2 Paprika\n350 g Tomaten\n1 große Handvoll Basilikum\n40 g mittelscharfer Senf zB Löwensenf Mittelscharf mild\n40 g Honig\n40 ml Olivenöl\n40 ml Balsamico Bianco\nSalz und Pfeffer; evtl. veganes Geschnetzeltes und/oder Garnelen; Zubereitung: Nudeln nach Packungsanweisung al dente garen.\nIn der Zwischenzeit Gurke, Paprika und Tomaten waschen, putzen und mundgerecht würfeln. Basilikum waschen und in feine Streifen schneiden.\nFür das Dressing Senf, Honig, Öl und Balsamico gut vermischen, mit Salz und Pfeffer abschmecken.\nDie abgeschütteten Nudeln in eine große Schüssel geben. Gemüse, Basilikum und Sauce hinzufügen und alles gut vermischen.\nGenießen."
     },
     {
       "id": "nudelsalat-mit-erbsen-joghurt",
@@ -225,7 +225,7 @@
         "erbsen",
         "joghurt"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4-6 Portionen: 400 g Pasta\n200 g griechischer Joghurt\n2 EL Olivenöl\n5-7 EL Nudelkochwasser\n7 EL Zitronensaft\nDill\n3 Handvoll Rucola\n250 g TK-Erbsen\nSalz und Pfeffer, evtl. Sojasprossen; Zubereitung: Pasta nach Packungsanweisung al dente garen.\nIn der Zwischenzeit griechischen Joghurt, Olivenöl, Nudelwasser, Zitronensaft und Dill vermischen. Gut mit Salz und Pfeffer abschmecken. Rucola waschen und trocken schleudern.\nDie Erbsen eine Minute vor Ende der Nudelkochzeit in den Topf geben. Alles abschütten und kurz abkühlen lassen. Mit der Sauce und dem Rucola vermischen und nach Geschmack noch einmal abschmecken."
     },
     {
       "id": "wassermelonen-feta-salat",
@@ -245,7 +245,7 @@
         "feta",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: 1 kleine Wassermelone\n▢150 g Feta\n▢4 Stiele Minze\nZutaten für das Dressing:\n▢1 Limette\n▢1 TL Ahornsirup\n▢Salz und Pfeffer; Zubereitung: Für das Dressing die Limette auspressen und den Saft mit Ahornsirup, Salz und Pfeffer verrühren. \nDie Wassermelone vierteln und das Fruchtfleisch in mundgerechte Stücke schneiden. Wassermelonenstücke in eine Schüssel geben und mit dem Dressing mischen.\nKlein geschnittene Wassermelone in der Schüssel\nDen Feta zerbröseln und unterheben. Die Minzblätter von den Stielen zupfen und den Salat mit den Blättern garnieren."
     },
     {
       "id": "rucola-mango-salat",
@@ -265,7 +265,7 @@
         "mango",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: 150 g Rucola\n▢1 Mango\n▢1 Avocado\n▢125 g Mini-Mozzarella-Kugeln\n▢20 g Pinienkerne\nDressing-Zutaten:\n▢1/2 Orange\n▢1 EL Olivenöl\n▢1 EL Balsamico Bianco\n▢1 TL Ahornsirup - oder Honig\n▢Salz und Pfeffer; evtl Knoblauchbaguette (dann Cheat!); Zubereitung: Rucola waschen. Mango schälen und das Fruchtfleisch in kleine Stücke schneiden. Avocado klein schneiden. Mozzarella abtropfen lassen. Pinienkerne in einer Pfanne fettfrei rösten.\nRucola in der Schüssel mit Avocado und Orange\nDie halbe Orange auspressen und den Saft mit Olivenöl, Balsamico und Ahornsirup verrühren. Das Dressing mit Salz und Pfeffer abschmecken.\nRucola, Mango, Avocado, Mozzarella-Kugeln und Pinienkerne in eine Schüssel geben und mit dem Dressing verrühren."
     },
     {
       "id": "gnocchisalat-mit-pesto",
@@ -285,7 +285,7 @@
         "mit",
         "pesto"
       ],
-      "notes": ""
+      "notes": "Zutaten für 2 Portionen: 200 g kleine Tomaten\n▢125 g Mozzarella - z.B. Kugeln\n▢100 g Rucola\n▢1 EL Olivenöl\n▢400 g Gnocchi - Kühlregal\nDressing-Zutaten\n▢2 EL grünes Pesto\n▢1 EL Olivenöl\n▢2 EL Weißweinessig; evtl. Pinienkerne; Zubereitung: Tomaten halbieren, Rucola waschen. Mozzarella abtropfen lassen.\nOlivenöl in einer Pfanne erhitzen und die Gnocchi für ca. 5 Min. knusprig anbraten.\nFür das Dressing grünes Pesto mit Olivenöl und Weißweinessig verrühren.\nAlle Salatzutaten in eine Schüssel geben und mit dem Dressing mischen."
     },
     {
       "id": "mangold-feta-pasta",
@@ -305,7 +305,7 @@
         "feta",
         "pasta"
       ],
-      "notes": ""
+      "notes": "Zutaten: 500 g Nudeln, Packung Feta, 1 Mangold, evtl etwas Ingwer; Zubereitung: Mangold und evtl etwas Ingwer zuerst dünsten, danach gekochte Nudeln dazu; Feta drüber streuen."
     },
     {
       "id": "ofenkartoffeln-mit-tsatziki",
@@ -325,7 +325,7 @@
         "mit",
         "tsatziki"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: 1,5 kg Kartoffeln\n4 + 1 EL Olivenöl\n6 + 2 Knoblauchzehen\n500 g Joghurt\n1 Gurke\nSalz und Pfeffer; Zubereitung: Ofen auf 200 Grad Umluft vorheizen und ein Blech mit Backpapier belegen.\nKartoffeln waschen, nach Bedarf schälen und klein würfeln. Knoblauch schälen und 6 Zehen in Scheiben schneiden. 4 EL Olivenöl, Kartoffeln, Knoblauchscheiben und Salz und Pfeffer vermischen und auf dem Backblech verteilen. Circa 40 Minuten knusprig backen.\nIn der Zwischenzeit für das Tzatziki Gurke raspeln, salzen und beiseite stellen. Restlichen Knoblauch schälen, fein hacken und mit Joghurt und restlichem Olivenöl vermischen. Die Gurkenraspeln in ein sauberes Küchentuch geben und gut ausdrücken. Zum Joghurt geben und mit Salz und Pfeffer abschmecken.\nKnoblauch-Kartoffeln mit Tzatziki genießen."
     },
     {
       "id": "kartoffelgulasch",
@@ -343,7 +343,7 @@
       "tags": [
         "kartoffelgulasch"
       ],
-      "notes": ""
+      "notes": "Zutaten: 800 g mehlige Kartoffel, 400 g Zwiebel, 2 Knoblauchzehen, 20 g Sonnenblumenöl, 30 g Tomatenmark, 20 g Paprikapulver edelsüß, 1 TL Paprikapulver geräuchert, 1 EL Majoran, 1 EL Kümmel gemahlen, 1 EL Maisstärke, 1 EL Essig, 1 TL Salz, Pfeffer, Zitronensalzpaste, Gewürzpaste/Gewürzbrühe, 2 Lorbeerblätter, 800 g Wasser; Zubereitung s. TM"
     },
     {
       "id": "mango-kokos-curry-reis",
@@ -364,7 +364,7 @@
         "curry",
         "reis"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: Reis nach Geschmack\n1 Zwiebel\n2 Knoblauchzehen\n1 Mango\n1 EL Kokosöl\n400 g gehackte Tomaten\n250 ml Kokosmilch\n1 Dose Kichererbsen\n1 1/2 TL Garam Masala\n2-3 TL Curry\n1 TL Kreuzkümmel\nSalz Pfeffer und Chili; Zubereitung: Reis nach Packungsanweisung garen.\nWährenddessen Zwiebel und Knoblauch schälen und fein hacken. Mango schälen und in mundgerechte Würfel schneiden.\nÖl in einer großen Pfanne erhitzen. Knoblauch und Zwiebeln hinzufügen und glasig werden lassen. Gehackte Tomaten und Kokosmilch in die Pfanne geben und 5 Minuten köcheln lassen.\nAbgetropfte Kichererbsen hinzufügen und 10 Minuten köcheln lassen. Gewürze hinzufügen, dann weitere fünf Minuten köcheln lassen und Mangowürfel unterheben.\nMit Salz, Pfeffer und Chili abschmecken, dann mit Reis und frischem Koriander servieren."
     },
     {
       "id": "linsen-dahl-garnelen",
@@ -384,7 +384,7 @@
         "dahl",
         "garnelen"
       ],
-      "notes": ""
+      "notes": "Zutaten: 50 g Zwiebeln, 2 Knoblauchzehen, 1/2 Chili frisch, 1 1/2 cm Ingwer frisch, 1 EL Olivenöl, Kurkuma, Koriander, 250 g Karotten, 250 g Paprika, 200 g Kokosmilch, Gewürzpaste/Gewürzbrühe, Wasser 150 g rote Linsen getrocknet, evtl 2 cm Zitronengras, Salz, schwarzer Pfeffer, 1 Frühlingszwiebel, 150 g rohe Garnelen (frisch oder aufgetaut), 2 Limetten, 60 g Babyspinat frisch"
     },
     {
       "id": "palatschinken",
@@ -402,7 +402,7 @@
       "tags": [
         "palatschinken"
       ],
-      "notes": ""
+      "notes": "Zutaten: 140 g Mehl, 1/2 l Milch, Salz, 2 Eier; optional Schuss Sprudel"
     },
     {
       "id": "waffeln",
@@ -649,7 +649,7 @@
         "mit",
         "schokostückchen"
       ],
-      "notes": ""
+      "notes": "Zutaten 6 Stk: 85ml Milch* \n75g weiche Butter*\n75g Erythrit* \n\n\n65g entöltes Mandelmehl* \n50g zuckerfreie Schokodrops* \n30g Kokosmehl*\n2 Eier*\n1 TL Backpulver*\n1/2 TL Vanille Extrakt* \nZubereitung: 1. Schritt\nHeize deinen Backofen auf 180 °C (Ober- und Unterhitze) vor.\n2. Schritt\n  75g weiche Butter*, 75g Erythrit*, 1/2 TL Vanille Extrakt*\n\nGebe die Butter, das Erythrit und den Vanille Extrakt in eine große Schüssel.\nSchlage die weiche Butter mit einem Handrührgerät oder einem Schneebesen, bis du eine gleichmäßige, luftig-blasse Masse erhältst.\n\n3. Schritt\n  85ml Milch*, 65g entöltes Mandelmehl*, 30g Kokosmehl*, 2 Eier*, 1 TL Backpulver*\n\nGebe die restlichen Zutaten mit in die Schüssel und hebe sie anschließend unter die geschlagene Butter, bis du einen gleichmäßigen Teig erhältst.\n4. Schritt\n  50g zuckerfreie Schokodrops*\n\nGebe als Letztes die Schoko Drops in die Schüssel und hebe sie unter den Teig, bis sie gleichmäßig in ihm verteilt sind.\n5. Schritt\nLege eine Muffinbackform* mit 6 Papier- oder Silikonförmchen* aus.\n6. Schritt\nBefülle die Förmchen gleichmäßig mit dem Teig.\n Du kannst zusätzlich zur Dekoration ein paar Schoko Drops oben auf den Teig drücken.\n\n7. Schritt\nBacke die Muffins bei 180 °C (Ober- und Unterhitze) für ca. 20-25 Minuten.\n Jeder Ofen ist anders, was zu abweichenden Backzeiten führen kann.\nAußerdem solltest du immer wieder nach deinen Muffins schauen, denn Mandelmehl brennt meist schneller an als übliches Weizenmehl.\n\n Um zu testen, ob deine Muffins durch sind, ist die Stäbchenprobe gut geeignet:\nStecke einen Zahnstocher in deine Muffins und ziehe ihn vorsichtig wieder heraus – kommt der Zahnstocher sauber und ohne Teigreste wieder heraus, sind sie fertig."
     },
     {
       "id": "high-protein-mousse",
@@ -707,7 +707,7 @@
         "avoado",
         "zitrone"
       ],
-      "notes": ""
+      "notes": "Sehr gute Wahl, rund & weich; 60-70 g Risoni\nSauce:\n- ½ reife Avocado\n- 1–2 TL Zitronensaft\n- Salz\n- optional 1 TL Olivenöl, evtl gewürfelte Gurke und klein gezupfter Rucola"
     },
     {
       "id": "risoni-joghurt-pesto",
@@ -727,7 +727,7 @@
         "joghurt",
         "pesto"
       ],
-      "notes": ""
+      "notes": "Sauce:\n- 3 EL griechischer Joghurt\n- 1 TL grünes Pesto\n- 1 TL Zitronensaft\n- Salz\nGut verrühren, nicht erhitzen, unter die warmen Risoni ziehen. 60-70 g Risoni."
     },
     {
       "id": "risoni-tomate-frischkaese",
@@ -747,7 +747,7 @@
         "tomate",
         "frischkäse"
       ],
-      "notes": ""
+      "notes": "Pasta-Feeling ohne Pasta-Overkill\nSauce:\n- 4–5 EL passierte Tomaten\n- 1–2 EL Frischkäse\n- Salz\nKurz erwärmen, dann mit Risoni mischen."
     },
     {
       "id": "risoni-tahini-joghurt",
@@ -767,7 +767,7 @@
         "tahini",
         "joghurt"
       ],
-      "notes": ""
+      "notes": "Sättigend, sehr rund\nSauce:\n- 2 EL Joghurt\n- 1 TL Tahini\n- Zitronensaft\n- Salz\nEvtl. 1–2 TL Wasser für Cremigkeit."
     },
     {
       "id": "risoni-ricotta-zitrone",
@@ -787,7 +787,7 @@
         "ricotta",
         "zitrone"
       ],
-      "notes": ""
+      "notes": "Sehr elegant, mild\nSauce:\n- 2–3 EL Ricotta\n- Zitronenabrieb\n- Salz\n👉 Gurke/Rucola hier eher weglassen, damit es nicht zu „salatig“ wird."
     },
     {
       "id": "reis-avocado",
@@ -806,7 +806,7 @@
         "reis",
         "avocado"
       ],
-      "notes": ""
+      "notes": "60 g Reis\nSauce:\n- ½ reife Avocado\n- 1–2 TL Zitronensaft\n- Salz\n- optional 1 TL Olivenöl, evtl gewürfelte Gurke und klein gezupfter Rucola"
     },
     {
       "id": "reis-pesto",
@@ -825,7 +825,7 @@
         "reis",
         "pesto"
       ],
-      "notes": ""
+      "notes": "Grünes Pesto (sparsam!)\n\n- 1 TL Pesto\n- optional mit 1–2 EL Joghurt strecken\n👉 Mehr als 1 TL kippt es Richtung Pasta/Genuss."
     },
     {
       "id": "reis-joghurt-tahini",
@@ -845,7 +845,7 @@
         "joghurt",
         "tahini"
       ],
-      "notes": ""
+      "notes": "Sauce:\n- 3 EL Joghurt\n- 1 TL Tahini\n- Zitronensaft\n- Salz"
     },
     {
       "id": "nudeln-tomate-cottage",
@@ -865,7 +865,7 @@
         "tomate",
         "cottage"
       ],
-      "notes": ""
+      "notes": "70-80 g Nudeln; Tomaten–Cottage\n\n- passierte Tomaten\n- 2–3 EL Cottage\n- Salz\n👉 leicht, aber eindeutig „Pasta“"
     },
     {
       "id": "nudeln-zitrone-ricotta",
@@ -885,7 +885,7 @@
         "zitrone",
         "ricotta"
       ],
-      "notes": ""
+      "notes": "70- 80 g Nudeln; - Ricotta\n- Zitronenabrieb\n- etwas Nudelwasser\n- Salz\n👉 sehr elegant, nicht schwer"
     },
     {
       "id": "nudeln-pesto-joghurt",
@@ -905,7 +905,7 @@
         "pesto",
         "joghurt"
       ],
-      "notes": ""
+      "notes": "70-80 g Nudeln; - 1–2 TL Pesto\n- 2–3 EL Joghurt\n👉 verhindert, dass Pesto zu fettig wird"
     },
     {
       "id": "nudeln-tomaten-ricotta",
@@ -925,7 +925,7 @@
         "tomaten",
         "ricotta"
       ],
-      "notes": ""
+      "notes": "70-80 g Nudeln; Tomaten–Ricotta\n\n- passierte Tomaten\n- 2–3 EL Ricotta\n- Salz\n👉 leicht, aber eindeutig „Pasta“"
     },
     {
       "id": "risotto-avocado-pesto",
@@ -945,7 +945,7 @@
         "avocado",
         "pesto"
       ],
-      "notes": ""
+      "notes": "ca 70 g Risottoreis; - Avocado\n- Zitrone\n- Olivenöl\n  \n   → bleibt leicht, trotz Genuss"
     },
     {
       "id": "risotto-zitrone-parmesan",
@@ -965,7 +965,7 @@
         "zitrone",
         "parmesan"
       ],
-      "notes": ""
+      "notes": "ca 70 g Risotto-Reis; - Zitronenabrieb\n- etwas Parmesan\n- evtl. ein Löffel Frischkäse\n  \n   → frisch, nicht schwer\n  \n   👉 eines der besten „nicht-bauchigen“ Risotti"
     },
     {
       "id": "risotto-tomate-frischkaese",
@@ -985,7 +985,7 @@
         "tomate",
         "frischkäse"
       ],
-      "notes": ""
+      "notes": "ca 70 g Risotto-Reis; - passierte Tomaten\n- Frischkäse statt viel Butter\n  \n   → tomatig, cremig, nicht fettig\n  \n   👉 sehr gute Alternative zu Pasta mit Tomatensauce"
     },
     {
       "id": "risotto-safran",
@@ -1004,7 +1004,7 @@
         "risotto",
         "safran"
       ],
-      "notes": ""
+      "notes": "wenig Gewürz, viel Aroma\n\n → braucht fast nichts dazu\n\n 👉 elegant, „Restaurant-Gefühl“"
     },
     {
       "id": "risotto-kurkuma",
@@ -1023,7 +1023,7 @@
         "risotto",
         "kurkuma"
       ],
-      "notes": ""
+      "notes": "wenig Gewürz, viel Aroma\n\n → braucht fast nichts dazu\n\n 👉 elegant, „Restaurant-Gefühl“"
     },
     {
       "id": "lc-wrap-hummus-falafel-rucola-paprika",
@@ -1157,7 +1157,7 @@
         "frischkäse",
         "rucola"
       ],
-      "notes": ""
+      "notes": "2 Portionen: Packung Gnocchi, 2 EL Frischkäse, Avocado gewürfelt, Cocktailtomaten, Rucola; evtl Chili"
     },
     {
       "id": "gnocchi-und-lachs-gegrillt",
@@ -1624,7 +1624,7 @@
         "cotage",
         "zitrone"
       ],
-      "notes": ""
+      "notes": "Zutaten: Apfelwürfel, wenige Granatapfelkerne, Rucola/Gurke, Cottage, Walnüsse (kleine Menge), Zitronendressing (Zitrone + 1 TL Olivenöl), Salz, Pfeffer"
     },
     {
       "id": "spinat-tomaten-cottage-bowl",
@@ -1714,7 +1714,7 @@
       "tags": [
         "pizzamuffins"
       ],
-      "notes": ""
+      "notes": "Zutaten 6 Stk: 120g geriebener Käse* \n75g Mini-Salami*\n60ml Sahne*\n50g Cocktailtomaten*\n40g entöltes Mandelmehl* \n30g geschmolzene Butter*\n2 Eier*\n1 TL Backpulver*\n1 TL gehackter Basilikum*\n1/2 TL Oregano*\n1/8 TL Knoblauchpulver*; Zubereitung: 1. Schritt\nHeize deinen Backofen auf 180 °C (Ober- und Unterhitze) vor.\n2. Schritt\n  75g Mini-Salami*, 50g Cocktailtomaten*\n\nSchneide die Tomaten in kleine Würfel und gebe sie in eine große Schüssel.\nSchneide die Mini-Salamis in kleine Scheibchen und hebe etwa 5 kleine Salami-Scheibchen pro Muffin auf – die kommen vor dem Backen zur Dekoration auf die Pizza Muffins.\n\nGebe die restlichen Salami-Scheibchen ebenfalls in die große Schüssel.\n\n3. Schritt\n  40g entöltes Mandelmehl*, 1 TL Backpulver*, 1 TL gehackter Basilikum*, 1/2 TL Oregano*, 1/8 TL Knoblauchpulver*\n\nGebe die trockenen Zutaten mit in die Schüssel und vermische alles gut miteinander.\n4. Schritt\n  120g geriebener Käse*, 60ml Sahne*, 30g geschmolzene Butter*, 2 Eier*\n\nGebe nun die restlichen Zutaten für die Muffins hinzu und vermische alles mit einem Löffel oder Teigschaber, bis du einen gleichmäßigen Teig erhältst.\n5. Schritt\nLege eine Muffinbackform* mit 6 Muffin-Förmchen aus und verteile den Teig auf die Förmchen.\n Um zu verhindern, dass die fertigen Muffins an der Form kleben, eignen sich Silikon-Förmchen* besser als Papier-Förmchen.\n\nNoch besser ist allerdings eine Muffinbackform aus Silikon* – hier brauchst du gar keine Muffinförmchen, sie lässt sich super einfach reinigen und die Muffins lassen sich sehr einfach aus der Form lösen.\n\n6. Schritt\n Salami-Scheibchen\n\nDrücke nun die Salami-Scheibchen, die du in Schritt 2 beiseite gelegt hast oben auf deine Pizza Muffins.\n7. Schritt\nBacke die Muffins bei 180 °C (Ober- und Unterhitze) für ca. 15 Minuten.\n8. Schritt\nLasse die fertigen Low Carb Pizza Muffins vor dem Verzehr etwas abkühlen."
     },
     {
       "id": "finn-crisp-cottage-avocado",
@@ -1754,7 +1754,7 @@
       "tags": [
         "zucchinicremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: 1 Knoblauchzehe, 2 Schalotten, 150 g mehlige Kartoffeln, 20 g Butter, Öl, 600 g Zucchini, Curry, Minze, Wasser, Salz, Gewürzpaste/Gewürzbrühe, 400 g Milch, 100 g Sahne/Cuisine, 20 g Limettensaft; Zubereitung s. TM"
     },
     {
       "id": "tomatencremesuppe",
@@ -1772,7 +1772,7 @@
       "tags": [
         "tomatencremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: Zwiebel 1, Butter/Öl 20 g, Kartoffeln 300 g, Wasser/Brühe 300–400 g, passierte Tomaten 500 g, Milch/Sahne 200 g, Salz, optional Prise Zucker; Schritte\n1. Zwiebel in den Mixtopf → 5 Sek / Stufe 5\n2. Runterschieben, Butter/Öl dazu → 3 Min / 120°C / Stufe 1\n3. Kartoffeln + Wasser/Brühe + Salz dazu → 18 Min / 100°C / Stufe 1\n4. Passierte Tomaten dazu → 8 Min / 100°C / Stufe 1\n5. Pürieren → 45 Sek, langsam Stufe 4→8\n6. Milch/Sahne dazu → 2 Min / 90°C / Stufe 2\n7. Abschmecken: Salz, ggf. Prise Zucker (nur falls zu sauer).\n   \n    Wenn zu dick: +50–100 g Wasser, 30 Sek / 90°C / Stufe 2"
     },
     {
       "id": "fenchelcremesuppe",
@@ -1790,7 +1790,7 @@
       "tags": [
         "fenchelcremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: Zwiebel 1, Butter/Öl 20 g, Fenchel 500 g (in Stücken), Kartoffeln 250 g, Wasser/Brühe 700 g, Milch/Sahne 250 g, Salz, weißer Pfeffer; Schritte\n1. Zwiebel in den Mixtopf → 5 Sek / Stufe 5\n2. Runterschieben, Butter/Öl dazu → 3 Min / 120°C / Stufe 1\n3. Fenchelstücke dazu → 5 Sek / Stufe 5 (nur grob zerkleinern)\n4. Ansautieren → 5 Min / 120°C / Stufe 1\n5. Kartoffeln + Wasser/Brühe + Salz dazu → 20 Min / 100°C / Stufe 1\n6. Pürieren → 45–60 Sek, langsam Stufe 4→8\n7. Milch/Sahne + weißer Pfeffer dazu → 2 Min / 90°C / Stufe 2\n8. Abschmecken (Salz/Pfeffer). Bei Bedarf mit Wasser verdünnen."
     },
     {
       "id": "spinatcremesuppe",
@@ -1808,7 +1808,7 @@
       "tags": [
         "spinatcremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: Zwiebel 1, Knoblauch 1 Zehe, Butter/Öl 20 g, Kartoffeln 300 g (Stücke), Wasser/Brühe 700 g, Spinat 400 g (TK oder frisch), Milch/Hafermilch 300 g, Salz, Muskat; Schritte\n1. Zwiebel + Knoblauch in den Mixtopf → 5 Sek / Stufe 5\n2. Runterschieben, Butter/Öl dazu → 3 Min / 120°C / Stufe 1\n3. Kartoffeln + Wasser/Brühe + Salz dazu → 18 Min / 100°C / Stufe 1\n4. Spinat dazu (TK direkt, frisch kurz vorher grob) → 3 Min / 100°C / Stufe 1\n5. Pürieren → 45 Sek, langsam Stufe 4→8 (hochdrehen)\n6. Milch/Hafermilch + Muskat dazu → 2 Min / 90°C / Stufe 2\n7. Abschmecken (Salz/Muskat).\n   \n    Wenn zu dick: +50–100 g Wasser, 30 Sek / 90°C / Stufe 2"
     },
     {
       "id": "kartoffelcremesuppe",
@@ -1826,7 +1826,7 @@
       "tags": [
         "kartoffelcremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: Petersilie, 1 Zwiebel, 300 g Suppengemüse, Öl, 500 g Kartoffeln, Wasser, Gewürzpaste/Gewürzbrühe, Salz, Pfeffer, 150 g Sahne/Cuisine, Muskat; Zubereitung s. TM"
     },
     {
       "id": "erbsencremesuppe",
@@ -1844,7 +1844,7 @@
       "tags": [
         "erbsencremesuppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: Öl, 1 Lauch, 2 Zwiebel, 3 Knoblauch; 2 gewürfelte Kartoffel, 600 g TK Ebsen, 900 ml Gemüsebrühe, Cuisine; Zubereitung: Öl, Lauch, Knoblauch, Zwiebel anschwitzen (2 min 100 Grad); Kartoffel und Erbsen dazu (2 min., 100 Grad, Stufe 2); 850 mg Gemüsebrühe (15 min., 100 Grad, Stufe 2); 30 Sek. für Stufe 10; Cuisine dazu (15 Sek, Stufe 3)"
     },
     {
       "id": "kuerbis-kokos-suppe",
@@ -1864,7 +1864,7 @@
         "kokos",
         "suppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: 3 Stängel Koriander, Knoblauch, 1 Zwiebel, 650 g Hokkaido-Kürbis, Öl, Wasser, 300 g Möhrensaft, Gewürzpaste/Gewürzbrühe, gelbe Currypaste, 1 Dose Kokosmilch 200 g, Salz, Pfeffer; Zubereitung s. TM"
     },
     {
       "id": "avocado-garnelen-suppe",
@@ -1873,7 +1873,7 @@
       "heavy": false,
       "frequency": {
         "type": "weekly",
-        "max": 2
+        "max": 1
       },
       "slotTypes": [
         "lunch",
@@ -1884,7 +1884,7 @@
         "garnelen",
         "suppe"
       ],
-      "notes": ""
+      "notes": "Zutaten: 100 g Garnelen roh, Salz, Pfeffer, Öl, 100 g Tomaten, 1 gelbe Paprika, 60 g Rucola, 1 Avocado, 1 Frühlingszwiebel, 500 g Buttermilch, 100 g Wasser, Kreuzkümmel, Cayenne-Pfeffer, Limettensaft; Zubereitung s. TM"
     },
     {
       "id": "einbrennsuppe",
@@ -1902,11 +1902,11 @@
       "tags": [
         "einbrennsuppe"
       ],
-      "notes": ""
+      "notes": "Grundprinzip Einbrenn (TM)\n\n1. 30–40 g Butter oder Öl\n   \n    → 3 Min / 120 °C / Stufe 1\n2. 30–40 g Mehl zugeben\n   \n    → 5–6 Min / 120 °C / Stufe 1\n   \n    👉 ohne Messbecher, damit Feuchtigkeit entweichen kann\n   \n    👉 Farbe beobachten (hell = mild, dunkler = kräftig)\n3. Langsam Flüssigkeit zugeben (Brühe!)\n   \n    → erst 100 ml, 10 Sek / Stufe 4\n   \n    → dann restliche Brühe portionsweise\n4. Aufkochen & glätten\n   \n    → 8–10 Min / 100 °C / Stufe 2–3\n5. Würzen nach Geschmack\n🔑 Häufigster Fehler:\n- Mehl + Flüssigkeit zu schnell → klumpt\n- zu kurze Röstzeit → mehliger Geschmack"
     },
     {
       "id": "standard-porridge-smoothie",
-      "name": "Standard (Porridge + Smoothie)",
+      "name": "Standard Porridge + Smoothie",
       "category": "green",
       "heavy": false,
       "frequency": {
@@ -2150,23 +2150,24 @@
       "notes": ""
     },
     {
-      "id": "omelette-wrap",
-      "name": "Omelette Wrap",
+      "id": "omelette",
+      "name": "Standard-Omelette",
       "category": "green",
       "heavy": false,
       "frequency": {
         "type": "weekly",
-        "max": 5
+        "max": 4
       },
       "slotTypes": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
       "tags": [
-        "omelette",
-        "wrap"
+        "standard",
+        "omelette"
       ],
-      "notes": ""
+      "notes": "Zutaten: 3 Eier, etwas Cocktailtomaten, Rucola, Gewürze"
     },
     {
       "id": "mini-quiches",
@@ -2185,7 +2186,7 @@
         "mini",
         "quiches"
       ],
-      "notes": ""
+      "notes": "Zutaten 6 Stk: 3 Eier, 150 g Hüttenkäse, 50 g Reibekäse, 100 g Gemüse, Salz, Pfeffer; alles in Muffinformen, 180 Grad für ca 25 Minuten; mit Feta würziger - aber gelb; "
     },
     {
       "id": "spinat-feta-ei-muffins",
@@ -2206,7 +2207,7 @@
         "feta",
         "muffins"
       ],
-      "notes": ""
+      "notes": "Zutaten für ca 6 Stk.: 3 Eier, 50 g Feta, 100 g Spinat, Salz, Pfeffer; alles vermischen, Muffinformen, 180 Grad für ca 25 Minuten. Flüssigkeit aus Spinat drücken, damit Muffins nicht wässrig werden."
     },
     {
       "id": "thunfisch-tortilla-bake",
@@ -2226,11 +2227,11 @@
         "tortilla",
         "bake"
       ],
-      "notes": ""
+      "notes": "Zutaten: 1 LC Wrap, 1 Dose Thunfisch, 1 Ei, 40 g Käse, Gewürze, evtl noch Cottage für Proteinplus; alles mischen, in Wrap, Airfryer 180 Grad für 10-12 Minuten; "
     },
     {
       "id": "tortilla-ei-huettenkaese",
-      "name": "Tortilla Ei Hüttenkäse",
+      "name": "Tortilla Ei Hüttenkäse Quiche",
       "category": "green",
       "heavy": false,
       "frequency": {
@@ -2243,9 +2244,10 @@
       ],
       "tags": [
         "tortilla",
-        "hüttenkäse"
+        "hüttenkäse",
+        "quiche"
       ],
-      "notes": ""
+      "notes": "1 LC Tortilla, 3 Eier, 150 g Hüttenkäse, Gewürze; alles mischen, backen"
     },
     {
       "id": "lachs-auf-quinoasalat",
@@ -2265,7 +2267,7 @@
         "auf",
         "quinoasalat"
       ],
-      "notes": ""
+      "notes": "So machst du es:\nLachs:\n- 2 Lachsfilets (je ~120–150 g)\n- 1 TL Olivenöl (nicht mehr!)\n- Zitrone, Knoblauch, Kräuter\nQuinoa:\n- 60 g roh (nicht 150 g!)\n- 1/2 Gurke\n- 100 g Tomaten\n- 1/2 Zwiebel\nDressing:\n- 1 TL Olivenöl\n- 1 EL Zitronensaft\n- Salz, Pfeffer\n- KEIN Honig"
     },
     {
       "id": "spinat-ei-wrap-mit-thunfisch",
@@ -2286,7 +2288,7 @@
         "mit",
         "thunfisch"
       ],
-      "notes": ""
+      "notes": "kleine Optimierung:\n\n- 3 Eier\n- 80 g Thunfisch\n- 1 EL Frischkäse (statt 2)\n- 1/4 Avocado (statt 1/2)"
     },
     {
       "id": "hafer-chia-wrap",
@@ -2306,7 +2308,7 @@
         "chia",
         "wrap"
       ],
-      "notes": ""
+      "notes": "Teig:\n- 60 g Haferflocken\n- 1 TL Chia\n- 200 ml Wasser\nFüllung:\n- 2 Eier\n- 1 EL Avocado"
     },
     {
       "id": "protein-muffins-herzhaft",
@@ -2327,7 +2329,7 @@
         "muffins",
         "herzhaft"
       ],
-      "notes": ""
+      "notes": "Basis:\n- 4 Eier\n- 100 ml Milch\nGemüse:\n- 1 Paprika\n- 1 kleine Zucchini\n- 1 Hand Spinat\nTopping:\n- 20–30 g leichter Reibekäse\n---\n\n👉 Optional Upgrade:\n\n- 100 g Hähnchen oder Pute rein → noch besser"
     },
     {
       "id": "griechischer-risoni-salat",
@@ -2347,7 +2349,7 @@
         "risoni",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 60 g Risoni (roh)\n- 50 g Feta\n- 150 g Gemüse (Tomaten, Gurke)\n- 1 TL Olivenöl\n- Essig, Gewürze\nZubereitung:\n1. Risoni kochen\n2. Alles vermengen\n👉 Status: mit Mengenkontrolle OK"
     },
     {
       "id": "low-carb-schuettelpfannkuchen",
@@ -2367,7 +2369,7 @@
         "carb",
         "schüttelpfannkuchen"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 2 Eier\n- 150 g Magerquark\n- 30 g Hafermehl\n- 60 ml Milch\n- 1 TL Öl\n- Süße, Salz\nZubereitung:\n1. Mixen\n2. 5 Min stehen lassen\n3. langsam ausbacken\n👉 Status: funktioniert – wenn richtig gemacht; extra Protein durch Cottage; Würziger = Chili oder Paprikapulver; evtl noch mit Spinat ergänzen;"
     },
     {
       "id": "kichererbsensalat",
@@ -2385,7 +2387,7 @@
       "tags": [
         "kichererbsensalat"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 100 g Kichererbsen\n- 150 g Hähnchen oder Thunfisch\n- 100 g Gemüse\n- 1 TL Olivenöl\n- Gewürze\nZubereitung:\n→ alles mischen\n👉 Status: nur MIT Protein sinnvoll"
     },
     {
       "id": "avocado-protein-wrap",
@@ -2405,7 +2407,7 @@
         "protein",
         "wrap"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 1 LC Wrap\n- 120 g Hähnchen\n- 50 g Avocado\n- Gemüse\nZubereitung:\n→ füllen, rollen\n👉 Status: gut so"
     },
     {
       "id": "avocado-boden-pizza",
@@ -2425,7 +2427,7 @@
         "boden",
         "pizza"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 1 Ei\n- 50 g Avocado\n- 40 g Käse\n- 30 g Mehl (oder LC Alternative)\n- Belag nach Wahl\nZubereitung:\n1. Boden mischen\n2. backen (Ofen 190 Grad 15 Minuten, Airfryer 180 Grad 12 Minuten)\n3. belegen + nochmal backen (bis Käse geschmolzen)\n👉 Status: ok in moderater Menge"
     },
     {
       "id": "apfel-walnuss-salat",
@@ -2445,7 +2447,7 @@
         "walnuss",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 1 Apfel\n- 100 g Salat\n- 50 g Feta\n- 10 g Walnüsse\n- 1 TL Öl\n👉 Status: angepasst gut"
     },
     {
       "id": "honig-limetten-haehnchen",
@@ -2465,7 +2467,7 @@
         "limetten",
         "hähnchen"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 150 g Hähnchen\n- 60 g Reis (roh)\n- 50 g Avocado\n- 1 TL Honig\n- Limette, Gewürze 1 TL Paprikapulver, Salz, Pfeffer, 2 EL Koriander, 1 TL Kreuzkümmel; Zubereitung: Honig, Limette, Knoblauch, Paprikapulver, Salz, Pfeffer vermengen und Filet darin einlegen für min. 30 Min.; Reis kochen; separat Avocados, Tomaten, Koriander vermengen; Olivenöl, Limette, Kreuzkümmel, Salz und Pfeffer abschmecken; Filet in Pfanne 6-7 Min mittlere Hitze braten; in Streifen schneiden; Stack: Schicht Reis, dann Avocado-Mischung, dann Filetstreifen\n👉 Status: ausgewogen"
     },
     {
       "id": "protein-porridge-bowl",
@@ -2485,7 +2487,7 @@
         "porridge",
         "bowl"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 40 g Haferflocken\n- 30 g Proteinpulver\n- 200 ml Flüssigkeit\n- 100 g Beeren\n- 10 g Schokolade\n👉 Status: passt"
     },
     {
       "id": "erdbeer-mango-feta-salat",
@@ -2506,11 +2508,11 @@
         "feta",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 100 g Erdbeeren\n- 50 g Mango\n- 50 g Feta\n- 10 g Kerne\n- 1 TL Öl\n👉 Status: moderat ok"
     },
     {
       "id": "mini-lachs-spinat-quiches",
-      "name": "Mini Lachs-Spinat-Quiches",
+      "name": "Mini Lachs-Spinat-Quiches-Tortilla",
       "category": "yellow",
       "heavy": false,
       "frequency": {
@@ -2525,9 +2527,10 @@
         "mini",
         "lachs",
         "spinat",
-        "quiches"
+        "quiches",
+        "tortilla"
       ],
-      "notes": ""
+      "notes": "Teig:\n- 2 Tortillas (nicht 3–4)\nFüllung:\n- 150 g Lachs\n- 100 g Spinat\nGuss:\n- 3 Eier\n- 100 ml Milch (statt Sahne!)\nKäse:\n- max. 30 g gerieben; Tortilla-Körbchen mit Spinat und Lachswürfel auslegen, Guss aus Sahne, Eier, Salz, Pfeffer und Muskat drüber leeren bis fast voll; Ofen 180 Grad für 15-20 Minuten;"
     },
     {
       "id": "kartoffel-spinat-feta-wrap",
@@ -2548,7 +2551,7 @@
         "feta",
         "wrap"
       ],
-      "notes": ""
+      "notes": "🔧 Anpassung:\n\nBasis:\n- 2 Kartoffeln\n- 80 g Käse (statt 130 g)\nFüllung:\n- 200 g Spinat\n- 100 g Feta\n- KEIN extra Mozzarella; Zubereitung: Kartoffel-Bett: Ofen 200, Kartoffel schälen, hauchdünn hobeln, abspülen, sehr gut trocken tupfen, Salz und Pfeffer würzen; Scheiben überlappend auf ein Blech mit Backpapier; Käse drüber streuen 20-25 Min backen, bis Platte goldbraun und knusprig; Spinatfüllung (Zwiebel und Knoblauch 5 Min dünsten, Spinat zugeben und bis zum kompletten Verdampfen der Flüssigkeit garen, abkühlen lassen, Feta dazu). Kartoffelplatte kurz auf Gitter abkühlen lassen, umdrehen (knusprige Seite nach unten); Füllung drauf verteilen, vorsichtig rollen, 12-15 Minuten backen bis Käse im Inneren geschmolzen."
     },
     {
       "id": "kartoffel-fladenbrot",
@@ -2568,7 +2571,7 @@
         "kartoffel",
         "fladenbrot"
       ],
-      "notes": ""
+      "notes": "Anpassung:\n\nTeig:\n- 4 Kartoffeln\n- 150 g Mehl (statt 250 g)\n- KEIN zusätzlicher Käse nötig\nBraten:\n- ohne Fett oder max. 1 TL"
     },
     {
       "id": "protein-piccolini",
@@ -2588,7 +2591,7 @@
         "protein",
         "piccolini"
       ],
-      "notes": ""
+      "notes": "Basis:\n- 250 g Hüttenkäse (light)\n- 2 Eier\n- 80 g Mozzarella (statt 150 g!)\nFüllung:\n- 100 g magerer Schinken ODER besser: 👉 100 g Hähnchenbrust (empfohlen)\n- 1/2 Zwiebel\n- 1 Paprika\nGewürze:\n- unverändert Pizzagewürz, Salz, Pfeffer, Oregano; Chili oder Knoblauch für mehr Würze; alles vermengen, auf Blech mit Backpapier Fladen, 200 Grad für 10-15 Minuten"
     },
     {
       "id": "green-goddess-salat",
@@ -2608,7 +2611,7 @@
         "goddess",
         "salat"
       ],
-      "notes": ""
+      "notes": "🔧 Anpassung (sehr wichtig hier!):\n\nBasis:\n- 1/2 Spitzkohl/Alternative, 1 Salatgurke, 1 Bund Schnittlauch, 1 Schalotte\n---\nFettquellen reduzieren:\n- 1/2 Avocado (statt ganz)\n- 80 g Feta (statt 150 g)\n- 1 TL Öl (statt 3 EL!!)\n- 1 EL Kerne (statt 2) zB Pinienkerne\n---\nDressing:\n- 150 g griechischer Joghurt\n- viel Zitrone\n- Kräuter - Handvoll Spinat, Handvoll Basilikum, 2 Knoblauchzehen, Salz, Pfeffer; \n---\n\n👉 Optional sinnvoll:\n\n➡️ + 100 g Hähnchen oder Thunfisch\n→ macht es zu kompletter Mahlzeit"
     },
     {
       "id": "kartoffelplaetzchen",
@@ -2626,7 +2629,7 @@
       "tags": [
         "kartoffelplätzchen"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 250 g Kartoffeln\n- 1 Eigelb\n- 1 EL Stärke\n- 50 g Käse\n- Öl\n👉 Status: Cheat"
     },
     {
       "id": "suesse-schupfnudeln",
@@ -2645,7 +2648,7 @@
         "süße",
         "schupfnudeln"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 250 g Schupfnudeln\n- Butter\n- Zucker\n👉 Status: Cheat"
     },
     {
       "id": "spinatspaetzle-mit-sahne",
@@ -2665,7 +2668,7 @@
         "mit",
         "sahne"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 200 g Spätzle\n- 100 ml Sahne\n- Käse\n👉 Status: Cheat"
     },
     {
       "id": "knoblauch-fladenbrot",
@@ -2684,7 +2687,7 @@
         "knoblauch",
         "fladenbrot"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- Mehl\n- Öl\n- Wasser\n👉 Status: Cheat"
     },
     {
       "id": "kaiserschmarrn",
@@ -2702,7 +2705,7 @@
       "tags": [
         "kaiserschmarrn"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 2 Eier\n- 100 g Mehl\n- Milch\n- Zucker\n👉 Status: Cheat; Zubereitung: Eier trennen, Eiweiß aufschlagen; Eigelb, Mehl, Backpulver, Wasser, Milch, Salz verrühren, Schnee unterheben; Öl erhitzen, niedriger Stufe und geschlossener Deckel zum Stocken bringen, zerrupfen"
     },
     {
       "id": "apfelpfannkuchen",
@@ -2720,7 +2723,7 @@
       "tags": [
         "apfelpfannkuchen"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 2 Eier\n- 125 g Mehl\n- Milch\n- Apfel\n- Zucker\n👉 Status: Cheat"
     },
     {
       "id": "ofenpfannkuchen",
@@ -2738,7 +2741,7 @@
       "tags": [
         "ofenpfannkuchen"
       ],
-      "notes": ""
+      "notes": "Zutaten:\n- 4 Eier\n- 150 g Mehl\n- Milch\n- Zucker, Tasse Heidelbeeren\n👉 Status: Cheat"
     },
     {
       "id": "blaetterteig-spinat-feta-schnecken",
@@ -2759,7 +2762,7 @@
         "feta",
         "schnecken"
       ],
-      "notes": ""
+      "notes": "Zutaten: 1 Pkg Blätterteig, 300 g TK Blattspinat (aufgetaut und sehr gut ausgedrückt), 200 g Feta, 100 g Frischkäse natur, 1 Knoblauchzehe gepresst, Salz, Pfeffer, Muskat; evtl 1 Eigelb zum Bestreichen; alles vermengen, auf dem Blätterteig verteilen, von der langen Seie her eng rollen; in 2 cm dicke Scheiben schneiden; auf Blech legen, 200 Grad Ober-Unterhitze für 15-20 Minuten backen."
     },
     {
       "id": "bruschetta-avocado",
@@ -2778,7 +2781,7 @@
         "bruschetta",
         "avocado"
       ],
-      "notes": ""
+      "notes": "Zutaten: Basis 1 Baguette, 1 Knoblauchzehe, Olivenöl; Green-Mix: 2 reife Avocados, Saft und Schale einer Limette, Salz, Pfeffer; Herzstück: 250 g Burrata; Topping: frisches Basilikum, Balsamico; Anpassungen: Cherrytomaten für mehr Frische, Chili-Flocken für Kick, Zitronensaft statt Limette, Rucola als zusätzliche grüne Komponente; Zubereitung: Baguette in Scheiben schneiden, mit Öl bestreichen und für 5-7 Minuten bei 200 Grad backen; Avocado-Limettensaft-Salz-Pfeffer vermischen und auf den Scheiben verteilen; Burrata auseinanderzupfen und auf Scheiben verteilen; Basilikum drauf; Balsamico drüber"
     },
     {
       "id": "spaghetti-spinat-frischkaese",
@@ -2798,7 +2801,7 @@
         "spinat",
         "frischkäse"
       ],
-      "notes": ""
+      "notes": "Zutaten: 250 g Pasta; 200 g frischer Babyspinat, 150 g Frischkäse, 1 Zwiebel, 1 Knoblauchzehe, Schuss Nudelwasser; Salz, Pfeffer, Muskat; Topping evtl Pinienkerne; Anpassungen: gebratene Hähnchenstreifen oder Kichererbsen für Proteinplus, Chili-Flocken für Extrakick; Zubereitung: Spaghetti kochen, Zwiebeln und Knoblauch klein gehackt in etwas Öl dünsten, Spinat dazu, Frischkäse und Nudelwasser dazu, abschmecken."
     },
     {
       "id": "erdbeermousse",
@@ -2815,7 +2818,7 @@
       "tags": [
         "erdbeermousse"
       ],
-      "notes": ""
+      "notes": "Zutaten für 4 Portionen: 300 g frische Erdbeeren, 250 ml Schlagsahne gut gekühlt, 2-3 EL Staubzucker, evtl Spritzer Zitronensaft; Anpassungen: evtl Teil der Sahne durch griechischen Joghurt ersetzen; evtl Zuckerersatz; Zubereitung: Erdbeeren waschen und zerkleinern, Puderzucker dazu und pürieren; Sahne separat schlagen, Erdbeerpüree vorsichtig unter Sahne heben, evtl 30 Minuten kaltstellen; Servieren mit zB frischen Erdbeeren als Topping, Minzblättern, Keksen als Crunch"
     },
     {
       "id": "pasta-garnelen-cremig",
@@ -2835,16 +2838,16 @@
         "garnelen",
         "cremig"
       ],
-      "notes": ""
+      "notes": "Zutaten: 200 g Garnelen, 190 g Spaghetti, 200 g Kirschtomaten, 200 g Rahmspinat, 200 ml Cremefine 7%, 1 EL Tomatenmark; Marinade: 1 Tl Olivenöl, 1 TL Paprikapulver, 1,5 TL Knoblauchgewürz; Salz, Pfeffer, 1 TL ital. Gewürzmischung; Variationen: Lachs oder Huhn statt Garnelen; Paprika dazu; Chili für Schärfe; Löffel Frischkäse für Cremigkeit; Zubereitung Pasta kochen, Garnelen mit Öl, Paprikapulver, Knoblauchgewürz marinieren, Garnelen 2-3 Minuten scharf anbraten; halbierte Cocktailtomaten und tomatenmark dazu, anrösten; Mit Cremefine ablöschen, Rahmspinat dazugeben, kurz köcheln lassen, bis Spinat geschmolzen und Sauce cremig ist; Spaghetti in die Pfanne dazu, gut vermengen; dazu: Rucola, kuspriges Baguette, evtl Spritzer Zitronensaft"
     },
     {
       "id": "avocado-pesto-salat",
-      "name": "Avocado-Pesto-Salat",
-      "category": "yellow",
+      "name": "Avocado-Pasta-Salat",
+      "category": "red",
       "heavy": true,
       "frequency": {
         "type": "weekly",
-        "max": 2
+        "max": 1
       },
       "slotTypes": [
         "lunch",
@@ -2852,10 +2855,10 @@
       ],
       "tags": [
         "avocado",
-        "pesto",
+        "pasta",
         "salat"
       ],
-      "notes": ""
+      "notes": "Zutaten: 250 g Fusilli oder Penne; 1 reife Avocado, 200 g Kirschtomaten, Handvoll Rucola oder Babyspinat; 1 Dose Kichererbsen für Proteinextra; Dressing: 1 weitere reife Avocado, Saft einer Limette, 1 Knoblauchzehe, Frischer Koriander oder Petersilie, 2 EL Olivenöl, Salz, Pfefffer; Topping: Pinienkerne; Variationen: Gurke oder Paprika für extra Frische, Feta für mehr Würze, Linsen statt Kichererbsen"
     },
     {
       "id": "pasta-lachs-sahne",
@@ -2875,7 +2878,7 @@
         "lachs",
         "sahne"
       ],
-      "notes": ""
+      "notes": "Zutaten: 200 g Lachsfilet in Würfel geschnitten; Basis: 150 g Kirschtomaten, 2 Handvoll Babyspinat, 1 Knoblauchzehe gepresst; Sauce: 150 ml Sahne oder pflanzliche Alternative, 2 EL geriebener Parmesan; 150 g Pasta; Salz, Pfeffer, italienische Kräuter, Spritzer Zitrone; Zubereitung: Lachs, Tomaten, Spinat und Knoblauch in hitzebeständige Form in Airfryer geben; 180 Grad für 10-12 Minuten; Pasta zwischenzeitlich kochen; vermengen; mit frischem Basilikum und Spritzer Zitrone servieren"
     },
     {
       "id": "tagliatelle-al-salmone",
@@ -2894,7 +2897,7 @@
         "tagliatelle",
         "salmone"
       ],
-      "notes": ""
+      "notes": "Zutaten: 200 g Tagliatelle; 200 g Lachs (Räucherlachs oder Frisches Filet in Würfeln); Sauce: 1 Schalotte, 200 ml Sahne, guter Spritzer Zitrone; Aroma: 1 EL Butter, Salz, Pfeffer, frischer Dill; Zubereitung: Pasta kochen, Schalotten würfeln und in Butter glasig dünsten; Lachs hinzufügen (frischen Lachs vorher kurz anbraten), mit Sahne aufgießen und kurz köcheln; Zitronensaft, Salz, Pfeffer abschmecken, Nudeln dazu"
     },
     {
       "id": "spinat-feta-tomaten-pasta",
@@ -2915,7 +2918,7 @@
         "tomaten",
         "pasta"
       ],
-      "notes": ""
+      "notes": "Zutaten: 1 Block Feta, 250 g TK Blattspinat, 200 g Cocktailtomaten, 300 g Nudeln; Sauce: 250 ml Sahne, 2-3 EL Olivenöl, 1 Knoblauchzehe; Gewürze: 1/2 TL Oregano, 1/2 TL Paprikapulver, Salz, Pfeffer; Variationen: leichtere Kochcreme statt Sahne, frischer Spinat statt TK, Chili für mehr Würze; Zubereitung: Ofen auf 200 Grad Umluft, Feta-Block mittig in Auflaufform legen; Spinat, Cocktailtomaten herum verteilen; Knoblauch über Zutaten pressen, Olivenöl und Sahne gleichmäßig drüber gießen; Oregano, Paprikapulver Salz, Pfeffer drüber streuen, 20 Minuten in den Ofen. Währenddessen Nudeln kochen."
     },
     {
       "id": "chili-garnelen-pasta",
@@ -2935,7 +2938,7 @@
         "garnelen",
         "pasta"
       ],
-      "notes": ""
+      "notes": "Zutaten für 2 Portionen: 250 g Linguine, Olivenöl, 250 g Garnelen TK, 1 EL Chili, Saft einer halben Zitrone, 1 Kelle trübes Nudelwasser, 200 g Sahne/Cremefine, 100 g Parmesan; Zuereitung: Nudeln kochen, bei 12 Minuten Garzeit nach 10 abgießen; Nudelwasser auffangen,"
     },
     {
       "id": "avocado-tomaten-pasta",
@@ -2955,7 +2958,7 @@
         "tomaten",
         "pasta"
       ],
-      "notes": ""
+      "notes": "Zutaten: 1 Knoblauchzehe, 200 g Kirschtomaten, 1/2 Bund Basilikum, 250 g Spaghetti, Salz, 1/2 Zitrone, 1 Avocado, 3 EL Olivenöl, Cayennepfeffer, frisch gemahlener Pfeffer; Optional: geriebener Parmesan, 1 Avocado für Topping; Zubereitung: Knoblauch, Tomaten, Basilikum waschen, schneiden, vermengen; Spaghetti kochen, Nudelwasser auffangen; Zitrone heiß abspülen, trocken tupfen, Schale fein abreiben, übrige Zitrone entsaften; Avocado mit 1 EL Zitronensaft, Olivenöl, Knoblauch, 2/3 der Basilikumblätter und 50 ml Nudelwasser mixen, Pfeffer und Salz dazu; restliches Olivenöl in Pfanne, Kirschtomaten dazu, 2-3 Minuten anschwitzen; Spaghetti, Avocadocreme, Tomaten, Salz und Pfeffer in Pfanne, mittlere Hitze, je nach Konsistenz Nudelwasser dazu"
     },
     {
       "id": "sonstiges-gelb",
