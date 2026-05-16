@@ -340,6 +340,20 @@ body[data-screen="settings"] .tab:nth-child(3) {
   resize: vertical;
   min-height: 60px;
 }
+.slot-add-note {
+  align-self: flex-start;
+  margin: 0 16px 12px;
+  padding: 6px 10px;
+  background: none;
+  border: 1px dashed var(--n-200);
+  border-radius: 6px;
+  color: var(--n-500);
+  font: inherit;
+  font-size: 13px;
+  min-height: 32px;
+  cursor: pointer;
+}
+.slot-add-note:hover { color: var(--n-900); border-color: var(--n-500); }
 .slot-actions {
   display: flex;
   gap: 8px;

@@ -49,6 +49,11 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
     sheet.style.transform = "";
   });
 
+  // Whether to render the Notiz textarea. Starts open only if the slot
+  // already has a note; otherwise we show a "+ Notiz" button to reveal it.
+  let showNotiz = !!(slot.note && slot.note.trim());
+  let focusNotizAfterRender = false;
+
   function rerender() {
     clear(sheet);
     sheet.append(
@@ -64,11 +69,16 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
               h("span", { class: "slot-detail-name" }, "Mahlzeit nicht mehr im Vorrat"),
             )
           : h("div", { class: "slot-detail-meta" }, h("span", {}, t.empty)),
-      h("textarea", {
-        class: "slot-note",
-        placeholder: "Notiz …",
-        oninput: (e) => onNoteChange(e.target.value),
-      }, slot.note ?? ""),
+      showNotiz
+        ? h("textarea", {
+            class: "slot-note",
+            placeholder: "Notiz …",
+            oninput: (e) => onNoteChange(e.target.value),
+          }, slot.note ?? "")
+        : h("button", {
+            class: "slot-add-note",
+            onclick: () => { showNotiz = true; focusNotizAfterRender = true; rerender(); },
+          }, "+ Notiz"),
       // Anleitung button — full-width, visually prominent, only if the
       // dish carries a non-empty notes field. Tapping it leaves the
       // detail sheet and opens the cooking view.
@@ -94,6 +104,12 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
           : null,
       ),
     );
+
+    if (focusNotizAfterRender) {
+      focusNotizAfterRender = false;
+      const ta = sheet.querySelector(".slot-note");
+      if (ta) requestAnimationFrame(() => ta.focus());
+    }
   }
 
   function emojiFor(c) { return { green: "🟢", yellow: "🟡", red: "🔴" }[c] ?? "·"; }
