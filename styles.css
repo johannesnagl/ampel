@@ -348,6 +348,7 @@ body[data-screen="settings"] .tab:nth-child(3) {
 }
 .slot-action {
   flex: 1;
+  min-width: 0; /* allow shrinking below content width if needed */
   min-height: 44px;
   background: var(--n-50);
   border: 1px solid var(--n-200);
@@ -355,11 +356,16 @@ body[data-screen="settings"] .tab:nth-child(3) {
   padding: 10px;
   font: inherit;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .slot-action.primary { background: var(--n-900); color: var(--n-0); border-color: var(--n-900); }
 .slot-action.danger  { color: var(--red-text); border-color: var(--red); }
 .slot-action.recipe {
-  width: 100%;
+  /* Sheet is a column flex container — children stretch full-width
+     by default via align-items: stretch. No need for width:100%
+     (which combined with horizontal margins would overflow the sheet). */
   flex: none;
   margin: 0 16px 8px;
   padding: 12px 16px;
