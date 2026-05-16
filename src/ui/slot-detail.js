@@ -72,12 +72,14 @@ export function openSlotDetail({ date, slotIdx, week, settings, dishes, onLog, o
       // Anleitung button — full-width, visually prominent, only if the
       // dish carries a non-empty notes field. Tapping it leaves the
       // detail sheet and opens the cooking view.
-      dish && dish.notes && dish.notes.trim()
-        ? h("button", {
+      // Spread an array (possibly empty) instead of returning null —
+      // native DOM `append(null)` renders the literal text "null".
+      ...(dish && dish.notes && dish.notes.trim()
+        ? [h("button", {
             class: "slot-action recipe",
             onclick: () => { onShowRecipe?.(); cleanup(); },
-          }, "📖 Anleitung")
-        : null,
+          }, "📖 Anleitung")]
+        : []),
       h("div", { class: "slot-actions" },
         slot.dishId && dish
           ? slot.loggedAt

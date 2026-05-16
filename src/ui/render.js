@@ -22,5 +22,10 @@ export function clear(el) {
 
 export function mount(parent, ...nodes) {
   clear(parent);
-  for (const n of nodes) parent.append(n);
+  for (const n of nodes.flat()) {
+    // Skip nullish/false children — they shouldn't render as the
+    // literal text "null"/"false" via native DOM append().
+    if (n == null || n === false) continue;
+    parent.append(n);
+  }
 }
