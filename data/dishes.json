@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "dishes": [
     {
       "id": "roest-polentakartoffeln",
@@ -116,7 +116,6 @@
       ],
       "tags": [
         "bowl",
-        "süß",
         "kalt",
         "vegetarisch",
         "cheat"
@@ -1097,6 +1096,7 @@
         "max": 2
       },
       "slotTypes": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -2433,6 +2433,7 @@
         "max": 2
       },
       "slotTypes": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -3116,7 +3117,6 @@
         "max": 2
       },
       "slotTypes": [
-        "breakfast",
         "snack"
       ],
       "tags": [
@@ -3161,7 +3161,6 @@
       ],
       "tags": [
         "leicht verdaulich",
-        "süß",
         "warm"
       ],
       "notes": "•\t200 g Süßkartoffel\n•\twenig Ölspray\n•\tGewürze\nKOMPOSITION entscheidet!\nGrün – als Beilage zu:\nGemüse-Frittata\nLachs\nTempeh\nThunfisch\nHähnchen\nCottage Cheese Dip\nQuark-Kräuter-Dip\n\nZubereitung:\nRaspeln bzw ganz dünn schneiden; 15-20 Minuten bei 180° im Airfryer; zwischendurch leicht schütteln\n\nBeispiele:\nLachs + Süßkartoffelchips + Salat = 0 Punkte\nTempeh-Bowl + Süßkartoffelchips + Avocado = 1 Punkt (wegen der Gesamtkomposition)"
@@ -3393,7 +3392,6 @@
         "max": 2
       },
       "slotTypes": [
-        "breakfast",
         "snack"
       ],
       "tags": [
@@ -3586,7 +3584,6 @@
         "dinner"
       ],
       "tags": [
-        "süß",
         "warm",
         "vegetarisch"
       ],
@@ -3723,6 +3720,7 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -3804,7 +3802,6 @@
         "max": 2
       },
       "slotTypes": [
-        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -3871,7 +3868,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack"
       ],
       "tags": [
@@ -4350,6 +4346,7 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "lunch",
         "dinner"
       ],
@@ -4816,7 +4813,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"
@@ -4841,7 +4837,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"
@@ -4870,7 +4865,6 @@
         "dinner"
       ],
       "tags": [
-        "süß",
         "warm",
         "meal prep",
         "vegetarisch"
@@ -4907,7 +4901,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"
@@ -4976,7 +4969,6 @@
         "dinner"
       ],
       "tags": [
-        "süß",
         "kalt",
         "meal prep",
         "to go",
@@ -5064,7 +5056,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"
@@ -5088,7 +5079,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"
@@ -5152,7 +5142,6 @@
         "max": 1
       },
       "slotTypes": [
-        "breakfast",
         "snack",
         "lunch",
         "dinner"

@@ -5,7 +5,7 @@ export const CATALOG_KEY = "ampel.dishes";
 // Bump when the seed catalog ("data/dishes 2.0.xlsx" → data/dishes.json) is
 // replaced. Bumping invalidates the user's localStorage cache so the new
 // catalog is fetched on next load.
-export const CATALOG_VERSION = 4;
+export const CATALOG_VERSION = 5;
 
 export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
   const storage = makeStorage(backend, {
@@ -30,6 +30,12 @@ export function makeCatalogStore(backend, fetchSeed = defaultFetchSeed) {
         // That is the intended behaviour here: the corrected codings must win.
         // Trade-off: dishes a user added through the catalog screen are lost.
         // The catalog is maintained in the spreadsheet, so that is acceptable.
+        //
+        // 4 → 5: also no migration. Slot assignments and tags of existing
+        // dishes changed (desserts dropped out of the breakfast picker,
+        // four breakfast dishes gained the slot, five "süß" tags that were
+        // false positives from "Süßkartoffel" removed). Same reasoning:
+        // an additive merge would keep the outdated fields.
       },
     },
   });

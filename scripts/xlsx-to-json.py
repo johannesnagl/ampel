@@ -19,7 +19,7 @@ except ImportError:
 
 XLSX = Path("data/dishes 2.0.xlsx")
 JSON_OUT = Path("data/dishes.json")
-VERSION = 4
+VERSION = 5
 
 VALID_CATEGORIES = {"green", "yellow", "red"}
 VALID_FREQ_TYPES = {"weekly", "monthly"}
