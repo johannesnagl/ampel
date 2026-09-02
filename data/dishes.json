@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "dishes": [
     {
       "id": "roest-polentakartoffeln",
@@ -56,6 +56,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -201,6 +202,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "süß",
         "kalt",
         "meal prep",
@@ -222,6 +224,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "meal prep",
@@ -243,6 +246,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -263,6 +267,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -283,6 +288,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "vegetarisch",
@@ -2223,6 +2229,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep"
       ],
@@ -2302,6 +2309,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -2344,6 +2352,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -2402,6 +2411,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -2465,6 +2475,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "süß",
         "kalt",
         "meal prep",
@@ -2565,6 +2576,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -2825,6 +2837,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "vegetarisch",
         "cheat"
@@ -3472,6 +3485,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -3517,6 +3531,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "meal prep",
@@ -3541,6 +3556,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "meal prep",
@@ -4474,6 +4490,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "meal prep",
@@ -4495,6 +4512,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt"
       ],
       "notes": "Zutaten für 2 Portionen\n1 Knoblauchzehe\n250 g Hähnchenbrustfilet\n½ Zitrone\n¾ EL ungesüßte Chilisauce\nSalz und Pfeffer\n2¼ Handvoll Babyspinat\n150 g Erdbeeren\n½ reife Avocado\n½ rote Zwiebel\n1 TL Olivenöl\n1½ EL weißer Balsamicoessig\n10 g Pinienkerne\n50 g Fetakäse\n\nZubereitung\n1.\tKnoblauch schälen und fein zerdrücken. Hähnchen in mundgerechte Stücke schneiden, mit Zitronensaft, Chilisauce und Knoblauch mischen, salzen und pfeffern. Ca. 20 Minuten im Kühlschrank ziehen lassen.\n2.\tSpinat waschen und trocken schleudern. Erdbeeren waschen, putzen und halbieren bzw. vierteln. Avocado schälen, entkernen und in Scheiben schneiden. Zwiebel schälen und fein würfeln.\n3.\t1 TL Olivenöl in einer beschichteten Pfanne erhitzen und das Hähnchen darin goldbraun und vollständig durchbraten. Herausnehmen und kurz abkühlen lassen.\n4.\tBalsamico mit 3 EL Wasser, Salz und Pfeffer verrühren. Pinienkerne in einer Pfanne ohne zusätzliches Fett trocken rösten.\n5.\tSpinat, Zwiebel, Erdbeeren und Hähnchen mit dem Dressing mischen. Auf zwei Tellern anrichten. Avocado, Pinienkerne und zerbröckelten Feta darauf verteilen und sofort servieren."
@@ -4513,6 +4531,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -4534,6 +4553,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "süß",
         "kalt",
         "meal prep",
@@ -4555,6 +4575,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "warm",
         "meal prep",
         "to go",
@@ -4576,6 +4597,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "meal prep",
@@ -4597,6 +4619,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -4619,6 +4642,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -4641,6 +4665,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -4662,6 +4687,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "leicht verdaulich",
         "kalt",
         "vegetarisch"
@@ -4682,6 +4708,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go"
@@ -4703,6 +4730,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt"
       ],
       "notes": "Zutaten für 2 Portionen\n1 kleine Salatgurke\n1 kleine rote Zwiebel\n2 Frühlingszwiebeln\n1 kleiner Apfel\n300 g Kichererbsen aus der Konserve, abgetropft\n1 Avocado (ca. 50 g Fruchtfleisch)\n100 g Skyr Natur\n2 EL fettarme Milch\n4 EL Zitronensaft\nSalz\nPfeffer\n2 TL Dill, gehackt\n\nZubereitung\n1.\tGurke, Zwiebel, Frühlingszwiebeln und Apfel klein schneiden. Mit den Kichererbsen vermengen.\n2.\tAvocado, Skyr und Milch fein pürieren. Zitronensaft und Dill unterrühren und mit Salz und Pfeffer abschmecken.\n3.\tAvocadodressing mit dem Salat vermengen und servieren."
@@ -4999,6 +5027,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",
@@ -5143,6 +5172,7 @@
         "dinner"
       ],
       "tags": [
+        "bowl",
         "kalt",
         "meal prep",
         "to go",

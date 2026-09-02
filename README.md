@@ -70,6 +70,10 @@ the previous version so caches are discarded and re-seeded.
 Allowed tags: `leicht verdaulich`, `bowl`, `süß`, `warm`, `kalt`,
 `meal prep`, `to go`, `vegetarisch`, `dessert`, `cheat`.
 
+`bowl` covers bowls **and salads** — any dish whose head noun is a bowl
+or a salad. A dish that merely contains salad as a side or an ingredient
+(a wrap with lettuce, grilled salmon with a side salad) does not get it.
+
 `data/dishes 2.0 - Validierung.xlsx` documents the per-dish validation
 and the rules each decision was based on.
 
