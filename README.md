@@ -1,8 +1,8 @@
 # Ampel — Personal Traffic Light Meal Tracker
 
-Mobile-first web app for the personal nutrition system documented in
-`Gerichtepool aktuell_Ampelsystem.docx`. Plans + logs meals across daily
-slots, with active rule feedback while planning.
+Mobile-first web app for the personal nutrition system defined in
+`data/Masterpost Phase 3.docx`. Plans + logs meals across daily slots,
+with active rule feedback while planning.
 
 ## Run locally
 
@@ -30,6 +30,48 @@ ES modules.
 
 Drop the entire folder onto Cloudflare Pages, Netlify, or any static host.
 No environment variables. No build command.
+
+## The dish catalog
+
+`data/dishes 2.0.xlsx` is the source of truth — 255 dishes, validated
+against Masterpost Phase 3 (traffic light, frequency, severity, tags,
+slots). The app reads the generated `data/dishes.json`.
+
+After editing the spreadsheet:
+
+```bash
+pip install openpyxl          # once
+python3 scripts/xlsx-to-json.py
+```
+
+The converter validates ids, categories, frequency types, slot types and
+tags, and refuses to write on any error.
+
+**When the catalog changes materially, bump `CATALOG_VERSION` in
+`src/state/catalog.js`.** Adding dishes needs no bump — the store merges
+new seed entries into an existing cache automatically. Bump only when
+existing dishes change their coding, and leave out the migration step for
+the previous version so caches are discarded and re-seeded.
+
+### Spreadsheet columns
+
+| Column | Meaning |
+|---|---|
+| `id` | kebab-case, unique |
+| `name` | German display name |
+| `category` | `green` / `yellow` / `red` → 0 / 1 / 3 points |
+| `heavy` | TRUE = "schwer" (Masterpost §12 thresholds) |
+| `frequency_type` / `frequency_max` | `weekly` or `monthly`, max per window |
+| `slot_types` | comma-separated: `breakfast,snack,lunch,dinner` |
+| `tags` | from a fixed vocabulary (see below) |
+| `notes` | ingredients + preparation; drives the cooking view |
+| `typ` | `platzhalter` for catch-all rows, otherwise empty |
+
+Allowed tags: `leicht verdaulich`, `bowl`, `süß`, `warm`, `kalt`,
+`meal prep`, `to go`, `vegetarisch`, `dessert`, `cheat`.
+
+`data/dishes 2.0 - Validierung.xlsx` documents the per-dish validation
+and the rules each decision was based on.
 
 ## Project layout
 

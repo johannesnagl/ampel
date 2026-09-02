@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Convert data/dishes.xlsx → data/dishes.json.
+"""Convert "data/dishes 2.0.xlsx" → data/dishes.json.
 
-Use after editing data/dishes.xlsx to regenerate the catalog the app loads.
+Use after editing the catalog spreadsheet to regenerate the file the app loads.
 
 Usage:
     python3 scripts/xlsx-to-json.py
@@ -17,13 +17,15 @@ except ImportError:
     print("openpyxl not installed. Run: pip install openpyxl", file=sys.stderr)
     sys.exit(1)
 
-XLSX = Path("data/dishes.xlsx")
+XLSX = Path("data/dishes 2.0.xlsx")
 JSON_OUT = Path("data/dishes.json")
-VERSION = 3
+VERSION = 4
 
 VALID_CATEGORIES = {"green", "yellow", "red"}
 VALID_FREQ_TYPES = {"weekly", "monthly"}
 VALID_SLOT_TYPES = {"breakfast", "lunch", "dinner", "snack"}
+VALID_TAGS = {"leicht verdaulich", "bowl", "süß", "warm", "kalt",
+              "meal prep", "to go", "vegetarisch", "dessert", "cheat"}
 
 def autotags(name: str) -> list[str]:
     tokens = re.findall(r"[A-Za-zÄÖÜäöüß]+", name.lower())
@@ -45,6 +47,7 @@ def main():
         if row is None or row[0] is None or str(row[0]).strip() == "":
             continue
         id_, name, category, heavy, freq_type, freq_max, slot_types, tags, notes = row[:9]
+        typ = row[9] if len(row) > 9 else None
 
         # Validate
         if id_ in seen_ids:
@@ -70,9 +73,17 @@ def main():
         if category == "green" and heavy_bool:
             heavy_bool = False  # enforce: green can't be heavy
 
+        # Spalte H enthält die kuratierten semantischen Tags
+        # (leicht verdaulich, bowl, süß, warm, kalt, meal prep, to go,
+        #  vegetarisch, dessert, cheat). Nur wenn leer, aus dem Namen ableiten.
         tag_list = parse_csv(tags)
-        if not tag_list and name:
-            tag_list = autotags(name)
+        if tag_list:
+            unknown = [t for t in tag_list if t not in VALID_TAGS]
+            if unknown:
+                errors.append(f"Row {r_idx} ({id_}): unknown tag(s) {unknown}; "
+                              f"allowed: {sorted(VALID_TAGS)}")
+        elif name:
+            tag_list = autotags(name)   # Fallback für Zeilen ohne kuratierte Tags
 
         dishes.append({
             "id": str(id_),
@@ -83,6 +94,7 @@ def main():
             "slotTypes": slot_list,
             "tags": tag_list,
             "notes": str(notes or ""),
+            **({"typ": str(typ)} if typ else {}),
         })
 
     if errors:
