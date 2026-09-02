@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "dishes": [
     {
       "id": "roest-polentakartoffeln",
@@ -680,13 +680,15 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
         "süß",
         "kalt",
-        "vegetarisch"
+        "vegetarisch",
+        "dessert"
       ],
       "notes": ""
     },
@@ -5243,6 +5245,26 @@
         "dessert"
       ],
       "notes": "Zutaten für 2 Portionen\n150 g Himbeeren\n150 g griechischer Joghurt\n60 g Frischkäse\n1 TL Honig\n½ TL Vanilleextrakt\n\nZubereitung\n1.\tHimbeeren in einen Mixer geben.\n2.\tGriechischen Joghurt und Frischkäse hinzufügen.\n3.\tHonig und Vanilleextrakt dazugeben.\n4.\tAlles vollständig glatt und cremig pürieren.\n5.\tAuf zwei Dessertgläser verteilen.\n6.\tMindestens 1–2 Stunden im Kühlschrank kaltstellen.\n7.\tGekühlt servieren."
+    },
+    {
+      "id": "chips",
+      "name": "Chips",
+      "category": "red",
+      "heavy": false,
+      "frequency": {
+        "type": "monthly",
+        "max": 2
+      },
+      "slotTypes": [
+        "snack",
+        "dessert"
+      ],
+      "tags": [
+        "vegetarisch",
+        "dessert",
+        "cheat"
+      ],
+      "notes": ""
     }
   ]
 }

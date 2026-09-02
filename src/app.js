@@ -3,6 +3,7 @@ import { t } from "./i18n.js";
 import { h, mount } from "./ui/render.js";
 import { renderWeekView } from "./ui/week-view.js";
 import { makeSettingsStore } from "./state/settings.js";
+import { normalizeSlots } from "./state/slots.js";
 import { makeWeeksStore } from "./state/weeks.js";
 import { makeCatalogStore } from "./state/catalog.js";
 import { evaluateWeek } from "./rules/evaluate.js";
@@ -52,18 +53,6 @@ function loadWeek(anchorDateKey) {
   }
   state.week = week;
   weeksStore.saveWeek(weekId, week);
-}
-
-function normalizeSlots(existingSlots, slotsPerDay) {
-  return slotsPerDay.map((cfg, i) => {
-    const existing = existingSlots[i];
-    return {
-      type: cfg.type,
-      dishId: existing?.dishId ?? null,
-      loggedAt: existing?.loggedAt ?? null,
-      note: existing?.note ?? "",
-    };
-  });
 }
 
 function shiftWeek(deltaDays) {
