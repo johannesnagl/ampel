@@ -19,11 +19,11 @@ except ImportError:
 
 XLSX = Path("data/dishes 2.0.xlsx")
 JSON_OUT = Path("data/dishes.json")
-VERSION = 5
+VERSION = 6
 
 VALID_CATEGORIES = {"green", "yellow", "red"}
 VALID_FREQ_TYPES = {"weekly", "monthly"}
-VALID_SLOT_TYPES = {"breakfast", "lunch", "dinner", "snack"}
+VALID_SLOT_TYPES = {"breakfast", "lunch", "dinner", "snack", "dessert"}
 VALID_TAGS = {"leicht verdaulich", "bowl", "süß", "warm", "kalt",
               "meal prep", "to go", "vegetarisch", "dessert", "cheat"}
 

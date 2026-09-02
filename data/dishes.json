@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "dishes": [
     {
       "id": "roest-polentakartoffeln",
@@ -657,7 +657,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -2775,7 +2777,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "süß",
@@ -2994,7 +2998,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -3016,9 +3022,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "süß",
@@ -3117,7 +3125,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -3232,7 +3242,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -3392,7 +3404,9 @@
         "max": 2
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -3680,7 +3694,9 @@
         "max": 1
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -3868,7 +3884,9 @@
         "max": 1
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -4158,7 +4176,9 @@
         "max": 1
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "süß",
@@ -4198,7 +4218,9 @@
         "max": 1
       },
       "slotTypes": [
-        "snack"
+        "breakfast",
+        "snack",
+        "dessert"
       ],
       "tags": [
         "süß",
@@ -4813,9 +4835,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -4837,9 +4861,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -4901,9 +4927,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -4986,9 +5014,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5009,9 +5039,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5056,9 +5088,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5079,9 +5113,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5142,9 +5178,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5166,9 +5204,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",
@@ -5189,9 +5229,11 @@
         "max": 1
       },
       "slotTypes": [
+        "breakfast",
         "snack",
         "lunch",
-        "dinner"
+        "dinner",
+        "dessert"
       ],
       "tags": [
         "leicht verdaulich",

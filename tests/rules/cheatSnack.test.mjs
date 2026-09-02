@@ -42,3 +42,42 @@ test("respects current slotsPerDay when stored slot.type is stale", () => {
   assert.equal(w.length, 1);
   assert.equal(w[0].where.slotIndex, 2);
 });
+
+// --- Dessert-Slot (Masterpost §12: eigene Komponente) ---
+
+const SLOTS_7 = [
+  { type: "breakfast", label: "Frühstück" },
+  { type: "snack",     label: "Snack 1" },
+  { type: "lunch",     label: "Mittag" },
+  { type: "dessert",   label: "Dessert", optional: true },
+  { type: "snack",     label: "Snack 2" },
+  { type: "dinner",    label: "Abend" },
+  { type: "dessert",   label: "Dessert", optional: true },
+];
+const day7 = (map) => ({
+  slots: SLOTS_7.map((c, i) => ({ type: c.type, dishId: map[i] ?? null, loggedAt: null, note: "" })),
+});
+
+test("meldet sich nicht selbst, wenn der Snack selbst der Cheat ist", () => {
+  // Kuchenjause statt Snack: das 🔴 liegt IM Snack-Slot, sonst nichts.
+  // No-Go 4 zielt auf „Cheat + zusätzlicher Snack obendrauf“ – hier gibt es
+  // kein Obendrauf, also darf nichts gemeldet werden.
+  const day = day7({ 4: "pizza" });
+  assert.equal(checkCheatSnackPolicy(day, "2026-05-04", DISHES, SLOTS_7).length, 0);
+});
+
+test("meldet einen zusätzlichen Snack, wenn der Cheat woanders liegt", () => {
+  // 🔴 im Dessert-Slot, zusätzlich ein gelber Snack → genau der No-Go-Fall
+  const day = day7({ 6: "pizza", 1: "couscous" });
+  const w = checkCheatSnackPolicy(day, "2026-05-04", DISHES, SLOTS_7);
+  assert.equal(w.length, 1);
+  assert.equal(w[0].where.slotIndex, 1);
+});
+
+test("ein Dessert im Dessert-Slot wird nie als regelwidriger Snack gemeldet", () => {
+  // Cheat im Mittag, Dessert (gelb) im Dessert-Slot dahinter.
+  // Der Dessert-Slot ist kein Snack → keine Meldung auf Index 3.
+  const day = day7({ 2: "pizza", 3: "couscous" });
+  const w = checkCheatSnackPolicy(day, "2026-05-04", DISHES, SLOTS_7);
+  assert.equal(w.filter((x) => x.where.slotIndex === 3).length, 0);
+});

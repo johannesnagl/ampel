@@ -23,6 +23,7 @@ export function renderSettingsView({ settings, onSave, onExport, onImport, onRes
       { value: "snack",     label: "Snack" },
       { value: "lunch",     label: "Mittag" },
       { value: "dinner",    label: "Abend" },
+      { value: "dessert",   label: "Dessert" },
     ].sort((a, b) => a.label.localeCompare(b.label, "de"));
 
     return h("section", { class: "set-card" },

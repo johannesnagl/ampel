@@ -681,3 +681,24 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   cursor: pointer;
 }
 .cv-eat-btn:hover { background: var(--n-500); }
+
+/* ---------- Dessert-Slot ---------- */
+/* Hängt optisch an der Mahlzeit davor: schmaler, eingerückt, ohne
+   eigene Slot-Beschriftung im leeren Zustand. */
+.wk-slot.dessert {
+  margin-left: 16px;
+  margin-top: -4px;
+  padding: 8px 12px;
+  min-height: 36px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.wk-slot.dessert.empty {
+  border-style: dashed;
+  border-color: var(--n-200);
+  color: var(--n-500);
+  font-size: 13px;
+}
+.wk-slot.dessert.empty:hover { border-color: var(--n-500); color: var(--n-900); }
+.wk-slot.dessert .wk-slot-name { font-size: 14px; }
+.wk-slot.dessert .wk-slot-add { float: none; }

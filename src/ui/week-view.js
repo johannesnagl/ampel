@@ -139,14 +139,17 @@ function slotRow(slot, idx, date, dv, dishById, settings, onSlotClick, onSlotLon
   const slotCfg = settings.slotsPerDay[idx];
   const v = dv?.slots?.[idx];
   const dish = slot.dishId ? dishById.get(slot.dishId) : null;
+  // Dessert-Slots hängen an der Mahlzeit davor und werden schmaler
+  // gerendert, damit der Tag optisch bei fünf Karten bleibt.
+  const isDessert = slotCfg.type === "dessert";
   if (!dish) {
     return h("button", {
-        class: "wk-slot empty",
+        class: `wk-slot empty${isDessert ? " dessert" : ""}`,
         onclick: () => onSlotClick(date, idx, "empty"),
         "aria-label": `${slotCfg.label} planen`,
       },
-      h("span", { class: "wk-slot-label" }, slotCfg.label),
-      h("span", { class: "wk-slot-add" }, t.add),
+      isDessert ? null : h("span", { class: "wk-slot-label" }, slotCfg.label),
+      h("span", { class: "wk-slot-add" }, isDessert ? t.addDessert : t.add),
     );
   }
   const verdictClass = v?.verdict === "warn" ? "warn" : "";
@@ -167,7 +170,7 @@ function slotRow(slot, idx, date, dv, dishById, settings, onSlotClick, onSlotLon
   };
 
   return h("button", {
-      class: `wk-slot filled ${dish.category} ${verdictClass}`,
+      class: `wk-slot filled ${dish.category} ${verdictClass}${isDessert ? " dessert" : ""}`,
       onclick: handleClick,
       onpointerdown: handlePointerDown,
       onpointerup: handlePointerUp,
