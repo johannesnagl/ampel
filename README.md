@@ -67,12 +67,21 @@ the previous version so caches are discarded and re-seeded.
 | `notes` | ingredients + preparation; drives the cooking view |
 | `typ` | `platzhalter` for catch-all rows, otherwise empty |
 
-Allowed tags: `leicht verdaulich`, `bowl`, `süß`, `warm`, `kalt`,
-`meal prep`, `to go`, `vegetarisch`, `dessert`, `cheat`.
+Allowed tags, grouped by what they describe:
+
+- **Properties** — `leicht verdaulich`, `süß`, `warm`, `kalt`,
+  `meal prep`, `to go`, `vegetarisch`, `cheat`, `Foto`
+- **Kind of dish** — `bowl`, `dessert`, `auflauf`, `pasta`, `pancake`,
+  `kuchen`, `muffin`, `brot`, `brownie`, `aufstrich`, `dip`,
+  `cheesecake`, `mug cake`
 
 `bowl` covers bowls **and salads** — any dish whose head noun is a bowl
 or a salad. A dish that merely contains salad as a side or an ingredient
 (a wrap with lettuce, grilled salmon with a side salad) does not get it.
+
+`Foto` marks the dishes a photo exists for. In the spreadsheet these used
+to be flagged with a trailing " F" in the name; the converter expects the
+tag, not the suffix, so the display name stays clean.
 
 `data/dishes 2.0 - Validierung.xlsx` documents the per-dish validation
 and the rules each decision was based on.

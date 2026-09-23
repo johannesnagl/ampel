@@ -19,13 +19,19 @@ except ImportError:
 
 XLSX = Path("data/dishes 2.0.xlsx")
 JSON_OUT = Path("data/dishes.json")
-VERSION = 8
+VERSION = 9
 
 VALID_CATEGORIES = {"green", "yellow", "red"}
 VALID_FREQ_TYPES = {"weekly", "monthly"}
 VALID_SLOT_TYPES = {"breakfast", "lunch", "dinner", "snack", "dessert"}
-VALID_TAGS = {"leicht verdaulich", "bowl", "süß", "warm", "kalt",
-              "meal prep", "to go", "vegetarisch", "dessert", "cheat"}
+VALID_TAGS = {
+    # Eigenschaften
+    "leicht verdaulich", "süß", "warm", "kalt", "meal prep", "to go",
+    "vegetarisch", "cheat", "Foto",
+    # Gerichtsarten
+    "bowl", "dessert", "auflauf", "pasta", "pancake", "kuchen", "muffin",
+    "brot", "brownie", "aufstrich", "dip", "cheesecake", "mug cake",
+}
 
 def autotags(name: str) -> list[str]:
     tokens = re.findall(r"[A-Za-zÄÖÜäöüß]+", name.lower())
