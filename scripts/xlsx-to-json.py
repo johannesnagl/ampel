@@ -9,6 +9,7 @@ Usage:
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 try:
@@ -19,7 +20,7 @@ except ImportError:
 
 XLSX = Path("data/dishes 2.0.xlsx")
 JSON_OUT = Path("data/dishes.json")
-VERSION = 9
+VERSION = 10
 
 VALID_CATEGORIES = {"green", "yellow", "red"}
 VALID_FREQ_TYPES = {"weekly", "monthly"}
@@ -27,11 +28,28 @@ VALID_SLOT_TYPES = {"breakfast", "lunch", "dinner", "snack", "dessert"}
 VALID_TAGS = {
     # Eigenschaften
     "leicht verdaulich", "süß", "warm", "kalt", "meal prep", "to go",
-    "vegetarisch", "cheat", "Foto",
+    "vegetarisch", "cheat", "foto",
     # Gerichtsarten
     "bowl", "dessert", "auflauf", "pasta", "pancake", "kuchen", "muffin",
     "brot", "brownie", "aufstrich", "dip", "cheesecake", "mug cake",
 }
+
+UMLAUTE = [("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"), ("&", "und")]
+
+def slugify(value: str) -> str:
+    """kebab-case-ID aus einem Rohwert.
+
+    Die Tabelle wird extern bearbeitet und neu hochgeladen; dabei entstehen
+    IDs immer wieder direkt aus dem Namen, inklusive &, Apostroph, Umlaut,
+    Klammer oder Leerzeichen. Statt das jedes Mal von Hand zu korrigieren
+    normalisiert der Konverter selbst — deterministisch, also bleibt die ID
+    über Uploads hinweg stabil.
+    """
+    s = str(value).lower()
+    for a, b in UMLAUTE:
+        s = s.replace(a, b)
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s)).strip("-")
 
 def autotags(name: str) -> list[str]:
     tokens = re.findall(r"[A-Za-zÄÖÜäöüß]+", name.lower())
@@ -48,6 +66,7 @@ def main():
     dishes = []
     errors = []
     seen_ids = set()
+    normalized_ids = []
 
     for r_idx, row in enumerate(rows, start=2):
         if row is None or row[0] is None or str(row[0]).strip() == "":
@@ -56,6 +75,17 @@ def main():
         typ = row[9] if len(row) > 9 else None
 
         # Validate
+        raw_id = str(id_)
+        id_ = slugify(raw_id)
+        if id_ != raw_id:
+            normalized_ids.append((r_idx, raw_id, id_))
+        if not id_:
+            errors.append(f"Row {r_idx}: id '{raw_id}' is empty after normalization")
+        # Das " F" am Namensende war früher die Foto-Markierung. Heute ist das
+        # der Tag `foto` — ein Restsuffix würde im Picker mitangezeigt.
+        if name and re.search(r"\sF$", str(name).rstrip(), re.I):
+            errors.append(f"Row {r_idx} ({id_}): name ends in ' F'; "
+                          f"use the 'foto' tag instead")
         if id_ in seen_ids:
             errors.append(f"Row {r_idx}: duplicate id '{id_}'")
         seen_ids.add(id_)
@@ -82,7 +112,9 @@ def main():
         # Spalte H enthält die kuratierten semantischen Tags
         # (leicht verdaulich, bowl, süß, warm, kalt, meal prep, to go,
         #  vegetarisch, dessert, cheat). Nur wenn leer, aus dem Namen ableiten.
-        tag_list = parse_csv(tags)
+        # Tags sind durchweg kleingeschrieben; eine abweichende Schreibweise
+        # aus der Tabelle wäre sonst ein zweiter, eigener Tag.
+        tag_list = [t.lower() for t in parse_csv(tags)]
         if tag_list:
             unknown = [t for t in tag_list if t not in VALID_TAGS]
             if unknown:
@@ -102,6 +134,11 @@ def main():
             "notes": str(notes or ""),
             **({"typ": str(typ)} if typ else {}),
         })
+
+    if normalized_ids:
+        print(f"ℹ {len(normalized_ids)} id(s) normalized to kebab-case:")
+        for r_idx, before, after in normalized_ids:
+            print(f"    row {r_idx}: {before}  →  {after}")
 
     if errors:
         print("Validation errors:", file=sys.stderr)

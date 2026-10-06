@@ -70,7 +70,7 @@ the previous version so caches are discarded and re-seeded.
 Allowed tags, grouped by what they describe:
 
 - **Properties** — `leicht verdaulich`, `süß`, `warm`, `kalt`,
-  `meal prep`, `to go`, `vegetarisch`, `cheat`, `Foto`
+  `meal prep`, `to go`, `vegetarisch`, `cheat`, `foto`
 - **Kind of dish** — `bowl`, `dessert`, `auflauf`, `pasta`, `pancake`,
   `kuchen`, `muffin`, `brot`, `brownie`, `aufstrich`, `dip`,
   `cheesecake`, `mug cake`
@@ -79,9 +79,14 @@ Allowed tags, grouped by what they describe:
 or a salad. A dish that merely contains salad as a side or an ingredient
 (a wrap with lettuce, grilled salmon with a side salad) does not get it.
 
-`Foto` marks the dishes a photo exists for. In the spreadsheet these used
-to be flagged with a trailing " F" in the name; the converter expects the
-tag, not the suffix, so the display name stays clean.
+`foto` marks the dishes a photo exists for. In the spreadsheet these used
+to be flagged with a trailing " F" in the name; the converter rejects that
+suffix so it can never reach the picker, and lowercases every tag so one
+spelling cannot split into two tags.
+
+The converter also slugifies ids itself: an id typed straight from a name
+(`avocado & jamy-egg-toast`) is normalized deterministically, so it stays
+stable across spreadsheet uploads instead of breaking the catalog.
 
 `data/dishes 2.0 - Validierung.xlsx` documents the per-dish validation
 and the rules each decision was based on.
